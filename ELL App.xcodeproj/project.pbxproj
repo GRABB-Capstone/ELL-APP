@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BE9D4761BF289AA00E6F893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */; };
+		3BE9D4781BF289AA00E6F893 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4771BF289AA00E6F893 /* ViewController.swift */; };
+		3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9D4791BF289AA00E6F893 /* Main.storyboard */; };
+		3BE9D47D1BF289AA00E6F893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */; };
+		3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9D47E1BF289AA00E6F893 /* LaunchScreen.storyboard */; };
+		3BE9D48A1BF29F7800E6F893 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */; settings = {ASSET_TAGS = (); }; };
+		3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BE9D4721BF289AA00E6F893 /* ELL App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ELL App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BE9D4771BF289AA00E6F893 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BE9D47A1BF289AA00E6F893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BE9D47F1BF289AA00E6F893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BE9D4811BF289AA00E6F893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
+		3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BE9D46F1BF289AA00E6F893 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BE9D4691BF289AA00E6F893 = {
+			isa = PBXGroup;
+			children = (
+				3BE9D4871BF29F7800E6F893 /* SSRadioButtonController */,
+				3BE9D4741BF289AA00E6F893 /* ELL App */,
+				3BE9D4731BF289AA00E6F893 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BE9D4731BF289AA00E6F893 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BE9D4721BF289AA00E6F893 /* ELL App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BE9D4741BF289AA00E6F893 /* ELL App */ = {
+			isa = PBXGroup;
+			children = (
+				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
+				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
+				3BE9D4791BF289AA00E6F893 /* Main.storyboard */,
+				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
+				3BE9D47E1BF289AA00E6F893 /* LaunchScreen.storyboard */,
+				3BE9D4811BF289AA00E6F893 /* Info.plist */,
+			);
+			path = "ELL App";
+			sourceTree = "<group>";
+		};
+		3BE9D4871BF29F7800E6F893 /* SSRadioButtonController */ = {
+			isa = PBXGroup;
+			children = (
+				3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */,
+				3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */,
+			);
+			path = SSRadioButtonController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BE9D4711BF289AA00E6F893 /* ELL App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BE9D4841BF289AA00E6F893 /* Build configuration list for PBXNativeTarget "ELL App" */;
+			buildPhases = (
+				3BE9D46E1BF289AA00E6F893 /* Sources */,
+				3BE9D46F1BF289AA00E6F893 /* Frameworks */,
+				3BE9D4701BF289AA00E6F893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ELL App";
+			productName = "ELL App";
+			productReference = 3BE9D4721BF289AA00E6F893 /* ELL App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BE9D46A1BF289AA00E6F893 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Bcarreon;
+				TargetAttributes = {
+					3BE9D4711BF289AA00E6F893 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = K6537G2NJZ;
+					};
+				};
+			};
+			buildConfigurationList = 3BE9D46D1BF289AA00E6F893 /* Build configuration list for PBXProject "ELL App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BE9D4691BF289AA00E6F893;
+			productRefGroup = 3BE9D4731BF289AA00E6F893 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BE9D4711BF289AA00E6F893 /* ELL App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BE9D4701BF289AA00E6F893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */,
+				3BE9D47D1BF289AA00E6F893 /* Assets.xcassets in Resources */,
+				3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BE9D46E1BF289AA00E6F893 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BE9D4781BF289AA00E6F893 /* ViewController.swift in Sources */,
+				3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */,
+				3BE9D4761BF289AA00E6F893 /* AppDelegate.swift in Sources */,
+				3BE9D48A1BF29F7800E6F893 /* SSRadioButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BE9D4791BF289AA00E6F893 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BE9D47A1BF289AA00E6F893 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BE9D47E1BF289AA00E6F893 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BE9D47F1BF289AA00E6F893 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BE9D4821BF289AA00E6F893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3BE9D4831BF289AA00E6F893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BE9D4851BF289AA00E6F893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ELL App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3BE9D4861BF289AA00E6F893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ELL App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BE9D46D1BF289AA00E6F893 /* Build configuration list for PBXProject "ELL App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BE9D4821BF289AA00E6F893 /* Debug */,
+				3BE9D4831BF289AA00E6F893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BE9D4841BF289AA00E6F893 /* Build configuration list for PBXNativeTarget "ELL App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BE9D4851BF289AA00E6F893 /* Debug */,
+				3BE9D4861BF289AA00E6F893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BE9D46A1BF289AA00E6F893 /* Project object */;
+}
