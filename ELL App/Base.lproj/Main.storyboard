@@ -23,9 +23,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMG-yE-H1Z">
                                 <rect key="frame" x="449" y="67" width="46" height="30"/>
                                 <state key="normal" title="I Know"/>
-                                <connections>
-                                    <segue destination="ui0-4y-rAo" kind="show" id="JBj-am-K7G"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word 1: Threatened" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-lV-2Xn">
                                 <rect key="frame" x="87" y="38" width="150" height="21"/>
@@ -35,15 +32,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogM-9L-hM1">
                                 <rect key="frame" x="277" y="67" width="46" height="30"/>
                                 <state key="normal" title="Maybe"/>
-                                <connections>
-                                    <segue destination="arO-N3-MwZ" kind="show" id="uej-2i-vRp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHa-Nj-YGm">
-                                <rect key="frame" x="310" y="309" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -57,48 +45,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="237" y="174"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zgU-9J-VSo">
-            <objects>
-                <viewController id="arO-N3-MwZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yfv-Be-PNL"/>
-                        <viewControllerLayoutGuide type="bottom" id="v6L-Bb-0pZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ya9-34-WnG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HIw-cu-O3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="329" y="995"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Vw7-qs-31L">
-            <objects>
-                <viewController id="ui0-4y-rAo" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Slw-gh-Kpn"/>
-                        <viewControllerLayoutGuide type="bottom" id="71M-Lg-74T"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zwD-v7-eMe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-vT-LKH">
-                                <rect key="frame" x="251" y="274" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ucg-nR-wWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="893" y="261"/>
         </scene>
     </scenes>
 </document>
