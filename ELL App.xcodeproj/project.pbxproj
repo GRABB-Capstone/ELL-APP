@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
+		3BCFFEFE1C0E404D00C20C79 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFEFB1C0E404D00C20C79 /* Bolts.framework */; };
+		3BCFFEFF1C0E404D00C20C79 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFEFC1C0E404D00C20C79 /* Parse.framework */; };
+		3BCFFF001C0E404D00C20C79 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFEFD1C0E404D00C20C79 /* ParseUI.framework */; };
+		3BCFFF021C0E407600C20C79 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFF011C0E407600C20C79 /* AudioToolbox.framework */; };
 		3BE9D4761BF289AA00E6F893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */; };
 		3BE9D4781BF289AA00E6F893 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4771BF289AA00E6F893 /* ViewController.swift */; };
 		3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9D4791BF289AA00E6F893 /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRABB LOGO.png"; sourceTree = "<group>"; };
+		3BCFFEFB1C0E404D00C20C79 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		3BCFFEFC1C0E404D00C20C79 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		3BCFFEFD1C0E404D00C20C79 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		3BCFFF011C0E407600C20C79 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3BE9D4721BF289AA00E6F893 /* ELL App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ELL App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BE9D4771BF289AA00E6F893 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCFFF021C0E407600C20C79 /* AudioToolbox.framework in Frameworks */,
+				3BCFFF001C0E404D00C20C79 /* ParseUI.framework in Frameworks */,
+				3BCFFEFF1C0E404D00C20C79 /* Parse.framework in Frameworks */,
+				3BCFFEFE1C0E404D00C20C79 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +58,11 @@
 		3BE9D4691BF289AA00E6F893 = {
 			isa = PBXGroup;
 			children = (
+				3BCFFF011C0E407600C20C79 /* AudioToolbox.framework */,
 				3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */,
+				3BCFFEFB1C0E404D00C20C79 /* Bolts.framework */,
+				3BCFFEFC1C0E404D00C20C79 /* Parse.framework */,
+				3BCFFEFD1C0E404D00C20C79 /* ParseUI.framework */,
 				3BE9D4871BF29F7800E6F893 /* SSRadioButtonController */,
 				3BE9D4741BF289AA00E6F893 /* ELL App */,
 				3BE9D4731BF289AA00E6F893 /* Products */,
@@ -273,6 +289,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ELL App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
@@ -284,6 +304,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ELL App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
