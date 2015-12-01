@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,7 +34,7 @@
                                 <state key="normal" title="Maybe"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipL-q1-DTq">
-                                <rect key="frame" x="351" y="326" width="102" height="30"/>
+                                <rect key="frame" x="449" y="541" width="102" height="30"/>
                                 <state key="normal" title="Activities Page">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -42,6 +42,74 @@
                                     <segue destination="TQl-D1-8Dv" kind="show" id="pBu-ws-7HS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word 3: Threatened" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0M-gn-OEu">
+                                <rect key="frame" x="84" y="241" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word 5: Threatened" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDJ-6f-1IJ">
+                                <rect key="frame" x="84" y="460" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word 4: Threatened" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQV-T6-kiO">
+                                <rect key="frame" x="84" y="353" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nq-A0-nBH">
+                                <rect key="frame" x="87" y="270" width="79" height="30"/>
+                                <state key="normal" title="Don't Know"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBg-AS-6ix">
+                                <rect key="frame" x="449" y="270" width="46" height="30"/>
+                                <state key="normal" title="I Know"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWS-L1-sRq">
+                                <rect key="frame" x="277" y="270" width="46" height="30"/>
+                                <state key="normal" title="Maybe"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Da-rf-HDy">
+                                <rect key="frame" x="87" y="382" width="79" height="30"/>
+                                <state key="normal" title="Don't Know"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVv-am-EcN">
+                                <rect key="frame" x="449" y="382" width="46" height="30"/>
+                                <state key="normal" title="I Know"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUe-jZ-6fp">
+                                <rect key="frame" x="277" y="382" width="46" height="30"/>
+                                <state key="normal" title="Maybe"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4W-IO-00a">
+                                <rect key="frame" x="87" y="489" width="79" height="30"/>
+                                <state key="normal" title="Don't Know"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDx-FB-eFi">
+                                <rect key="frame" x="449" y="489" width="46" height="30"/>
+                                <state key="normal" title="I Know"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wy-Qu-RyY">
+                                <rect key="frame" x="277" y="489" width="46" height="30"/>
+                                <state key="normal" title="Maybe"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq3-tv-rpi">
+                                <rect key="frame" x="87" y="160" width="79" height="30"/>
+                                <state key="normal" title="Don't Know"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYn-dy-H5k">
+                                <rect key="frame" x="449" y="160" width="46" height="30"/>
+                                <state key="normal" title="I Know"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gje-tp-7Et">
+                                <rect key="frame" x="277" y="160" width="46" height="30"/>
+                                <state key="normal" title="Maybe"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word 2: Enthusiasm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMx-TX-07r">
+                                <rect key="frame" x="84" y="133" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -53,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-43" y="65"/>
+            <point key="canvasLocation" x="-131" y="71"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qRW-hY-XbU">
@@ -70,37 +138,37 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zq-RF-gjv" userLabel="Word Master">
                                 <rect key="frame" x="48" y="63" width="217" height="140"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" staticText="YES"/>
+                                    <accessibilityTraits key="traits" image="YES" staticText="YES"/>
                                 </accessibility>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYd-tI-bRk" userLabel="Word Connect">
                                 <rect key="frame" x="337" y="63" width="217" height="140"/>
                                 <accessibility key="accessibilityConfiguration" label="Slider">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" staticText="YES"/>
+                                    <accessibilityTraits key="traits" image="YES" staticText="YES"/>
                                 </accessibility>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5WV-TF-kYr" userLabel="Image Connect">
                                 <rect key="frame" x="48" y="243" width="217" height="140"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" staticText="YES"/>
+                                    <accessibilityTraits key="traits" image="YES" staticText="YES"/>
                                 </accessibility>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E10-MN-O3O" userLabel="Pre Assessment">
                                 <rect key="frame" x="337" y="243" width="217" height="140"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" staticText="YES"/>
+                                    <accessibilityTraits key="traits" image="YES" staticText="YES"/>
                                 </accessibility>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VV0-5s-jjO" userLabel="Post Assessment">
                                 <rect key="frame" x="48" y="415" width="217" height="140"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" staticText="YES"/>
+                                    <accessibilityTraits key="traits" image="YES" staticText="YES"/>
                                 </accessibility>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3MX-3V-GZR" userLabel="Questions">
                                 <rect key="frame" x="337" y="415" width="217" height="140"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" staticText="YES"/>
+                                    <accessibilityTraits key="traits" image="YES" staticText="YES"/>
                                 </accessibility>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word Master" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLT-Xp-CzS">
@@ -145,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYd-Th-oJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="65"/>
+            <point key="canvasLocation" x="677" y="65"/>
         </scene>
     </scenes>
 </document>
