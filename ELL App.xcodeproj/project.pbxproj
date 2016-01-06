@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4088DB1C0E859500EF817B /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B4088DA1C0E859500EF817B /* happy.png */; };
+		3B4088DD1C0F5B3800EF817B /* book1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4088DC1C0F5B3800EF817B /* book1.jpg */; };
+		3B4088DF1C0F5B8D00EF817B /* book2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4088DE1C0F5B8D00EF817B /* book2.jpg */; };
+		3B4088E11C0F5BC000EF817B /* book3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4088E01C0F5BC000EF817B /* book3.jpg */; };
 		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
 		3BCFFEFE1C0E404D00C20C79 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFEFB1C0E404D00C20C79 /* Bolts.framework */; };
 		3BCFFEFF1C0E404D00C20C79 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFEFC1C0E404D00C20C79 /* Parse.framework */; };
@@ -21,6 +25,7 @@
 		3BCFFF101C0E429800C20C79 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFF0F1C0E429800C20C79 /* SystemConfiguration.framework */; };
 		3BCFFF121C0E42A000C20C79 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFF111C0E42A000C20C79 /* libz.tbd */; };
 		3BCFFF141C0E42AB00C20C79 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFF131C0E42AB00C20C79 /* libsqlite3.tbd */; };
+		3BCFFF181C0E4EDD00C20C79 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCFFF171C0E4EDD00C20C79 /* LogInViewController.swift */; };
 		3BE9D4761BF289AA00E6F893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */; };
 		3BE9D4781BF289AA00E6F893 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4771BF289AA00E6F893 /* ViewController.swift */; };
 		3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9D4791BF289AA00E6F893 /* Main.storyboard */; };
@@ -32,6 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B4088DA1C0E859500EF817B /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
+		3B4088DC1C0F5B3800EF817B /* book1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book1.jpg; sourceTree = "<group>"; };
+		3B4088DE1C0F5B8D00EF817B /* book2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book2.jpg; sourceTree = "<group>"; };
+		3B4088E01C0F5BC000EF817B /* book3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book3.jpg; sourceTree = "<group>"; };
 		3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRABB LOGO.png"; sourceTree = "<group>"; };
 		3BCFFEFB1C0E404D00C20C79 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		3BCFFEFC1C0E404D00C20C79 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -46,6 +55,7 @@
 		3BCFFF0F1C0E429800C20C79 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3BCFFF111C0E42A000C20C79 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3BCFFF131C0E42AB00C20C79 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3BCFFF171C0E4EDD00C20C79 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3BE9D4721BF289AA00E6F893 /* ELL App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ELL App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BE9D4771BF289AA00E6F893 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4088E21C0F5BCB00EF817B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */,
+				3B4088DA1C0E859500EF817B /* happy.png */,
+				3B4088DC1C0F5B3800EF817B /* book1.jpg */,
+				3B4088DE1C0F5B8D00EF817B /* book2.jpg */,
+				3B4088E01C0F5BC000EF817B /* book3.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		3BCFFF151C0E42B500C20C79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				3BCFFF151C0E42B500C20C79 /* Frameworks */,
-				3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */,
+				3B4088E21C0F5BCB00EF817B /* Images */,
 				3BE9D4871BF29F7800E6F893 /* SSRadioButtonController */,
 				3BE9D4741BF289AA00E6F893 /* ELL App */,
 				3BE9D4731BF289AA00E6F893 /* Products */,
@@ -125,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
+				3BCFFF171C0E4EDD00C20C79 /* LogInViewController.swift */,
 				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
 				3BE9D4791BF289AA00E6F893 /* Main.storyboard */,
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
@@ -204,9 +227,13 @@
 			files = (
 				3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */,
 				F1E940F21BF956CD008F05B8 /* BookList.storyboard in Resources */,
+				3B4088E11C0F5BC000EF817B /* book3.jpg in Resources */,
+				3B4088DB1C0E859500EF817B /* happy.png in Resources */,
 				3BE9D47D1BF289AA00E6F893 /* Assets.xcassets in Resources */,
 				3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */,
+				3B4088DF1C0F5B8D00EF817B /* book2.jpg in Resources */,
 				3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */,
+				3B4088DD1C0F5B3800EF817B /* book1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +247,7 @@
 				3BE9D4781BF289AA00E6F893 /* ViewController.swift in Sources */,
 				3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */,
 				3BE9D4761BF289AA00E6F893 /* AppDelegate.swift in Sources */,
+				3BCFFF181C0E4EDD00C20C79 /* LogInViewController.swift in Sources */,
 				3BE9D48A1BF29F7800E6F893 /* SSRadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
