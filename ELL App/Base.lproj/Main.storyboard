@@ -307,114 +307,57 @@
             <point key="canvasLocation" x="-670" y="1165"/>
         </scene>
         <!--Book List-->
-        <scene sceneID="EoD-qY-5X0">
+        <scene sceneID="Mdf-b9-xm1">
             <objects>
-                <tableViewController id="pE3-8l-Ncp" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fL1-Hh-uzW">
+                <tableViewController title="Book List" id="45I-6Q-NhJ" customClass="BookTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="159" sectionHeaderHeight="28" sectionFooterHeight="28" id="usP-tr-j2b">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="jmm-xw-fnV">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="164" id="Cdj-ub-YBR">
-                                        <rect key="frame" x="0.0" y="64" width="768" height="164"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cdj-ub-YBR" id="vPQ-4W-w62">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="163"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Htk-lM-xZC">
-                                                    <rect key="frame" x="34" y="20" width="111" height="123"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author of Mentor Text 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBu-Fx-ruK">
-                                                    <rect key="frame" x="182" y="92" width="200" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mentor Text 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cU-Rx-NC7">
-                                                    <rect key="frame" x="182" y="55" width="104" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="TQl-D1-8Dv" kind="show" id="Rol-R5-oYR"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="164" id="s2n-sj-QwL">
-                                        <rect key="frame" x="0.0" y="228" width="768" height="164"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s2n-sj-QwL" id="FPJ-t2-yMV">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="163"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AWR-9B-oti">
-                                                    <rect key="frame" x="34" y="20" width="111" height="123"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mentor Text 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bl7-5D-mmI">
-                                                    <rect key="frame" x="180" y="55" width="106" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author of Mentor Text 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6T-LG-3dS">
-                                                    <rect key="frame" x="180" y="92" width="200" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="TQl-D1-8Dv" kind="show" id="U9M-oV-vqE"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="164" id="W0f-Sp-EpE">
-                                        <rect key="frame" x="0.0" y="392" width="768" height="164"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W0f-Sp-EpE" id="JaR-MQ-eXR">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="163"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SNl-0I-OJY">
-                                                    <rect key="frame" x="34" y="20" width="111" height="123"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mentor Text 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL6-7X-TBo">
-                                                    <rect key="frame" x="179" y="55" width="107" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author of Mentor Text 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVL-G1-k2k">
-                                                    <rect key="frame" x="179" y="92" width="200" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="TQl-D1-8Dv" kind="show" id="cK3-TB-qKw"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="159" id="N6k-bg-siT" customClass="BookTableViewCell" customModule="ELL_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="768" height="159"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N6k-bg-siT" id="nz3-ra-KUi">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="158"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBs-1V-JSN">
+                                            <rect key="frame" x="25" y="11" width="137" height="135"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcO-qz-soB">
+                                            <rect key="frame" x="206" y="47" width="291" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv6-Kd-soe">
+                                            <rect key="frame" x="206" y="85" width="291" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="author" destination="Wv6-Kd-soe" id="z0M-2v-0WU"/>
+                                    <outlet property="bookImage" destination="SBs-1V-JSN" id="xs3-h5-rax"/>
+                                    <outlet property="title" destination="tcO-qz-soB" id="430-vH-DIN"/>
+                                    <segue destination="TQl-D1-8Dv" kind="show" id="WVh-UC-aQX"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="pE3-8l-Ncp" id="ZBg-fp-UQl"/>
-                            <outlet property="delegate" destination="pE3-8l-Ncp" id="Cr7-Om-tSG"/>
+                            <outlet property="dataSource" destination="45I-6Q-NhJ" id="OvH-bd-IMG"/>
+                            <outlet property="delegate" destination="45I-6Q-NhJ" id="nE0-kP-o6k"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Book List" id="kjE-ib-Uol"/>
+                    <navigationItem key="navigationItem" title="Book List" id="J9L-qm-x6P"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qBr-dX-Eh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AIT-nf-l0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="-1632"/>
+            <point key="canvasLocation" x="873" y="-1636"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="Cyb-b8-A2b">
@@ -476,31 +419,23 @@
             <point key="canvasLocation" x="-1569" y="-1531"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="KcU-98-N8h">
+        <scene sceneID="zLx-zB-6M9">
             <objects>
-                <navigationController storyboardIdentifier="bookListVC" automaticallyAdjustsScrollViewInsets="NO" id="ZMD-di-SdJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="bookListView" automaticallyAdjustsScrollViewInsets="NO" id="SAH-BQ-BYR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JKh-Kn-Hzy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eNF-u7-ure">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="pE3-8l-Ncp" kind="relationship" relationship="rootViewController" id="XN0-R8-vxw"/>
+                        <segue destination="45I-6Q-NhJ" kind="relationship" relationship="rootViewController" id="jU8-av-yVq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CZI-09-DvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIS-qr-xjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-384" y="-1638"/>
+            <point key="canvasLocation" x="-151" y="-1636"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="book1.jpg" width="260" height="243"/>
-        <image name="book2.jpg" width="260" height="346"/>
-        <image name="book3.jpg" width="260" height="287"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="cK3-TB-qKw"/>
-    </inferredMetricsTieBreakers>
 </document>
