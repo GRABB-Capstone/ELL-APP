@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B4088DB1C0E859500EF817B /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B4088DA1C0E859500EF817B /* happy.png */; };
-		3B4088DD1C0F5B3800EF817B /* book1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4088DC1C0F5B3800EF817B /* book1.jpg */; };
-		3B4088DF1C0F5B8D00EF817B /* book2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4088DE1C0F5B8D00EF817B /* book2.jpg */; };
-		3B4088E11C0F5BC000EF817B /* book3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4088E01C0F5BC000EF817B /* book3.jpg */; };
 		3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576231C460A61009A2819 /* BookTableViewCell.swift */; };
 		3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576251C460C6F009A2819 /* BookTableViewController.swift */; };
 		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
@@ -39,10 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B4088DA1C0E859500EF817B /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
-		3B4088DC1C0F5B3800EF817B /* book1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book1.jpg; sourceTree = "<group>"; };
-		3B4088DE1C0F5B8D00EF817B /* book2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book2.jpg; sourceTree = "<group>"; };
-		3B4088E01C0F5BC000EF817B /* book3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book3.jpg; sourceTree = "<group>"; };
 		3BC576231C460A61009A2819 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		3BC576251C460C6F009A2819 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRABB LOGO.png"; sourceTree = "<group>"; };
@@ -100,10 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */,
-				3B4088DA1C0E859500EF817B /* happy.png */,
-				3B4088DC1C0F5B3800EF817B /* book1.jpg */,
-				3B4088DE1C0F5B8D00EF817B /* book2.jpg */,
-				3B4088E01C0F5BC000EF817B /* book3.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -233,13 +221,9 @@
 			files = (
 				3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */,
 				F1E940F21BF956CD008F05B8 /* BookList.storyboard in Resources */,
-				3B4088E11C0F5BC000EF817B /* book3.jpg in Resources */,
-				3B4088DB1C0E859500EF817B /* happy.png in Resources */,
 				3BE9D47D1BF289AA00E6F893 /* Assets.xcassets in Resources */,
 				3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */,
-				3B4088DF1C0F5B8D00EF817B /* book2.jpg in Resources */,
 				3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */,
-				3B4088DD1C0F5B3800EF817B /* book1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
