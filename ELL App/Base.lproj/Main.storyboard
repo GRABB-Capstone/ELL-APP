@@ -159,7 +159,7 @@
         <!--Activities-->
         <scene sceneID="qRW-hY-XbU">
             <objects>
-                <viewController storyboardIdentifier="activitiesVC" id="TQl-D1-8Dv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="activitiesVC" id="TQl-D1-8Dv" customClass="ActivitiesViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4nt-pa-UhR"/>
                         <viewControllerLayoutGuide type="bottom" id="apA-eg-Glp"/>
@@ -226,11 +226,20 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI4-po-yct">
+                                <rect key="frame" x="201" y="139" width="367" height="63"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.58091855940000003" green="0.75878259319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Activities" id="UQf-69-j7H"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="label" destination="HI4-po-yct" id="BGf-xr-ACj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYd-Th-oJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -343,7 +352,6 @@
                                     <outlet property="author" destination="Wv6-Kd-soe" id="z0M-2v-0WU"/>
                                     <outlet property="bookImage" destination="SBs-1V-JSN" id="xs3-h5-rax"/>
                                     <outlet property="title" destination="tcO-qz-soB" id="430-vH-DIN"/>
-                                    <segue destination="TQl-D1-8Dv" kind="show" id="WVh-UC-aQX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -354,6 +362,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Book List" id="J9L-qm-x6P"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <segue destination="TQl-D1-8Dv" kind="show" identifier="activities" id="5T7-r7-P3r"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIT-nf-l0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
