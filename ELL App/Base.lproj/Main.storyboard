@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Pre-Assessment-->
@@ -184,7 +184,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="O2a-77-6xh" kind="show" id="KN5-kq-huA"/>
+                                    <segue destination="O2a-77-6xh" kind="show" identifier="wordconnect" id="KN5-kq-huA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8u-ie-Vr7">
@@ -248,7 +248,7 @@
         <!--Word Connect-->
         <scene sceneID="0HW-1r-wEL">
             <objects>
-                <viewController storyboardIdentifier="wordConnectVC" id="O2a-77-6xh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wordConnectVC" id="O2a-77-6xh" customClass="WordConnectViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UIp-Rm-ega"/>
                         <viewControllerLayoutGuide type="bottom" id="FKM-zv-zg7"/>
@@ -258,49 +258,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8H-h2-T3C">
-                                <rect key="frame" x="252" y="373" width="37" height="30"/>
+                                <rect key="frame" x="170" y="373" width="200" height="30"/>
                                 <state key="normal" title="Word">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cok-He-ueZ">
-                                <rect key="frame" x="480" y="373" width="37" height="30"/>
+                                <rect key="frame" x="398" y="373" width="200" height="30"/>
                                 <state key="normal" title="Word">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgg-hh-ua4">
-                                <rect key="frame" x="252" y="458" width="37" height="30"/>
+                                <rect key="frame" x="170" y="458" width="200" height="30"/>
                                 <state key="normal" title="Word">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoB-pg-oTK">
-                                <rect key="frame" x="480" y="458" width="37" height="30"/>
+                                <rect key="frame" x="398" y="458" width="200" height="30"/>
                                 <state key="normal" title="Word">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jv-mJ-4y2">
-                                <rect key="frame" x="480" y="538" width="37" height="30"/>
+                                <rect key="frame" x="398" y="538" width="200" height="30"/>
                                 <state key="normal" title="Word">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-WQ-cOl">
-                                <rect key="frame" x="252" y="621" width="37" height="30"/>
+                                <rect key="frame" x="170" y="621" width="200" height="30"/>
                                 <state key="normal" title="Word">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0J-pH-2Qb">
-                                <rect key="frame" x="480" y="621" width="37" height="30"/>
+                                <rect key="frame" x="398" y="621" width="200" height="30"/>
                                 <state key="normal" title="Word">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ov0-af-wvN">
-                                <rect key="frame" x="252" y="538" width="37" height="30"/>
+                                <rect key="frame" x="170" y="538" width="200" height="30"/>
                                 <state key="normal" title="Word">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -310,10 +310,28 @@
                     </view>
                     <navigationItem key="navigationItem" title="Word Connect" id="w6s-ts-nqU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="button1" destination="D8H-h2-T3C" id="TCb-tE-Ezz"/>
+                        <outlet property="button2" destination="cok-He-ueZ" id="tKI-R7-k7q"/>
+                        <outlet property="button3" destination="bgg-hh-ua4" id="ujA-FW-Ay9"/>
+                        <outlet property="button4" destination="xoB-pg-oTK" id="zdT-5h-ySZ"/>
+                        <outlet property="button5" destination="Ov0-af-wvN" id="JZl-7g-qef"/>
+                        <outlet property="button6" destination="2jv-mJ-4y2" id="FNd-4s-evx"/>
+                        <outlet property="button7" destination="BHa-WQ-cOl" id="X2E-ZL-Dpx"/>
+                        <outlet property="button8" destination="J0J-pH-2Qb" id="c34-kN-Smr"/>
+                        <outletCollection property="buttons" destination="D8H-h2-T3C" collectionClass="NSMutableArray" id="Hmb-Cf-6vQ"/>
+                        <outletCollection property="buttons" destination="cok-He-ueZ" collectionClass="NSMutableArray" id="cI9-cp-ipr"/>
+                        <outletCollection property="buttons" destination="bgg-hh-ua4" collectionClass="NSMutableArray" id="n7p-5p-aDr"/>
+                        <outletCollection property="buttons" destination="xoB-pg-oTK" collectionClass="NSMutableArray" id="eHd-XH-EFB"/>
+                        <outletCollection property="buttons" destination="Ov0-af-wvN" collectionClass="NSMutableArray" id="DLT-1g-1My"/>
+                        <outletCollection property="buttons" destination="2jv-mJ-4y2" collectionClass="NSMutableArray" id="UM3-Qh-oDY"/>
+                        <outletCollection property="buttons" destination="BHa-WQ-cOl" collectionClass="NSMutableArray" id="sl3-x0-pRX"/>
+                        <outletCollection property="buttons" destination="J0J-pH-2Qb" collectionClass="NSMutableArray" id="icj-B5-ARx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4a1-1B-n0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-670" y="1165"/>
+            <point key="canvasLocation" x="-660" y="1209"/>
         </scene>
         <!--Book List-->
         <scene sceneID="Mdf-b9-xm1">
