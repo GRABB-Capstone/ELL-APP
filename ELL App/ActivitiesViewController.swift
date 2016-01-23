@@ -15,6 +15,8 @@ class ActivitiesViewController: UIViewController {
     var objectId = String()
     var words = [String]()
     var query = PFQuery(className: "Book")
+    var selectedObjectId = String()
+    var nextObjectId = String()
     @IBOutlet var label: UILabel!
     
     override func viewDidLoad() {
@@ -34,15 +36,17 @@ class ActivitiesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "wordconnect") {
+            var vc = segue.destinationViewController as! WordConnectViewController
+            vc.objectId = self.objectId
+
+        }
     }
-    */
+    
+    
     
 }
