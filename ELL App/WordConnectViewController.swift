@@ -33,8 +33,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
             
             for word in arr {
                 self.newButton = UIButton()
-                //self.newButton.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
-                //self.newButton!.frame = CGRect(x: 170 + i % 2 * 228, y: 373 + i / 2 * 85, width: 200, height: 30)
+                self.newButton.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
                 self.newButton!.frame = CGRect(x: 0, y: 0, width: 200, height: 30)
                 self.newButton!.center = CGPoint(x: centerX + 150 * ((i % 2 == 0) ? -1 : 1), y: 373 + i / 2 * 85)
                 self.newButton!.setTitle(word, forState: UIControlState.Normal)
@@ -52,7 +51,22 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         }
  
     }
-
+    func pressed(sender: UIButton) {
+        if(sender.selected) {
+            if self.radioButtonController.shouldLetDeSelect {
+                sender.selected = false
+                self.radioButtonController.currentSelectedButton = nil
+            }
+        } else {
+            for aButton in self.radioButtonController.buttonsArray {
+                aButton.selected = false
+            }
+            sender.selected = true
+            self.radioButtonController.currentSelectedButton = sender
+        }
+        self.radioButtonController.delegate?.didSelectButton?(self.radioButtonController.currentSelectedButton)
+    }
+/*
     func didSelectButton(aButton: UIButton?) {
        /* if aButton!.selected {
             aButton!.selected = false
@@ -62,7 +76,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         //else {
             //aButton!.backgroundColor = UIColor.blueColor()
         //}
-    }
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
