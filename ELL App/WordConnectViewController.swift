@@ -9,45 +9,39 @@
 import UIKit
 import Parse
 
-class WordConnectViewController: UIViewController {
+class WordConnectViewController: UIViewController, SSRadioButtonControllerDelegate {
 
-    @IBOutlet var button1: UIButton?
-    @IBOutlet var button2: UIButton?
-    @IBOutlet var button3: UIButton?
-    @IBOutlet var button4: UIButton?
-    @IBOutlet var button5: UIButton?
-    @IBOutlet var button6: UIButton?
-    @IBOutlet var button7: UIButton?
-    @IBOutlet var button8: UIButton?
+    var newButton: UIButton?
     var buttons = [UIButton]()
     var objectId = String()
     var query = PFQuery(className: "Book")
-    var words = [String]()
+    let radioButtonController = SSRadioButtonsController()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttons.append(button1!)
-        buttons.append(button2!)
-        buttons.append(button3!)
-        buttons.append(button4!)
-        buttons.append(button5!)
-        buttons.append(button6!)
-        buttons.append(button7!)
-        buttons.append(button8!)
-        
+        radioButtonController.delegate = self
+        radioButtonController.shouldLetDeSelect = true
+
         query.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
-            /*self.words = object!["words"] as! [String]
-            print(self.words)*/
-            var arr = object!["words"] as! [String]
+
+            let arr = object!["words"] as! [String]
             var i = 0
             for word in arr {
-                self.buttons[i++].setTitle(word, forState: UIControlState.Normal)
-
+                self.newButton = UIButton()
+                //self.newButton.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
+                self.newButton!.frame = CGRect(x: 170 + i % 2 * 228, y: 373 + i / 2 * 85, width: 200, height: 30)
+                self.newButton!.setTitle(word, forState: UIControlState.Normal)
+                self.radioButtonController.addButton(self.newButton!)
+                self.view.addSubview(self.newButton!)
+                i++;
             }
         }
  
     }
+
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

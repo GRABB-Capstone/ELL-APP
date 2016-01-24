@@ -92,15 +92,15 @@
                                 <rect key="frame" x="594" y="346" width="46" height="30"/>
                                 <state key="normal" title="I Know"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gje-tp-7Et">
-                                <rect key="frame" x="361" y="346" width="46" height="30"/>
-                                <state key="normal" title="Maybe"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word 2: Enthusiasm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMx-TX-07r">
                                 <rect key="frame" x="136" y="317" width="153" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gje-tp-7Et">
+                                <rect key="frame" x="361" y="346" width="46" height="30"/>
+                                <state key="normal" title="Maybe"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58091855940000003" green="0.75878259319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -393,78 +393,10 @@
                     <view key="view" contentMode="scaleToFill" id="ge7-ig-jrz">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8H-h2-T3C">
-                                <rect key="frame" x="170" y="373" width="200" height="30"/>
-                                <state key="normal" title="Word">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cok-He-ueZ">
-                                <rect key="frame" x="398" y="373" width="200" height="30"/>
-                                <state key="normal" title="Word">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgg-hh-ua4">
-                                <rect key="frame" x="170" y="458" width="200" height="30"/>
-                                <state key="normal" title="Word">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoB-pg-oTK">
-                                <rect key="frame" x="398" y="458" width="200" height="30"/>
-                                <state key="normal" title="Word">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jv-mJ-4y2">
-                                <rect key="frame" x="398" y="538" width="200" height="30"/>
-                                <state key="normal" title="Word">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-WQ-cOl">
-                                <rect key="frame" x="170" y="621" width="200" height="30"/>
-                                <state key="normal" title="Word">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0J-pH-2Qb">
-                                <rect key="frame" x="398" y="621" width="200" height="30"/>
-                                <state key="normal" title="Word">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ov0-af-wvN">
-                                <rect key="frame" x="170" y="538" width="200" height="30"/>
-                                <state key="normal" title="Word">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.58091855940000003" green="0.75878259319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Word Connect" id="w6s-ts-nqU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="button1" destination="D8H-h2-T3C" id="TCb-tE-Ezz"/>
-                        <outlet property="button2" destination="cok-He-ueZ" id="tKI-R7-k7q"/>
-                        <outlet property="button3" destination="bgg-hh-ua4" id="ujA-FW-Ay9"/>
-                        <outlet property="button4" destination="xoB-pg-oTK" id="zdT-5h-ySZ"/>
-                        <outlet property="button5" destination="Ov0-af-wvN" id="JZl-7g-qef"/>
-                        <outlet property="button6" destination="2jv-mJ-4y2" id="FNd-4s-evx"/>
-                        <outlet property="button7" destination="BHa-WQ-cOl" id="X2E-ZL-Dpx"/>
-                        <outlet property="button8" destination="J0J-pH-2Qb" id="c34-kN-Smr"/>
-                        <outletCollection property="buttons" destination="D8H-h2-T3C" collectionClass="NSMutableArray" id="Hmb-Cf-6vQ"/>
-                        <outletCollection property="buttons" destination="cok-He-ueZ" collectionClass="NSMutableArray" id="cI9-cp-ipr"/>
-                        <outletCollection property="buttons" destination="bgg-hh-ua4" collectionClass="NSMutableArray" id="n7p-5p-aDr"/>
-                        <outletCollection property="buttons" destination="xoB-pg-oTK" collectionClass="NSMutableArray" id="eHd-XH-EFB"/>
-                        <outletCollection property="buttons" destination="Ov0-af-wvN" collectionClass="NSMutableArray" id="DLT-1g-1My"/>
-                        <outletCollection property="buttons" destination="2jv-mJ-4y2" collectionClass="NSMutableArray" id="UM3-Qh-oDY"/>
-                        <outletCollection property="buttons" destination="BHa-WQ-cOl" collectionClass="NSMutableArray" id="sl3-x0-pRX"/>
-                        <outletCollection property="buttons" destination="J0J-pH-2Qb" collectionClass="NSMutableArray" id="icj-B5-ARx"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4a1-1B-n0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
