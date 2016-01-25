@@ -12,5 +12,5 @@ class ReadAlongTableViewCell: UITableViewCell {
 
     @IBOutlet var wordLabel: UILabel!
     @IBOutlet var pageLabel: UILabel!
-    @IBOutlet var noteText: UITextView!
+    @IBOutlet var noteLabel: UILabel!
 }

@@ -48,7 +48,7 @@ class ReadAlongTableViewController: UITableViewController {
         // Configure the cell...
         cell.wordLabel.text = words[indexPath.row]
         cell.pageLabel.text = pages[indexPath.row]
-        cell.noteText.text = notes[indexPath.row]
+        cell.noteLabel.text = notes[indexPath.row]
 
         return cell
     }
