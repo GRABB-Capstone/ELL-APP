@@ -17,10 +17,12 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
     var query = PFQuery(className: "Book")
     let radioButtonController = SSRadioButtonsController()
     var selectedButtons = [UIButton]()
-    
+    var butt: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var i = 0
+        let centerX = Int(self.view.center.x)
         
         radioButtonController.delegate = self
         radioButtonController.shouldLetDeSelect = true
@@ -28,30 +30,47 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         query.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
 
             let arr = object!["words"] as! [String]
-            let centerX = Int(self.view.center.x)
-            var i = 0
             
             for word in arr {
-                self.newButton = UIButton()
-                self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
-                self.newButton!.frame = CGRect(x: 0, y: 0, width: 200, height: 30)
-                self.newButton!.center = CGPoint(x: centerX + 150 * ((i % 2 == 0) ? -1 : 1), y: 373 + i / 2 * 85)
-                self.newButton!.setTitle(word, forState: UIControlState.Normal)
-                self.newButton!.selected = false
-                self.newButton!.backgroundColor = UIColor.clearColor()
-                self.radioButtonController.addButton(self.newButton!)
-                self.view.addSubview(self.newButton!)
-                i++;
+                if i < 8 {
+                    self.makeButton(word, buttonNum: i++)
+                }
             }
             
-            self.commentBox.frame = (CGRect(x: 0, y: 0, width: 400, height: 30))
+            self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
             self.commentBox.center = CGPoint(x: centerX, y: 373 + (i + 1) / 2 * 85)
             self.commentBox.placeholder = "Optional Notes"
             self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
             self.view.addSubview(self.commentBox)
+            
+            
+            print(i)
         }
- 
+        
+        print(5)
+        self.butt = UIButton()
+        self.butt!.center = CGPoint(x: centerX, y: 373 + (i + 3) / 2 * 85)
+        self.butt!.frame = CGRect(x: 0, y: 0, width: 100, height: 30)
+        self.butt!.setTitle("Submit", forState: UIControlState.Normal)
+        //self.butt!.sizeToFit()
+        self.butt!.backgroundColor = UIColor.blueColor()
+        self.view.addSubview(self.butt!)
     }
+    
+    func makeButton(word: String, buttonNum: Int) {
+        let centerX = Int(self.view.center.x)
+        
+        self.newButton = UIButton()
+        self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.newButton!.frame = CGRect(x: 0, y: 0, width: 200, height: 30)
+        self.newButton!.center = CGPoint(x: centerX + 150 * ((buttonNum % 2 == 0) ? -1 : 1), y: 373 + buttonNum / 2 * 85)
+        self.newButton!.setTitle(word, forState: UIControlState.Normal)
+        self.newButton!.selected = false
+        self.newButton!.backgroundColor = UIColor.clearColor()
+        self.radioButtonController.addButton(self.newButton!)
+        self.view.addSubview(self.newButton!)
+    }
+    
     func pressed(sender: UIButton) {
         
         if sender.backgroundColor == UIColor.clearColor() {
