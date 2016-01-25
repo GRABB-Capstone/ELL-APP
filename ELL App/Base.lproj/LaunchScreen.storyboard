@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GRABB LOGO.png" translatesAutoresizingMaskIntoConstraints="NO" id="JAJ-bR-o5s">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ELLO Icon Logo White Transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="JAJ-bR-o5s">
                                 <rect key="frame" x="174" y="240" width="421" height="544"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.58091855940000003" green="0.75878259319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
@@ -30,6 +30,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GRABB LOGO.png" width="678" height="767"/>
+        <image name="ELLO Icon Logo White Transparent.png" width="923" height="923"/>
     </resources>
 </document>

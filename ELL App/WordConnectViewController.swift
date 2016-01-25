@@ -45,7 +45,8 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
             self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
             self.view.addSubview(self.commentBox)
             
-            self.newButton = UIButton()
+            self.newButton = UIButton(type: UIButtonType.System)
+            self.newButton!.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
             self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
             self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
             self.newButton!.center = CGPoint(x: centerX, y: 373 + (i + 3) / 2 * 85)

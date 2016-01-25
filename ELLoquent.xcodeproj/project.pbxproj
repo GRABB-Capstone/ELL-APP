@@ -12,6 +12,7 @@
 		3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */; };
 		3B429D2B1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */; };
 		3B814E1F1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B814E1E1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png */; };
+		3B814E211C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B814E201C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png */; };
 		3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576231C460A61009A2819 /* BookTableViewCell.swift */; };
 		3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576251C460C6F009A2819 /* BookTableViewController.swift */; };
 		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
@@ -47,6 +48,7 @@
 		3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongTableViewController.swift; sourceTree = "<group>"; };
 		3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongTableViewCell.swift; sourceTree = "<group>"; };
 		3B814E1E1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ELLOQUENT Icon App Square - Blue.png"; sourceTree = "<group>"; };
+		3B814E201C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ELLO Icon Logo White Transparent.png"; sourceTree = "<group>"; };
 		3BC576231C460A61009A2819 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		3BC576251C460C6F009A2819 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRABB LOGO.png"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		3B4088E21C0F5BCB00EF817B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3B814E201C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png */,
 				3B814E1E1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png */,
 				3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */,
 			);
@@ -274,6 +277,7 @@
 			files = (
 				3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */,
 				3B814E1F1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png in Resources */,
+				3B814E211C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png in Resources */,
 				3BE9D47D1BF289AA00E6F893 /* Assets.xcassets in Resources */,
 				3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */,
 				3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */,
