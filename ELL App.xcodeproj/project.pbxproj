@@ -38,7 +38,6 @@
 		C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */; };
 		F1AF392B1C55EA5500106D70 /* WordConnectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */; };
 		F1AF392F1C55F76000106D70 /* WordConnectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */; };
-		F1E940F21BF956CD008F05B8 /* BookList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E940F11BF956CD008F05B8 /* BookList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +74,6 @@
 		C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectViewController.swift; sourceTree = "<group>"; };
 		F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewCell.swift; sourceTree = "<group>"; };
 		F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewController.swift; sourceTree = "<group>"; };
-		F1E940F11BF956CD008F05B8 /* BookList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,23 +150,16 @@
 		3BE9D4741BF289AA00E6F893 /* ELL App */ = {
 			isa = PBXGroup;
 			children = (
+				F1AF39331C56018600106D70 /* Storyboards */,
+				F1AF39321C56015E00106D70 /* BookTable */,
+				F1AF39311C56014F00106D70 /* ReadAlong */,
+				F1AF39301C56014200106D70 /* WordConnect */,
 				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
 				3BCFFF171C0E4EDD00C20C79 /* LogInViewController.swift */,
 				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
-				3BE9D4791BF289AA00E6F893 /* Main.storyboard */,
-				3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */,
-				3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */,
-				3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */,
-				F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */,
-				F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */,
-				C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */,
 				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
-				3BC576251C460C6F009A2819 /* BookTableViewController.swift */,
-				3BC576231C460A61009A2819 /* BookTableViewCell.swift */,
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
-				3BE9D47E1BF289AA00E6F893 /* LaunchScreen.storyboard */,
 				3BE9D4811BF289AA00E6F893 /* Info.plist */,
-				F1E940F11BF956CD008F05B8 /* BookList.storyboard */,
 			);
 			path = "ELL App";
 			sourceTree = "<group>";
@@ -180,6 +171,44 @@
 				3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */,
 			);
 			path = SSRadioButtonController;
+			sourceTree = "<group>";
+		};
+		F1AF39301C56014200106D70 /* WordConnect */ = {
+			isa = PBXGroup;
+			children = (
+				F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */,
+				F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */,
+				C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */,
+			);
+			name = WordConnect;
+			sourceTree = "<group>";
+		};
+		F1AF39311C56014F00106D70 /* ReadAlong */ = {
+			isa = PBXGroup;
+			children = (
+				3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */,
+				3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */,
+				3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */,
+			);
+			name = ReadAlong;
+			sourceTree = "<group>";
+		};
+		F1AF39321C56015E00106D70 /* BookTable */ = {
+			isa = PBXGroup;
+			children = (
+				3BC576251C460C6F009A2819 /* BookTableViewController.swift */,
+				3BC576231C460A61009A2819 /* BookTableViewCell.swift */,
+			);
+			name = BookTable;
+			sourceTree = "<group>";
+		};
+		F1AF39331C56018600106D70 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3BE9D4791BF289AA00E6F893 /* Main.storyboard */,
+				3BE9D47E1BF289AA00E6F893 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */,
-				F1E940F21BF956CD008F05B8 /* BookList.storyboard in Resources */,
 				3BE9D47D1BF289AA00E6F893 /* Assets.xcassets in Resources */,
 				3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */,
 				3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */,
