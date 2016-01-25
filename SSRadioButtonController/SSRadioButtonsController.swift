@@ -27,7 +27,7 @@ class SSRadioButtonsController : NSObject
     /**
         Set whether a selected radio button can be deselected or not. Default value is false.
     */
-    var shouldLetDeSelect = false
+    var shouldLetDeSelect = true
     /**
         Variadic parameter init that accepts UIButtons.
 
