@@ -45,10 +45,15 @@ class ActivitiesViewController: UIViewController {
             vc.objectId = self.objectId
         }
         
-        else if segue.identifier == "imageconnect" {
+        if segue.identifier == "assessment" {
+            let vc = segue.destinationViewController as! AssessmentViewController
+            vc.words = words
+        }
+        
+        /*else if segue.identifier == "imageconnect" {
             let vc = segue.destinationViewController as! ImageConnectViewController
             vc.objectId = self.objectId
-        }
+        }*/
     }
     
     
