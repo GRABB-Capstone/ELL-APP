@@ -10,6 +10,13 @@ import UIKit
 
 class AssessmentViewController: UIViewController, SSRadioButtonControllerDelegate {
     
+    @IBOutlet var word1: UILabel!
+    @IBOutlet var word2: UILabel!
+    @IBOutlet var word3: UILabel!
+    @IBOutlet var word4: UILabel!
+    @IBOutlet var word5: UILabel!
+    
+    var words = [String]()
     
     @IBOutlet var word1sad: UIButton!
     @IBOutlet var word1maybe: UIButton!
@@ -39,6 +46,30 @@ class AssessmentViewController: UIViewController, SSRadioButtonControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(words)
+        print(words.count)
+        
+        if words.count >= 1 {
+            word1.text = words[0]
+        }
+        
+        if words.count >= 2 {
+            print("test")
+            word2.text = words[1]
+        }
+        
+        if words.count >= 3 {
+            word3.text = words[2]
+        }
+        
+        if words.count >= 4 {
+            word4.text = words[3]
+        }
+        
+        if words.count >= 5 {
+            word5.text = words[4]
+        }
         
         radioButtonController1 = SSRadioButtonsController(buttons: word1sad, word1maybe, word1happy)
         radioButtonController1!.delegate = self
