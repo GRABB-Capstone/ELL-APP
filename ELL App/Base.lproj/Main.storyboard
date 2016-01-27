@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Pre-Assessment-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="preassessmentVC" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="preassessmentVC" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -119,7 +119,7 @@
         <!--Read Along-->
         <scene sceneID="7cW-M3-Rnh">
             <objects>
-                <viewController id="eWu-NP-WWm" customClass="ReadAlongViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eWu-NP-WWm" customClass="ReadAlongViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kX9-lP-CXr"/>
                         <viewControllerLayoutGuide type="bottom" id="cCA-sy-jAd"/>
@@ -187,17 +187,17 @@
         <!--Word Review-->
         <scene sceneID="Rbv-uU-58P">
             <objects>
-                <tableViewController id="dsv-1y-0eM" customClass="ReadAlongTableViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="dsv-1y-0eM" customClass="ReadAlongTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sje-6a-b6S">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="wordCell" rowHeight="90" id="51C-Oy-b4F" customClass="ReadAlongTableViewCell" customModule="ELLoquent" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="wordCell" rowHeight="90" id="51C-Oy-b4F" customClass="ReadAlongTableViewCell" customModule="ELL_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="768" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51C-Oy-b4F" id="stX-PR-3wA">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3s-FG-EPV">
@@ -227,13 +227,13 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXs-hP-wsM">
                                             <rect key="frame" x="270" y="8" width="67" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d4-e8-t5R">
                                             <rect key="frame" x="345" y="8" width="405" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -280,7 +280,7 @@
         <!--Activities-->
         <scene sceneID="qRW-hY-XbU">
             <objects>
-                <viewController storyboardIdentifier="activitiesVC" id="TQl-D1-8Dv" customClass="ActivitiesViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="activitiesVC" id="TQl-D1-8Dv" customClass="ActivitiesViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4nt-pa-UhR"/>
                         <viewControllerLayoutGuide type="bottom" id="apA-eg-Glp"/>
@@ -372,7 +372,7 @@
         <!--Word Connect-->
         <scene sceneID="0HW-1r-wEL">
             <objects>
-                <viewController storyboardIdentifier="wordConnectVC" id="O2a-77-6xh" customClass="WordConnectViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wordConnectVC" id="O2a-77-6xh" customClass="WordConnectViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UIp-Rm-ega"/>
                         <viewControllerLayoutGuide type="bottom" id="FKM-zv-zg7"/>
@@ -399,17 +399,17 @@
         <!--Word Pairs-->
         <scene sceneID="2MB-fE-HST">
             <objects>
-                <tableViewController id="ctI-e0-HlG" customClass="WordConnectTableViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ctI-e0-HlG" customClass="WordConnectTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="ycJ-Vy-sas">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="paircell" rowHeight="70" id="d4e-rt-W5i" customClass="WordConnectTableViewCell" customModule="ELLoquent" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="paircell" rowHeight="70" id="d4e-rt-W5i" customClass="WordConnectTableViewCell" customModule="ELL_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="768" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d4e-rt-W5i" id="FZ8-th-ca0">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4m-YE-8Cy">
@@ -459,17 +459,17 @@
         <!--Book List-->
         <scene sceneID="Mdf-b9-xm1">
             <objects>
-                <tableViewController title="Book List" id="45I-6Q-NhJ" customClass="BookTableViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Book List" id="45I-6Q-NhJ" customClass="BookTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="159" sectionHeaderHeight="28" sectionFooterHeight="28" id="usP-tr-j2b">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="159" id="N6k-bg-siT" customClass="BookTableViewCell" customModule="ELLoquent" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="159" id="N6k-bg-siT" customClass="BookTableViewCell" customModule="ELL_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="768" height="159"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N6k-bg-siT" id="nz3-ra-KUi">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="158.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="158"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBs-1V-JSN">
@@ -514,7 +514,7 @@
         <!--Log In View Controller-->
         <scene sceneID="Cyb-b8-A2b">
             <objects>
-                <viewController id="NNM-QM-Uop" customClass="LogInViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NNM-QM-Uop" customClass="LogInViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WqC-oW-GUn"/>
                         <viewControllerLayoutGuide type="bottom" id="hXO-Mz-HQP"/>

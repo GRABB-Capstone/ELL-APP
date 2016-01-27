@@ -20,6 +20,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     var bookTitle = String()
     var selectedButtons = [UIButton]()
     var newImg: UIImage?
+    var images = [PFFile]()
     var img1 = [String]()
     var img2 = [String]()
     var notes = [String]()
@@ -39,42 +40,56 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     
         imgQuery.findObjectsInBackgroundWithBlock { (object, error) -> Void in
             
-            /*for img in object! {
+            for img in object! {
                 if (img["book"] as! String) == "Harry Potter" {
-                    let image = img["image"] as! PFFile
-                    
-                    image.getDataInBackgroundWithBlock { (imageData: NSData, error: NSError!) -> Void in
-                        self.newImg = UIImage(data: imageData)
-                    self.makeButton(self.newImg!, buttonNum: i++)
-                    print(img["book"])
-                    }
-                }
-            }*/
-            /*
-            let arr = object!["book"] as! String
-            
-            for word in arr {
-                if i < 8 {
-                    self.makeButton(word, buttonNum: i++)
+                    //let image = img["image"] as! PFFile
+                    self.images.append(img["image"] as! PFFile)
                 }
             }
             
-            self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
-            self.commentBox.center = CGPoint(x: centerX, y: 373 + (i + 1) / 2 * 85)
-            self.commentBox.placeholder = "Optional Notes"
-            self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
-            self.view.addSubview(self.commentBox)
-            
-            self.newButton = UIButton()
-            self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
-            self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
-            self.newButton!.center = CGPoint(x: centerX, y: 373 + (i + 3) / 2 * 85)
-            self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
-            self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
-            self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
-            self.view.addSubview(self.newButton!)
-            */
+            for img in self.images {
+                img.getDataInBackgroundWithBlock { (pic, error) -> Void in
+                    if let dlImage = UIImage(data: pic!) {
+                        self.makeButton(dlImage, buttonNum: i++)
+                    }
+                }
+            }
+            print("a")
         }
+        print("b")
+        
+        
+        
+        /*images.getDataInBackgroundWithBlock { (data, error) -> Void in
+            if let downloadedImage = UIImage(data: data!) {
+                cell.bookImage.image = downloadedImage
+            }
+        }*/
+        /*
+        let arr = object!["book"] as! String
+        
+        for word in arr {
+            if i < 8 {
+                self.makeButton(word, buttonNum: i++)
+            }
+        }
+        
+        self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
+        self.commentBox.center = CGPoint(x: centerX, y: 373 + (i + 1) / 2 * 85)
+        self.commentBox.placeholder = "Optional Notes"
+        self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
+        self.view.addSubview(self.commentBox)
+        
+        self.newButton = UIButton()
+        self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
+        self.newButton!.center = CGPoint(x: centerX, y: 373 + (i + 3) / 2 * 85)
+        self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
+        self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
+        self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
+        self.view.addSubview(self.newButton!)
+        */
+        
     }
     
     func makeButton(image: UIImage, buttonNum: Int) {
@@ -82,7 +97,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         
         self.newButton = UIButton()
         self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.newButton!.frame = CGRect(x: 0, y: 0, width: 150, height: 40)
+        self.newButton!.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
         self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 373 + buttonNum / 2 * 85)
         //self.newButton!.setTitle(image, forState: UIControlState.Normal)
         //self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(16, weight: UIFontWeightBold)
@@ -92,7 +107,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         self.radioButtonController.addButton(self.newButton!)
         self.view.addSubview(self.newButton!)
     }
-    
+    /*
     func pressed(sender: UIButton) {
         
         if sender.backgroundColor == UIColor.clearColor() {
@@ -148,7 +163,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    }*/
    /*
     @IBAction func nextButtonAction(sender: AnyObject) {
         performSegueWithIdentifier("viewpairs", sender: self)
@@ -165,6 +180,4 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         }
         
     }*/
-
-
 }
