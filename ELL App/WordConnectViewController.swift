@@ -38,7 +38,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
                     self.makeButton(word, buttonNum: i++)
                 }
             }
-            
+
             self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
             self.commentBox.center = CGPoint(x: centerX, y: 373 + (i + 1) / 2 * 85)
             self.commentBox.placeholder = "Optional Notes"

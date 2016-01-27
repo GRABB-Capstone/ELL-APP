@@ -255,7 +255,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L31-Bv-ohQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="1159"/>
+            <point key="canvasLocation" x="1119" y="1159"/>
         </scene>
         <!--Image Connect-->
         <scene sceneID="cW4-Q7-7Iv">
@@ -270,12 +270,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.58091855940000003" green="0.75878259319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Image Connect" id="zbR-gJ-ekt"/>
+                    <navigationItem key="navigationItem" title="Image Connect" id="zbR-gJ-ekt">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="bXs-QM-dxJ">
+                            <connections>
+                                <action selector="nextButtonAction:" destination="rtZ-0C-Tzb" id="Fgy-CB-mpf"/>
+                                <segue destination="bZa-MO-7EF" kind="show" identifier="viewImagePairs" id="6Db-hv-Ted"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlN-Wi-t1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1671" y="-81"/>
+            <point key="canvasLocation" x="-1487" y="319"/>
+        </scene>
+        <!--Image Pairs-->
+        <scene sceneID="smV-0k-jLM">
+            <objects>
+                <tableViewController id="bZa-MO-7EF" customClass="ImageConnectTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" sectionHeaderHeight="28" sectionFooterHeight="28" id="r44-xO-VyC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagePairCell" rowHeight="210" id="2JZ-ED-E7c" customClass="ImageConnectTableViewCell" customModule="ELL_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="768" height="210"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2JZ-ED-E7c" id="xaK-JX-BlN">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="209"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBO-ZG-cYz">
+                                            <rect key="frame" x="200" y="8" width="150" height="150"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5r-e1-Ei6">
+                                            <rect key="frame" x="418" y="8" width="150" height="150"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wad-Rm-Ngq">
+                                            <rect key="frame" x="39" y="175" width="55" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqO-Ub-8xk">
+                                            <rect key="frame" x="110" y="175" width="581" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="img1" destination="fBO-ZG-cYz" id="kfU-S6-H2h"/>
+                                    <outlet property="img2" destination="y5r-e1-Ei6" id="iKU-MB-BOP"/>
+                                    <outlet property="notes" destination="JqO-Ub-8xk" id="qjf-eQ-4As"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bZa-MO-7EF" id="0eB-p7-sGy"/>
+                            <outlet property="delegate" destination="bZa-MO-7EF" id="BHe-OZ-P4Q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Image Pairs" id="EUe-oA-Pr0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Svx-WG-HA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2506" y="314"/>
         </scene>
         <!--Activities-->
         <scene sceneID="qRW-hY-XbU">
@@ -472,9 +533,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="158"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBs-1V-JSN">
-                                            <rect key="frame" x="25" y="11" width="137" height="135"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcO-qz-soB">
                                             <rect key="frame" x="206" y="47" width="291" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -487,6 +545,9 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBs-1V-JSN">
+                                            <rect key="frame" x="25" y="11" width="137" height="135"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
