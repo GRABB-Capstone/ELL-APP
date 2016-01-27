@@ -36,6 +36,7 @@
 		3BE9D48A1BF29F7800E6F893 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */; };
 		3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */; };
 		C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */; };
+		F10BE6D11C56D783009C0D84 /* ImageConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10BE6D01C56D783009C0D84 /* ImageConnectViewController.swift */; };
 		F1AF392B1C55EA5500106D70 /* WordConnectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */; };
 		F1AF392F1C55F76000106D70 /* WordConnectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectViewController.swift; sourceTree = "<group>"; };
+		F10BE6D01C56D783009C0D84 /* ImageConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectViewController.swift; sourceTree = "<group>"; };
 		F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewCell.swift; sourceTree = "<group>"; };
 		F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,10 +156,11 @@
 				F1AF39321C56015E00106D70 /* BookTable */,
 				F1AF39311C56014F00106D70 /* ReadAlong */,
 				F1AF39301C56014200106D70 /* WordConnect */,
+				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
+				F10BE6D01C56D783009C0D84 /* ImageConnectViewController.swift */,
 				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
 				3BCFFF171C0E4EDD00C20C79 /* LogInViewController.swift */,
 				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
-				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
 				3BE9D4811BF289AA00E6F893 /* Info.plist */,
 			);
@@ -292,6 +295,7 @@
 				3BCFFF181C0E4EDD00C20C79 /* LogInViewController.swift in Sources */,
 				3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */,
 				3B429D231C4F5E5500DD59DB /* ActivitiesViewController.swift in Sources */,
+				F10BE6D11C56D783009C0D84 /* ImageConnectViewController.swift in Sources */,
 				C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */,
 				3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */,
 				3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */,

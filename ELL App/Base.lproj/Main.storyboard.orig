@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
+>>>>>>> cff84835959a60dbc9daf25e1dad148063009a7e
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--Pre-Assessment-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="preassessmentVC" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="preassessmentVC" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -119,7 +123,7 @@
         <!--Read Along-->
         <scene sceneID="7cW-M3-Rnh">
             <objects>
-                <viewController id="eWu-NP-WWm" customClass="ReadAlongViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eWu-NP-WWm" customClass="ReadAlongViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kX9-lP-CXr"/>
                         <viewControllerLayoutGuide type="bottom" id="cCA-sy-jAd"/>
@@ -187,13 +191,13 @@
         <!--Word Review-->
         <scene sceneID="Rbv-uU-58P">
             <objects>
-                <tableViewController id="dsv-1y-0eM" customClass="ReadAlongTableViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="dsv-1y-0eM" customClass="ReadAlongTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sje-6a-b6S">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="wordCell" rowHeight="90" id="51C-Oy-b4F" customClass="ReadAlongTableViewCell" customModule="ELLoquent" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="wordCell" rowHeight="90" id="51C-Oy-b4F" customClass="ReadAlongTableViewCell" customModule="ELL_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="768" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51C-Oy-b4F" id="stX-PR-3wA">
@@ -218,28 +222,22 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Note text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzh-NV-geV">
+                                            <rect key="frame" x="350" y="0.0" width="410" height="67"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRD-co-5bu">
                                             <rect key="frame" x="89" y="8" width="187" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d4-e8-t5R">
-                                            <rect key="frame" x="413" y="8" width="347" height="28"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXs-hP-wsM">
-                                            <rect key="frame" x="329" y="8" width="67" height="28"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="noteLabel" destination="3d4-e8-t5R" id="N9A-Oc-Imo"/>
+                                    <outlet property="noteText" destination="gzh-NV-geV" id="JQ2-Ir-MKj"/>
                                     <outlet property="pageLabel" destination="mLM-f1-RpG" id="vEz-mw-nyN"/>
                                     <outlet property="wordLabel" destination="dRD-co-5bu" id="xv5-it-WdW"/>
                                 </connections>
@@ -260,7 +258,7 @@
         <!--Image Connect-->
         <scene sceneID="cW4-Q7-7Iv">
             <objects>
-                <viewController storyboardIdentifier="imageConnectVC" id="rtZ-0C-Tzb" customClass="ImageConnectViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imageConnectVC" id="rtZ-0C-Tzb" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="onA-l2-n4y"/>
                         <viewControllerLayoutGuide type="bottom" id="dyb-AI-ukL"/>
@@ -268,6 +266,26 @@
                     <view key="view" contentMode="scaleToFill" id="g5O-0y-9GG">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UPj-GR-eti">
+                                <rect key="frame" x="179" y="286" width="127" height="120"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X0k-az-9bV">
+                                <rect key="frame" x="463" y="286" width="127" height="120"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ctV-Wd-P2k">
+                                <rect key="frame" x="179" y="457" width="127" height="120"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-hU-rde">
+                                <rect key="frame" x="463" y="457" width="127" height="120"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSc-l1-aTA">
+                                <rect key="frame" x="179" y="618" width="127" height="120"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="10c-bv-ESX">
+                                <rect key="frame" x="463" y="618" width="127" height="120"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.58091855940000003" green="0.75878259319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Image Connect" id="zbR-gJ-ekt"/>
@@ -280,7 +298,7 @@
         <!--Activities-->
         <scene sceneID="qRW-hY-XbU">
             <objects>
-                <viewController storyboardIdentifier="activitiesVC" id="TQl-D1-8Dv" customClass="ActivitiesViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="activitiesVC" id="TQl-D1-8Dv" customClass="ActivitiesViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4nt-pa-UhR"/>
                         <viewControllerLayoutGuide type="bottom" id="apA-eg-Glp"/>
@@ -316,7 +334,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rtZ-0C-Tzb" kind="show" identifier="imageconnect" id="Uyq-LS-GRK"/>
+                                    <segue destination="rtZ-0C-Tzb" kind="show" id="Uyq-LS-GRK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1A-eo-Btf">
@@ -372,7 +390,7 @@
         <!--Word Connect-->
         <scene sceneID="0HW-1r-wEL">
             <objects>
-                <viewController storyboardIdentifier="wordConnectVC" id="O2a-77-6xh" customClass="WordConnectViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wordConnectVC" id="O2a-77-6xh" customClass="WordConnectViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UIp-Rm-ega"/>
                         <viewControllerLayoutGuide type="bottom" id="FKM-zv-zg7"/>
@@ -399,13 +417,13 @@
         <!--Word Pairs-->
         <scene sceneID="2MB-fE-HST">
             <objects>
-                <tableViewController id="ctI-e0-HlG" customClass="WordConnectTableViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ctI-e0-HlG" customClass="WordConnectTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="ycJ-Vy-sas">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="paircell" rowHeight="70" id="d4e-rt-W5i" customClass="WordConnectTableViewCell" customModule="ELLoquent" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="paircell" rowHeight="70" id="d4e-rt-W5i" customClass="WordConnectTableViewCell" customModule="ELL_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="768" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d4e-rt-W5i" id="FZ8-th-ca0">
@@ -459,13 +477,13 @@
         <!--Book List-->
         <scene sceneID="Mdf-b9-xm1">
             <objects>
-                <tableViewController title="Book List" id="45I-6Q-NhJ" customClass="BookTableViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Book List" id="45I-6Q-NhJ" customClass="BookTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="159" sectionHeaderHeight="28" sectionFooterHeight="28" id="usP-tr-j2b">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="159" id="N6k-bg-siT" customClass="BookTableViewCell" customModule="ELLoquent" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="159" id="N6k-bg-siT" customClass="BookTableViewCell" customModule="ELL_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="768" height="159"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N6k-bg-siT" id="nz3-ra-KUi">
@@ -514,7 +532,7 @@
         <!--Log In View Controller-->
         <scene sceneID="Cyb-b8-A2b">
             <objects>
-                <viewController id="NNM-QM-Uop" customClass="LogInViewController" customModule="ELLoquent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NNM-QM-Uop" customClass="LogInViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WqC-oW-GUn"/>
                         <viewControllerLayoutGuide type="bottom" id="hXO-Mz-HQP"/>

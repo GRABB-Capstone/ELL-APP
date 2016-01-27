@@ -40,10 +40,14 @@ class ActivitiesViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if (segue.identifier == "wordconnect") {
-            var vc = segue.destinationViewController as! WordConnectViewController
+        if segue.identifier == "wordconnect" {
+            let vc = segue.destinationViewController as! WordConnectViewController
             vc.objectId = self.objectId
-
+        }
+        
+        else if segue.identifier == "imageconnect" {
+            let vc = segue.destinationViewController as! ImageConnectViewController
+            vc.objectId = self.objectId
         }
     }
     

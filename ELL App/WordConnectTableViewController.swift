@@ -2,7 +2,7 @@
 //  WordConnectTableViewController.swift
 //  ELL App
 //
-//  Created by liblabs-mac on 1/24/16.
+//  Created by Genton Mo on 1/24/16.
 //  Copyright © 2016 Bcarreon. All rights reserved.
 //
 
