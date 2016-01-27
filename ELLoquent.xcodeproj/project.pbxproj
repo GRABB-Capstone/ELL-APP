@@ -14,6 +14,9 @@
 		3B814E1F1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B814E1E1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png */; };
 		3B814E211C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B814E201C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png */; };
 		3B814E251C56EA10009EFF14 /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B814E241C56EA10009EFF14 /* happy.png */; };
+		3B814E291C597F8D009EFF14 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B814E281C597F8D009EFF14 /* AssessmentViewController.swift */; };
+		3B814E2B1C598146009EFF14 /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B814E2A1C598146009EFF14 /* sad.png */; };
+		3B814E2D1C59823E009EFF14 /* maybe.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B814E2C1C59823E009EFF14 /* maybe.png */; };
 		3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576231C460A61009A2819 /* BookTableViewCell.swift */; };
 		3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576251C460C6F009A2819 /* BookTableViewController.swift */; };
 		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
@@ -51,6 +54,9 @@
 		3B814E1E1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ELLOQUENT Icon App Square - Blue.png"; sourceTree = "<group>"; };
 		3B814E201C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ELLO Icon Logo White Transparent.png"; sourceTree = "<group>"; };
 		3B814E241C56EA10009EFF14 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
+		3B814E281C597F8D009EFF14 /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssessmentViewController.swift; path = ../AssessmentViewController.swift; sourceTree = "<group>"; };
+		3B814E2A1C598146009EFF14 /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
+		3B814E2C1C59823E009EFF14 /* maybe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maybe.png; sourceTree = "<group>"; };
 		3BC576231C460A61009A2819 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		3BC576251C460C6F009A2819 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRABB LOGO.png"; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				3B814E241C56EA10009EFF14 /* happy.png */,
+				3B814E2C1C59823E009EFF14 /* maybe.png */,
+				3B814E2A1C598146009EFF14 /* sad.png */,
 				3B814E201C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png */,
 				3B814E1E1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png */,
 				3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */,
@@ -165,6 +173,7 @@
 				F1AF39301C56014200106D70 /* WordConnect */,
 				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
 				3BCFFF171C0E4EDD00C20C79 /* LogInViewController.swift */,
+				3B814E281C597F8D009EFF14 /* AssessmentViewController.swift */,
 				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
 				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
@@ -278,8 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B814E2D1C59823E009EFF14 /* maybe.png in Resources */,
 				3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */,
 				3B814E1F1C56DD54009EFF14 /* ELLOQUENT Icon App Square - Blue.png in Resources */,
+				3B814E2B1C598146009EFF14 /* sad.png in Resources */,
 				3B814E211C56DFB6009EFF14 /* ELLO Icon Logo White Transparent.png in Resources */,
 				3BE9D47D1BF289AA00E6F893 /* Assets.xcassets in Resources */,
 				3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */,
@@ -309,6 +320,7 @@
 				3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */,
 				3BE9D48A1BF29F7800E6F893 /* SSRadioButton.swift in Sources */,
 				3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */,
+				3B814E291C597F8D009EFF14 /* AssessmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

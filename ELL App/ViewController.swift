@@ -10,11 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, SSRadioButtonControllerDelegate {
     
-    @IBOutlet var button1: UIButton!
-    @IBOutlet var button2: UIButton!
-    @IBOutlet var button3: UIButton!
     
-    var radioButtonController: SSRadioButtonsController?
+    /*var radioButtonController: SSRadioButtonsController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +20,9 @@ class ViewController: UIViewController, SSRadioButtonControllerDelegate {
         radioButtonController!.delegate = self
         radioButtonController!.shouldLetDeSelect = true
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let image = UIImage(named: "happy.png")
+        button3.setBackgroundImage(image, forState: UIControlState.Normal)
     }
     
     func didSelectButton(aButton: UIButton?) {
@@ -34,7 +34,7 @@ class ViewController: UIViewController, SSRadioButtonControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    }*/
 
 }
 
