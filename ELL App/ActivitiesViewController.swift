@@ -50,6 +50,11 @@ class ActivitiesViewController: UIViewController {
             vc.words = words
         }
         
+        if segue.identifier == "imageconnect" {
+            let vc = segue.destinationViewController as! ImageConnectViewController
+            vc.objectId = objectId
+        }
+        
         /*else if segue.identifier == "imageconnect" {
             let vc = segue.destinationViewController as! ImageConnectViewController
             vc.objectId = self.objectId
