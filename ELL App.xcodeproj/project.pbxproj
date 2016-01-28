@@ -36,12 +36,12 @@
 		3BE9D48A1BF29F7800E6F893 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */; };
 		3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */; };
 		C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */; };
+		C1F6AFE71C59FBCA00BC499B /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */; };
+		C1F6AFED1C59FBE200BC499B /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F6AFEA1C59FBE200BC499B /* sad.png */; };
 		DE84C4F41C598B5E001E6104 /* ImageConnectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84C4F31C598B5E001E6104 /* ImageConnectTableViewController.swift */; };
 		DE84C4F61C598B93001E6104 /* ImageConnectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84C4F51C598B93001E6104 /* ImageConnectTableViewCell.swift */; };
-		DE84C4F81C59920D001E6104 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84C4F71C59920D001E6104 /* AssessmentViewController.swift */; };
 		DE84C4FC1C59923C001E6104 /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = DE84C4F91C59923C001E6104 /* happy.png */; };
 		DE84C4FD1C59923C001E6104 /* maybe.png in Resources */ = {isa = PBXBuildFile; fileRef = DE84C4FA1C59923C001E6104 /* maybe.png */; };
-		DE84C4FE1C59923C001E6104 /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = DE84C4FB1C59923C001E6104 /* sad.png */; };
 		F10BE6D11C56D783009C0D84 /* ImageConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10BE6D01C56D783009C0D84 /* ImageConnectViewController.swift */; };
 		F1AF392B1C55EA5500106D70 /* WordConnectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */; };
 		F1AF392F1C55F76000106D70 /* WordConnectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */; };
@@ -79,12 +79,12 @@
 		3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectViewController.swift; sourceTree = "<group>"; };
+		C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
+		C1F6AFEA1C59FBE200BC499B /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		DE84C4F31C598B5E001E6104 /* ImageConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectTableViewController.swift; sourceTree = "<group>"; };
 		DE84C4F51C598B93001E6104 /* ImageConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectTableViewCell.swift; sourceTree = "<group>"; };
-		DE84C4F71C59920D001E6104 /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
 		DE84C4F91C59923C001E6104 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
 		DE84C4FA1C59923C001E6104 /* maybe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maybe.png; sourceTree = "<group>"; };
-		DE84C4FB1C59923C001E6104 /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		F10BE6D01C56D783009C0D84 /* ImageConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectViewController.swift; sourceTree = "<group>"; };
 		F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewCell.swift; sourceTree = "<group>"; };
 		F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewController.swift; sourceTree = "<group>"; };
@@ -171,10 +171,10 @@
 				F1AF39301C56014200106D70 /* WordConnect */,
 				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
 				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
+				C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */,
 				DE84C4F91C59923C001E6104 /* happy.png */,
 				DE84C4FA1C59923C001E6104 /* maybe.png */,
-				DE84C4FB1C59923C001E6104 /* sad.png */,
-				DE84C4F71C59920D001E6104 /* AssessmentViewController.swift */,
+				C1F6AFEA1C59FBE200BC499B /* sad.png */,
 				3BCFFF171C0E4EDD00C20C79 /* LogInViewController.swift */,
 				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
@@ -299,12 +299,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE84C4FD1C59923C001E6104 /* maybe.png in Resources */,
+				C1F6AFED1C59FBE200BC499B /* sad.png in Resources */,
 				3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */,
 				3BE9D47D1BF289AA00E6F893 /* Assets.xcassets in Resources */,
 				3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */,
 				DE84C4FC1C59923C001E6104 /* happy.png in Resources */,
 				3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */,
-				DE84C4FE1C59923C001E6104 /* sad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +317,7 @@
 			files = (
 				DE84C4F61C598B93001E6104 /* ImageConnectTableViewCell.swift in Sources */,
 				3BE9D4781BF289AA00E6F893 /* ViewController.swift in Sources */,
-				DE84C4F81C59920D001E6104 /* AssessmentViewController.swift in Sources */,
+				C1F6AFE71C59FBCA00BC499B /* AssessmentViewController.swift in Sources */,
 				3B429D2B1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift in Sources */,
 				F1AF392B1C55EA5500106D70 /* WordConnectTableViewCell.swift in Sources */,
 				3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */,
