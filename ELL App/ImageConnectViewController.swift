@@ -25,10 +25,12 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     var img2 = [UIImage]()
     var notes = [String]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var i = 0
         let centerX = Int(self.view.center.x)
+        var imgCount: Int = 0
         
         radioButtonController.delegate = self
         radioButtonController.shouldLetDeSelect = true
@@ -39,24 +41,37 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         }
     
         imgQuery.findObjectsInBackgroundWithBlock { (object, error) -> Void in
-
+            
             for img in object! {
-                if (img["book"] as! String) == "Harry Potter" {
+                if (img["book"] as! String) == self.bookTitle {
                     self.images.append(img["image"] as! PFFile)
+                    imgCount++
                 }
+                
             }
             
-            for img in self.images {
-                img.getDataInBackgroundWithBlock { (pic, error) -> Void in
-                    if let dlImage = UIImage(data: pic!) {
-                        if i < 6 {
-                            self.makeButton(dlImage, buttonNum: i++)
+            // THERE'S A BUG HERE SOMETIMES WHERE SELF.IMAGES.COUNT == 0 FOR SOME REASON
+            print(imgCount)
+            let getRandom = self.randomSequenceGenerator(0, max: self.images.count - 1)
+            if self.images.count > 0 {
+                for _ in 0...self.images.count - 1 {
+                    self.images[getRandom()].getDataInBackgroundWithBlock { (pic, error) -> Void in
+                        if let dlImage = UIImage(data: pic!) {
+                            if i < 6 {
+                                self.makeButton(dlImage, buttonNum: i++)
+                            }
                         }
                     }
                 }
             }
+            
+            var numImg = self.images.count
+            if numImg > 6 {
+                numImg = 6
+            }
+            
             self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
-            self.commentBox.center = CGPoint(x: centerX, y: 200 + (self.images.count + 1) / 2 * 175)
+            self.commentBox.center = CGPoint(x: centerX, y: 200 + (numImg + 1) / 2 * 175)
             self.commentBox.placeholder = "Optional Notes"
             self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
             self.view.addSubview(self.commentBox)
@@ -64,7 +79,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
             self.newButton = UIButton()
             self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
             self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
-            self.newButton!.center = CGPoint(x: centerX, y: 75 + (self.images.count + 3) / 2 * 175)
+            self.newButton!.center = CGPoint(x: centerX, y: 75 + (numImg + 3) / 2 * 175)
             self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
             self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
             self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
@@ -135,6 +150,18 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
             
         else {
             selectedButtons.removeLast()
+        }
+    }
+    
+    func randomSequenceGenerator(min: Int, max: Int) -> () -> Int {
+        var numbers: [Int] = []
+        return {
+            if numbers.count == 0 {
+                numbers = Array(min ... max)
+            }
+            
+            let index = Int(arc4random_uniform(UInt32(numbers.count)))
+            return numbers.removeAtIndex(index)
         }
     }
     

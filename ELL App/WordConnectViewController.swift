@@ -32,10 +32,11 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         query.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
 
             let arr = object!["words"] as! [String]
+            let getRandom = self.randomSequenceGenerator(0, max: arr.count - 1)
             
-            for word in arr {
+            for _ in 0...arr.count - 1 {
                 if i < 8 {
-                    self.makeButton(word, buttonNum: i++)
+                    self.makeButton(arr[getRandom()], buttonNum: i++)
                 }
             }
 
@@ -124,6 +125,18 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         }
     }
 
+    func randomSequenceGenerator(min: Int, max: Int) -> () -> Int {
+        var numbers: [Int] = []
+        return {
+            if numbers.count == 0 {
+                numbers = Array(min ... max)
+            }
+            
+            let index = Int(arc4random_uniform(UInt32(numbers.count)))
+            return numbers.removeAtIndex(index)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
