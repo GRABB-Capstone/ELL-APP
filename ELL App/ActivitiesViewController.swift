@@ -17,6 +17,7 @@ class ActivitiesViewController: UIViewController {
     var query = PFQuery(className: "Book")
     var selectedObjectId = String()
     var nextObjectId = String()
+
     @IBOutlet var label: UILabel!
     
     override func viewDidLoad() {

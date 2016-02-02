@@ -318,7 +318,6 @@
 				DE84C4F61C598B93001E6104 /* ImageConnectTableViewCell.swift in Sources */,
 				3BE9D4781BF289AA00E6F893 /* ViewController.swift in Sources */,
 				C1F6AFE71C59FBCA00BC499B /* AssessmentViewController.swift in Sources */,
-				3B429D2B1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift in Sources */,
 				F1AF392B1C55EA5500106D70 /* WordConnectTableViewCell.swift in Sources */,
 				3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */,
 				DE84C4F41C598B5E001E6104 /* ImageConnectTableViewController.swift in Sources */,
@@ -327,6 +326,7 @@
 				3BCFFF181C0E4EDD00C20C79 /* LogInViewController.swift in Sources */,
 				3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */,
 				3B429D231C4F5E5500DD59DB /* ActivitiesViewController.swift in Sources */,
+				3B429D2B1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift in Sources */,
 				F10BE6D11C56D783009C0D84 /* ImageConnectViewController.swift in Sources */,
 				C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */,
 				3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */,
@@ -453,6 +453,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Debug;
 		};
@@ -468,6 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
