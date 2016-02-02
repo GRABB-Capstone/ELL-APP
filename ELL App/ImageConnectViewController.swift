@@ -94,9 +94,11 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
         self.newButton!.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
         self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 250 + buttonNum / 2 * 175)
-        self.newButton!.setBackgroundImage(image, forState: UIControlState.Normal)
+        //self.newButton!.setBackgroundImage(image, forState: UIControlState.Normal)
+        self.newButton!.setImage(image, forState: .Normal)
         self.newButton!.selected = false
         self.newButton!.backgroundColor = UIColor.clearColor()
+        self.newButton!.backgroundRectForBounds(CGRect(x: 0, y: 0, width: 300, height: 300))
         self.radioButtonController.addButton(self.newButton!)
         self.view.addSubview(self.newButton!)
     }
