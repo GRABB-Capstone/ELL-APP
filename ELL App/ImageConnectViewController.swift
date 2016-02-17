@@ -120,8 +120,8 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     func submit(sender: UIButton) {
         
         if selectedButtons.count == 2 {
-            img1.append(selectedButtons[0].currentBackgroundImage!)
-            img2.append(selectedButtons[1].currentBackgroundImage!)
+            img1.append(selectedButtons[0].currentImage!)
+            img2.append(selectedButtons[1].currentImage!)
             notes.append(commentBox.text!)
             
             for button in selectedButtons {
