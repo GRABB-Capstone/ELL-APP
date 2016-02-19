@@ -55,6 +55,11 @@ class ActivitiesViewController: UIViewController {
             let vc = segue.destinationViewController as! ImageConnectViewController
             vc.objectId = objectId
         }
+        
+        else if segue.identifier == "wordmaster" {
+            let vc = segue.destinationViewController as! WordMasterViewController
+            vc.objectId = objectId
+        }
     }
     
     

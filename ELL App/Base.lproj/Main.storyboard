@@ -374,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlN-Wi-t1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1487" y="319"/>
+            <point key="canvasLocation" x="-1879" y="1164"/>
         </scene>
         <!--Image Pairs-->
         <scene sceneID="smV-0k-jLM">
@@ -428,7 +428,73 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Svx-WG-HA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2506" y="314"/>
+            <point key="canvasLocation" x="-2898" y="1159"/>
+        </scene>
+        <!--Word Order-->
+        <scene sceneID="UQL-2K-0LH">
+            <objects>
+                <tableViewController id="rsX-4b-2jd" customClass="WordMasterTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gNN-Qe-6dO">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="vieworder" id="ocx-jc-Ghs" customClass="WordMasterTableViewCell" customModule="ELL_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ocx-jc-Ghs" id="Ooj-m9-paI">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fig-v9-e2q">
+                                            <rect key="frame" x="50" y="11" width="322" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="fig-v9-e2q" id="FON-Pc-gbo"/>
+                                    <outlet property="words" destination="fig-v9-e2q" id="0nG-gz-fT7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rsX-4b-2jd" id="kVC-fv-3GP"/>
+                            <outlet property="delegate" destination="rsX-4b-2jd" id="JrB-27-GYv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Word Order" id="BBG-RA-OFs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcT-5P-5zt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2460" y="-81"/>
+        </scene>
+        <!--Word Master-->
+        <scene sceneID="e8O-69-qgr">
+            <objects>
+                <viewController id="8BI-Br-uWd" customClass="WordMasterViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aht-Ix-6xJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="6sH-qf-zT2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rXb-iq-kMl">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.58091855940000003" green="0.75878259319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Word Master" id="EQc-wd-yAY">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="G2e-0g-iYo">
+                            <connections>
+                                <segue destination="rsX-4b-2jd" kind="show" identifier="vieworder" id="mbW-3T-zsD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wxc-J2-3Jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1538" y="-81"/>
         </scene>
         <!--Activities-->
         <scene sceneID="qRW-hY-XbU">
@@ -449,6 +515,9 @@
                                 <state key="normal" title="WORD MASTER">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="8BI-Br-uWd" kind="show" identifier="wordmaster" id="0RM-Uu-byA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuP-X0-ba8">
                                 <rect key="frame" x="433" y="292" width="194" height="95"/>
@@ -496,7 +565,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI4-po-yct">
-                                <rect key="frame" x="201" y="139" width="367" height="63"/>
+                                <rect key="frame" x="91" y="139" width="588" height="63"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -612,6 +681,24 @@
             </objects>
             <point key="canvasLocation" x="-691" y="2351"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="JYd-dL-HjE">
+            <objects>
+                <viewController id="XwC-Y3-feC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xsf-sO-70K"/>
+                        <viewControllerLayoutGuide type="bottom" id="GZ9-AI-AQe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r7F-1x-Sr7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fjx-Qf-fLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-439" y="1925"/>
+        </scene>
         <!--Book List-->
         <scene sceneID="Mdf-b9-xm1">
             <objects>
@@ -665,7 +752,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIT-nf-l0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873" y="-1636"/>
+            <point key="canvasLocation" x="-691" y="-1606"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="Cyb-b8-A2b">
@@ -724,7 +811,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mW-Uo-oew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1569" y="-1531"/>
+            <point key="canvasLocation" x="-3131" y="-1507"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zLx-zB-6M9">
@@ -743,10 +830,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIS-qr-xjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-151" y="-1636"/>
+            <point key="canvasLocation" x="-1713" y="-1612"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uDd-fE-rwe"/>
+        <segue reference="TXb-rg-OM2"/>
     </inferredMetricsTieBreakers>
 </document>
