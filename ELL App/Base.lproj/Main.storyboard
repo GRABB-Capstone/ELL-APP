@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tad-c4-zge">
-                                <rect key="frame" x="355" y="186" width="75" height="75"/>
+                                <rect key="frame" x="355" y="186" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <state key="normal" title="HH">
                                     <color key="titleColor" red="1" green="0.1639525483" blue="0.37400185530000002" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -51,7 +51,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ha6-5J-DSc">
-                                <rect key="frame" x="146" y="186" width="75" height="75"/>
+                                <rect key="frame" x="146" y="186" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <state key="normal" title="HH">
                                     <color key="titleColor" red="1" green="0.1639525483" blue="0.37400185530000002" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -142,7 +142,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGs-1N-lBy">
-                                <rect key="frame" x="581" y="186" width="75" height="75"/>
+                                <rect key="frame" x="581" y="186" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <state key="normal" title="HH">
                                     <color key="titleColor" red="1" green="0.1639525483" blue="0.37400185530000002" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -449,7 +449,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fig-v9-e2q">
                                             <rect key="frame" x="50" y="11" width="322" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -681,24 +681,6 @@
             </objects>
             <point key="canvasLocation" x="-691" y="2351"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="JYd-dL-HjE">
-            <objects>
-                <viewController id="XwC-Y3-feC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xsf-sO-70K"/>
-                        <viewControllerLayoutGuide type="bottom" id="GZ9-AI-AQe"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="r7F-1x-Sr7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fjx-Qf-fLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-439" y="1925"/>
-        </scene>
         <!--Book List-->
         <scene sceneID="Mdf-b9-xm1">
             <objects>
@@ -832,29 +814,7 @@
             </objects>
             <point key="canvasLocation" x="-1713" y="-1612"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qXP-4U-4bn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mzg-jI-pBV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lLD-8f-7Gn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="rb2-AT-dtd" kind="relationship" relationship="rootViewController" id="nOX-B6-U2d"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qkZ-IK-sGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="429" y="3052"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="GRABB LOGO.png" width="678" height="767"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TXb-rg-OM2"/>
     </inferredMetricsTieBreakers>

@@ -14,7 +14,7 @@
 		3B429D231C4F5E5500DD59DB /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */; };
 		3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */; };
 		3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */; };
-		3B429D2B1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */; };
+		3B98BE911C7BCAE800B9CEE9 /* ReadAlongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */; };
 		3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576231C460A61009A2819 /* BookTableViewCell.swift */; };
 		3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576251C460C6F009A2819 /* BookTableViewController.swift */; };
 		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
@@ -345,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B98BE911C7BCAE800B9CEE9 /* ReadAlongTableViewCell.swift in Sources */,
 				BF0341661C76920300A3FEA0 /* WordMasterTableViewCell.swift in Sources */,
 				BF07704D1C768D600018D131 /* WordMasterViewController.swift in Sources */,
 				BF0341641C768FE800A3FEA0 /* WordMasterTableViewController.swift in Sources */,
