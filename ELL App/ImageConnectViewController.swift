@@ -25,12 +25,10 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     var img2 = [UIImage]()
     var notes = [String]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         var i = 0
         let centerX = Int(self.view.center.x)
-        var imgCount: Int = 0
         
         radioButtonController.delegate = self
         radioButtonController.shouldLetDeSelect = true
@@ -38,52 +36,52 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         bookQuery.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
             
             self.bookTitle = object!["title"] as! String
-        }
+        
     
-        imgQuery.findObjectsInBackgroundWithBlock { (object, error) -> Void in
-            
-            for img in object! {
-                if (img["book"] as! String) == self.bookTitle {
-                    self.images.append(img["image"] as! PFFile)
-                    imgCount++
+            self.imgQuery.findObjectsInBackgroundWithBlock { (object, error) -> Void in
+                var imgCount = 0
+                for img in object! {
+                    if (img["book"] as! String) == self.bookTitle {
+                        self.images.append(img["image"] as! PFFile)
+                        imgCount++
+
+                    }
                 }
                 
-            }
-            
-            // THERE'S A BUG HERE SOMETIMES WHERE SELF.IMAGES.COUNT == 0 FOR SOME REASON
-            print(imgCount)
-            let getRandom = self.randomSequenceGenerator(0, max: self.images.count - 1)
-            if self.images.count > 0 {
-                for _ in 0...self.images.count - 1 {
-                    self.images[getRandom()].getDataInBackgroundWithBlock { (pic, error) -> Void in
-                        if let dlImage = UIImage(data: pic!) {
-                            if i < 6 {
-                                self.makeButton(dlImage, buttonNum: i++)
+                let getRandom = self.randomSequenceGenerator(0, max: self.images.count - 1)
+                if self.images.count > 0 {
+                    for _ in 0...self.images.count - 1 {
+                        self.images[getRandom()].getDataInBackgroundWithBlock { (pic, error) -> Void in
+                            if let dlImage = UIImage(data: pic!) {
+                                if i < 6 {
+                                    self.makeButton(dlImage, buttonNum: i++)
+                                }
                             }
                         }
                     }
                 }
+                
+                var numImg = self.images.count
+                
+                if numImg > 6 {
+                    numImg = 6
+                }
+                
+                self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
+                self.commentBox.center = CGPoint(x: centerX, y: 200 + (numImg + 1) / 2 * 175)
+                self.commentBox.placeholder = "Optional Notes"
+                self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
+                self.view.addSubview(self.commentBox)
+                
+                self.newButton = UIButton()
+                self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
+                self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
+                self.newButton!.center = CGPoint(x: centerX, y: 75 + (numImg + 3) / 2 * 175)
+                self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
+                self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
+                self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
+                self.view.addSubview(self.newButton!)
             }
-            
-            var numImg = self.images.count
-            if numImg > 6 {
-                numImg = 6
-            }
-            
-            self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
-            self.commentBox.center = CGPoint(x: centerX, y: 200 + (numImg + 1) / 2 * 175)
-            self.commentBox.placeholder = "Optional Notes"
-            self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
-            self.view.addSubview(self.commentBox)
-            
-            self.newButton = UIButton()
-            self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
-            self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
-            self.newButton!.center = CGPoint(x: centerX, y: 75 + (numImg + 3) / 2 * 175)
-            self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
-            self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
-            self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
-            self.view.addSubview(self.newButton!)
         }
     }
     
@@ -94,9 +92,10 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
         self.newButton!.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
         self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 250 + buttonNum / 2 * 175)
-        self.newButton!.setBackgroundImage(image, forState: UIControlState.Normal)
+        self.newButton!.setImage(image, forState: .Normal)
         self.newButton!.selected = false
         self.newButton!.backgroundColor = UIColor.clearColor()
+        self.newButton!.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         self.radioButtonController.addButton(self.newButton!)
         self.view.addSubview(self.newButton!)
     }
@@ -120,8 +119,8 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     func submit(sender: UIButton) {
         
         if selectedButtons.count == 2 {
-            img1.append(selectedButtons[0].currentBackgroundImage!)
-            img2.append(selectedButtons[1].currentBackgroundImage!)
+            img1.append(selectedButtons[0].currentImage!)
+            img2.append(selectedButtons[1].currentImage!)
             notes.append(commentBox.text!)
             
             for button in selectedButtons {
@@ -135,8 +134,8 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     }
     
     func removeButtonFromArray(toRemove: UIButton) {
-        
-        if selectedButtons[0].currentTitle == toRemove.currentTitle {
+        print(toRemove.currentImage)
+        if selectedButtons[0].currentImage == toRemove.currentImage {
             
             if selectedButtons.count == 1 {
                 selectedButtons.removeAll()

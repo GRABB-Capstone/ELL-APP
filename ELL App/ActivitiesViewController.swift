@@ -17,6 +17,7 @@ class ActivitiesViewController: UIViewController {
     var query = PFQuery(className: "Book")
     var selectedObjectId = String()
     var nextObjectId = String()
+
     @IBOutlet var label: UILabel!
     
     override func viewDidLoad() {
@@ -52,6 +53,11 @@ class ActivitiesViewController: UIViewController {
         
         else if segue.identifier == "imageconnect" {
             let vc = segue.destinationViewController as! ImageConnectViewController
+            vc.objectId = objectId
+        }
+        
+        else if segue.identifier == "wordmaster" {
+            let vc = segue.destinationViewController as! WordMasterViewController
             vc.objectId = objectId
         }
     }
