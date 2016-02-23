@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class ReadAlongViewController: UIViewController {
 
@@ -48,6 +49,8 @@ class ReadAlongViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        SCLAlertView().showInfo("Important info", subTitle: "You are great")
     }
 
     override func didReceiveMemoryWarning() {
