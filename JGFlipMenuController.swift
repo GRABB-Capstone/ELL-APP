@@ -87,4 +87,8 @@ class JGFlipMenuController: UIViewController, UINavigationControllerDelegate, JG
             self.menuItems[index].flipToFrontSide()
         }
     }
+    
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        <#code#>
+    }*/
 }

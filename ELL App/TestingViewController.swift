@@ -11,6 +11,8 @@ import UIKit
 
 class TestingViewController: UIViewController {
 
+    @IBOutlet weak var test: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
