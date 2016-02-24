@@ -12,7 +12,7 @@ class JGTransitionExpandContract: NSObject, UIViewControllerAnimatedTransitionin
     
     var isPresenting = true
     var focalPoint: CGPoint? // set to vanishing point or defaults to middle of screen
-    var duration = 1.75
+    var duration = 1.1
     var dampingRatio: CGFloat = 0.6
     var transformScale: CGFloat = 0.14
     

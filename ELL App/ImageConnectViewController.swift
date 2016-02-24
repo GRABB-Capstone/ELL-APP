@@ -48,39 +48,54 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                     }
                 }
                 
-                let getRandom = self.randomSequenceGenerator(0, max: self.images.count - 1)
-                if self.images.count > 0 {
-                    for _ in 0...self.images.count - 1 {
-                        self.images[getRandom()].getDataInBackgroundWithBlock { (pic, error) -> Void in
-                            if let dlImage = UIImage(data: pic!) {
-                                if i < 6 {
-                                    self.makeButton(dlImage, buttonNum: i++)
+                if imgCount > 0 {
+                    let getRandom = self.randomSequenceGenerator(0, max: self.images.count - 1)
+                    if self.images.count > 0 {
+                        for _ in 0...self.images.count - 1 {
+                            self.images[getRandom()].getDataInBackgroundWithBlock { (pic, error) -> Void in
+                                if let dlImage = UIImage(data: pic!) {
+                                    if i < 6 {
+                                        self.makeButton(dlImage, buttonNum: i++)
+                                    }
                                 }
                             }
                         }
                     }
+                    
+                    var numImg = self.images.count
+                    
+                    if numImg > 6 {
+                        numImg = 6
+                    }
+                
+                
+                    self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
+                    self.commentBox.center = CGPoint(x: centerX, y: 200 + (numImg + 1) / 2 * 175)
+                    self.commentBox.placeholder = "Optional Notes"
+                    self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
+                    self.view.addSubview(self.commentBox)
+                    
+                    self.newButton = UIButton()
+                    self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
+                    self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
+                    self.newButton!.center = CGPoint(x: centerX, y: 75 + (numImg + 3) / 2 * 175)
+                    self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
+                    self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
+                    self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
+                    self.view.addSubview(self.newButton!)
                 }
                 
-                var numImg = self.images.count
-                
-                if numImg > 6 {
-                    numImg = 6
+                else {
+                    let noImages = UILabel()
+                    
+                    noImages.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
+                    noImages.center = CGPoint(x: centerX, y: 373)
+                    noImages.textAlignment = NSTextAlignment.Center
+                    noImages.font = UIFont.systemFontOfSize(22, weight: UIFontWeightRegular)
+                    noImages.text = "There are no images"
+                    self.view.addSubview(noImages)
+
                 }
-                
-                self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
-                self.commentBox.center = CGPoint(x: centerX, y: 200 + (numImg + 1) / 2 * 175)
-                self.commentBox.placeholder = "Optional Notes"
-                self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
-                self.view.addSubview(self.commentBox)
-                
-                self.newButton = UIButton()
-                self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
-                self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
-                self.newButton!.center = CGPoint(x: centerX, y: 75 + (numImg + 3) / 2 * 175)
-                self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
-                self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
-                self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
-                self.view.addSubview(self.newButton!)
             }
         }
     }
