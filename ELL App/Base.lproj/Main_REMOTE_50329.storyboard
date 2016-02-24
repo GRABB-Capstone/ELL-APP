@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qh0-de-Rf1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Assessment-->
@@ -289,7 +289,7 @@
                                 <rect key="frame" x="0.0" y="92" width="768" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51C-Oy-b4F" id="stX-PR-3wA">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3s-FG-EPV">
@@ -389,7 +389,7 @@
                                 <rect key="frame" x="0.0" y="92" width="768" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2JZ-ED-E7c" id="xaK-JX-BlN">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="209"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="209.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBO-ZG-cYz">
@@ -442,7 +442,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hm7-mo-rCU" customClass="JGFlipMenuItem" customModule="ELL_App" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hm7-mo-rCU" customClass="JGFlipMenuItem" customModule="ELL_App" customModuleProvider="target">
                                 <rect key="frame" x="84" y="236" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -647,7 +647,7 @@
                                 <rect key="frame" x="0.0" y="92" width="768" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d4e-rt-W5i" id="FZ8-th-ca0">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4m-YE-8Cy">
@@ -707,7 +707,7 @@
                                 <rect key="frame" x="0.0" y="92" width="768" height="159"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N6k-bg-siT" id="nz3-ra-KUi">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="158"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="158.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcO-qz-soB">
@@ -827,174 +827,9 @@
             </objects>
             <point key="canvasLocation" x="-1713" y="-1612"/>
         </scene>
-        <!--Doodle View Controller-->
-        <scene sceneID="5Aj-Yg-cxX">
-            <objects>
-                <viewController id="Qh0-de-Rf1" customClass="DoodleViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ySm-nR-4Gd"/>
-                        <viewControllerLayoutGuide type="bottom" id="3bs-lM-v2R"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IOR-Z9-3qn">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30G-CS-Ces" userLabel="MainImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bH-5L-Fsm">
-                                <rect key="frame" x="708" y="28" width="40" height="30"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="share:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="QPG-fS-2Pg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daB-7L-noa">
-                                <rect key="frame" x="118" y="863" width="50" height="200"/>
-                                <state key="normal" image="Black">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="Ati-3p-k4x"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-kf-iwG">
-                                <rect key="frame" x="167" y="863" width="50" height="200"/>
-                                <state key="normal" image="Grey">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="De2-OC-gqK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lt-3b-n0g">
-                                <rect key="frame" x="215" y="863" width="50" height="200"/>
-                                <state key="normal" image="Red">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="tc6-vx-hLq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ft-ck-2v6">
-                                <rect key="frame" x="263" y="863" width="50" height="200"/>
-                                <state key="normal" image="Blue">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="BTX-cS-5FN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wi-TW-2Pw">
-                                <rect key="frame" x="309" y="863" width="50" height="200"/>
-                                <state key="normal" image="LightBlue">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="2gA-rV-PM8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhC-Fh-HNd">
-                                <rect key="frame" x="359" y="863" width="50" height="200"/>
-                                <state key="normal" image="DarkGreen">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="zXb-mz-qDu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AO-hl-5LX">
-                                <rect key="frame" x="406" y="863" width="50" height="200"/>
-                                <state key="normal" image="LightGreen">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="FSS-Uq-3gF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxE-xs-kx9">
-                                <rect key="frame" x="455" y="863" width="50" height="200"/>
-                                <state key="normal" image="Brown">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="lsi-Y9-ufS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jom-bL-Ax7">
-                                <rect key="frame" x="503" y="863" width="50" height="200"/>
-                                <state key="normal" image="DarkOrange">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="xG3-u1-BIX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbO-HK-t7G">
-                                <rect key="frame" x="551" y="863" width="50" height="200"/>
-                                <state key="normal" image="Yellow">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="dxO-3O-acU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9B-Hq-Z3y">
-                                <rect key="frame" x="601" y="845" width="50" height="200"/>
-                                <state key="normal" image="Eraser">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="nYh-jm-48a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnq-lq-5kq">
-                                <rect key="frame" x="20" y="28" width="40" height="30"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="reset:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="3Js-Gp-3z0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vU-Vc-UUd">
-                                <rect key="frame" x="356" y="28" width="57" height="30"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSk-W9-92f" userLabel="TempImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="mainImageView" destination="30G-CS-Ces" id="PJg-VP-ftK"/>
-                        <outlet property="tempImageView" destination="WSk-W9-92f" id="Gli-33-aDZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RB2-hZ-K7n" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="832" y="2189"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="Black" width="53" height="332"/>
-        <image name="Blue" width="53" height="332"/>
-        <image name="Brown" width="53" height="332"/>
-        <image name="DarkGreen" width="53" height="332"/>
-        <image name="DarkOrange" width="53" height="332"/>
-        <image name="Eraser" width="55" height="167"/>
         <image name="GRABB LOGO.png" width="678" height="767"/>
-        <image name="Grey" width="53" height="332"/>
-        <image name="LightBlue" width="53" height="332"/>
-        <image name="LightGreen" width="53" height="332"/>
-        <image name="Red" width="53" height="332"/>
-        <image name="Yellow" width="53" height="332"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TXb-rg-OM2"/>

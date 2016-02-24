@@ -15,6 +15,7 @@
 		3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */; };
 		3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */; };
 		3B98BE911C7BCAE800B9CEE9 /* ReadAlongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */; };
+		3BA637951C7E7698003A7387 /* DoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA637941C7E7698003A7387 /* DoodleViewController.swift */; };
 		3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576231C460A61009A2819 /* BookTableViewCell.swift */; };
 		3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576251C460C6F009A2819 /* BookTableViewController.swift */; };
 		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
@@ -66,6 +67,7 @@
 		3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongViewController.swift; sourceTree = "<group>"; };
 		3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongTableViewController.swift; sourceTree = "<group>"; };
 		3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongTableViewCell.swift; sourceTree = "<group>"; };
+		3BA637941C7E7698003A7387 /* DoodleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoodleViewController.swift; sourceTree = "<group>"; };
 		3BC576231C460A61009A2819 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		3BC576251C460C6F009A2819 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRABB LOGO.png"; sourceTree = "<group>"; };
@@ -218,10 +220,7 @@
 				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
 				3BE9D4811BF289AA00E6F893 /* Info.plist */,
-				8FF24CBC1C7E7599008A4995 /* JLToast.swift */,
-				8FF24CBD1C7E7599008A4995 /* JLToastCenter.swift */,
-				8FF24CBE1C7E7599008A4995 /* JLToastView.swift */,
-				8FF24CBF1C7E7599008A4995 /* JLToastWindow.swift */,
+				3BA637941C7E7698003A7387 /* DoodleViewController.swift */,
 			);
 			path = "ELL App";
 			sourceTree = "<group>";
@@ -440,6 +439,7 @@
 				8FF24CC11C7E7599008A4995 /* JLToastCenter.swift in Sources */,
 				F10BE6D11C56D783009C0D84 /* ImageConnectViewController.swift in Sources */,
 				C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */,
+				3BA637951C7E7698003A7387 /* DoodleViewController.swift in Sources */,
 				3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */,
 				3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */,
 				8FF24CC31C7E7599008A4995 /* JLToastWindow.swift in Sources */,
