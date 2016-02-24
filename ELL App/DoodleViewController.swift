@@ -1,5 +1,5 @@
 //
-//  DrawViewController.swift
+//  DoodleViewController.swift
 //  ELL App
 //
 //  Created by Brian Carreon on 2/24/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrawViewController: UIViewController {
+class DoodleViewController: UIViewController {
 
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var tempImageView: UIImageView!
@@ -149,9 +149,9 @@ class DrawViewController: UIViewController {
         settingsViewController.blue = blue
     }
     
-}*/
+}
 
-/*extension ViewController: SettingsViewControllerDelegate {
+extension ViewController: SettingsViewControllerDelegate {
     func settingsViewControllerFinished(settingsViewController: SettingsViewController) {
         self.brushWidth = settingsViewController.brush
         self.opacity = settingsViewController.opacity

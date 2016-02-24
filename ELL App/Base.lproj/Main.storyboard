@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NNM-QM-Uop">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qh0-de-Rf1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -442,7 +442,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hm7-mo-rCU" customClass="JGFlipMenuItem" customModule="ELL_App" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hm7-mo-rCU" customClass="JGFlipMenuItem" customModule="ELL_App" customModuleProvider="target">
                                 <rect key="frame" x="84" y="236" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -827,10 +827,10 @@
             </objects>
             <point key="canvasLocation" x="-1713" y="-1612"/>
         </scene>
-        <!--Draw View Controller-->
+        <!--Doodle View Controller-->
         <scene sceneID="5Aj-Yg-cxX">
             <objects>
-                <viewController id="Qh0-de-Rf1" customClass="DrawViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qh0-de-Rf1" customClass="DoodleViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ySm-nR-4Gd"/>
                         <viewControllerLayoutGuide type="bottom" id="3bs-lM-v2R"/>
@@ -979,7 +979,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RB2-hZ-K7n" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="2255"/>
+            <point key="canvasLocation" x="832" y="2189"/>
         </scene>
     </scenes>
     <resources>
