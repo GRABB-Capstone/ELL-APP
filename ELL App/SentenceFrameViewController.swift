@@ -166,6 +166,10 @@ class SentenceFrameViewController: UIViewController {
             sentence.text = "\(self.firstWord) is similar to \(self.secondWord) because"
             
             selectedButtons.removeAll()
+            
+            //JLToast.makeText("Basic JLToast").show()
+            JLToast.makeText("Submitted", duration: JLToastDelay.ShortDelay).show()
+            //JLToast.makeText("With delay, JLToast will be shown after delay.", delay: 1, duration: 5).show()
         }
     }
     
