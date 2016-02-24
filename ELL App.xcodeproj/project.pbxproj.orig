@@ -14,7 +14,8 @@
 		3B429D231C4F5E5500DD59DB /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */; };
 		3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */; };
 		3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */; };
-		3B429D2B1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */; };
+		3B98BE911C7BCAE800B9CEE9 /* ReadAlongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */; };
+		3BA637931C7E6B40003A7387 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA637921C7E6B40003A7387 /* DrawViewController.swift */; };
 		3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576231C460A61009A2819 /* BookTableViewCell.swift */; };
 		3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576251C460C6F009A2819 /* BookTableViewController.swift */; };
 		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
@@ -39,9 +40,8 @@
 		3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9D47E1BF289AA00E6F893 /* LaunchScreen.storyboard */; };
 		3BE9D48A1BF29F7800E6F893 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */; };
 		3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */; };
-		BF0341641C768FE800A3FEA0 /* WordMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0341631C768FE800A3FEA0 /* WordMasterTableViewController.swift */; };
-		BF0341661C76920300A3FEA0 /* WordMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0341651C76920300A3FEA0 /* WordMasterTableViewCell.swift */; };
-		BF07704D1C768D600018D131 /* WordMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07704C1C768D600018D131 /* WordMasterViewController.swift */; };
+		7CB4DBC77A3EDE71384B4A27 /* Pods_ELL_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448FB0A17C9E07753C04CD8F /* Pods_ELL_App.framework */; };
+		8FF24CBB1C7E5602008A4995 /* SentenceFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */; };
 		C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */; };
 		C1F6AFE71C59FBCA00BC499B /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */; };
 		C1F6AFED1C59FBE200BC499B /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F6AFEA1C59FBE200BC499B /* sad.png */; };
@@ -63,6 +63,7 @@
 		3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongViewController.swift; sourceTree = "<group>"; };
 		3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongTableViewController.swift; sourceTree = "<group>"; };
 		3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongTableViewCell.swift; sourceTree = "<group>"; };
+		3BA637921C7E6B40003A7387 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 		3BC576231C460A61009A2819 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		3BC576251C460C6F009A2819 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRABB LOGO.png"; sourceTree = "<group>"; };
@@ -89,9 +90,9 @@
 		3BE9D4811BF289AA00E6F893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
-		BF0341631C768FE800A3FEA0 /* WordMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordMasterTableViewController.swift; sourceTree = "<group>"; };
-		BF0341651C76920300A3FEA0 /* WordMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordMasterTableViewCell.swift; sourceTree = "<group>"; };
-		BF07704C1C768D600018D131 /* WordMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordMasterViewController.swift; sourceTree = "<group>"; };
+		448FB0A17C9E07753C04CD8F /* Pods_ELL_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ELL_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4E5311D38F37D9817EF89C /* Pods-ELL App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELL App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ELL App/Pods-ELL App.debug.xcconfig"; sourceTree = "<group>"; };
+		8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceFrameViewController.swift; sourceTree = "<group>"; };
 		C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectViewController.swift; sourceTree = "<group>"; };
 		C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
 		C1F6AFEA1C59FBE200BC499B /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		DE84C4F51C598B93001E6104 /* ImageConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectTableViewCell.swift; sourceTree = "<group>"; };
 		DE84C4F91C59923C001E6104 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
 		DE84C4FA1C59923C001E6104 /* maybe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maybe.png; sourceTree = "<group>"; };
+		EC40059B6738651CEFC52E15 /* Pods-ELL App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELL App.release.xcconfig"; path = "Pods/Target Support Files/Pods-ELL App/Pods-ELL App.release.xcconfig"; sourceTree = "<group>"; };
 		F10BE6D01C56D783009C0D84 /* ImageConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectViewController.swift; sourceTree = "<group>"; };
 		F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewCell.swift; sourceTree = "<group>"; };
 		F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				3BCFFF001C0E404D00C20C79 /* ParseUI.framework in Frameworks */,
 				3BCFFEFF1C0E404D00C20C79 /* Parse.framework in Frameworks */,
 				3BCFFEFE1C0E404D00C20C79 /* Bolts.framework in Frameworks */,
+				7CB4DBC77A3EDE71384B4A27 /* Pods_ELL_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +166,7 @@
 				3BCFFEFB1C0E404D00C20C79 /* Bolts.framework */,
 				3BCFFEFC1C0E404D00C20C79 /* Parse.framework */,
 				3BCFFEFD1C0E404D00C20C79 /* ParseUI.framework */,
+				448FB0A17C9E07753C04CD8F /* Pods_ELL_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,6 +179,7 @@
 				3BE9D4871BF29F7800E6F893 /* SSRadioButtonController */,
 				3BE9D4741BF289AA00E6F893 /* ELL App */,
 				3BE9D4731BF289AA00E6F893 /* Products */,
+				B1E762B6126F09E4E4AD67A2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,9 +204,7 @@
 				3B1390D51C752DDD00EB3B9D /* TestingViewController.swift */,
 				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
 				C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */,
-				BF07704C1C768D600018D131 /* WordMasterViewController.swift */,
-				BF0341651C76920300A3FEA0 /* WordMasterTableViewCell.swift */,
-				BF0341631C768FE800A3FEA0 /* WordMasterTableViewController.swift */,
+				8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */,
 				DE84C4F91C59923C001E6104 /* happy.png */,
 				DE84C4FA1C59923C001E6104 /* maybe.png */,
 				C1F6AFEA1C59FBE200BC499B /* sad.png */,
@@ -209,6 +212,7 @@
 				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
 				3BE9D4811BF289AA00E6F893 /* Info.plist */,
+				3BA637921C7E6B40003A7387 /* DrawViewController.swift */,
 			);
 			path = "ELL App";
 			sourceTree = "<group>";
@@ -220,6 +224,15 @@
 				3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */,
 			);
 			path = SSRadioButtonController;
+			sourceTree = "<group>";
+		};
+		B1E762B6126F09E4E4AD67A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C4E5311D38F37D9817EF89C /* Pods-ELL App.debug.xcconfig */,
+				EC40059B6738651CEFC52E15 /* Pods-ELL App.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		DE84C4F21C598AAE001E6104 /* ImageConnect */ = {
@@ -277,9 +290,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BE9D4841BF289AA00E6F893 /* Build configuration list for PBXNativeTarget "ELL App" */;
 			buildPhases = (
+				B8961A1696D5590F857058FC /* Check Pods Manifest.lock */,
 				3BE9D46E1BF289AA00E6F893 /* Sources */,
 				3BE9D46F1BF289AA00E6F893 /* Frameworks */,
 				3BE9D4701BF289AA00E6F893 /* Resources */,
+				9F868ADCFAF1BA86F0B6BEFC /* Embed Pods Frameworks */,
+				41565D4AFFA758A91964856D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,14 +356,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41565D4AFFA758A91964856D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ELL App/Pods-ELL App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F868ADCFAF1BA86F0B6BEFC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ELL App/Pods-ELL App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8961A1696D5590F857058FC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3BE9D46E1BF289AA00E6F893 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B98BE911C7BCAE800B9CEE9 /* ReadAlongTableViewCell.swift in Sources */,
+<<<<<<< HEAD
 				BF0341661C76920300A3FEA0 /* WordMasterTableViewCell.swift in Sources */,
 				BF07704D1C768D600018D131 /* WordMasterViewController.swift in Sources */,
 				BF0341641C768FE800A3FEA0 /* WordMasterTableViewController.swift in Sources */,
+				3BA637931C7E6B40003A7387 /* DrawViewController.swift in Sources */,
+=======
+>>>>>>> 2918563cfbe2bceef239f62796d084619bebc6b6
 				DE84C4F61C598B93001E6104 /* ImageConnectTableViewCell.swift in Sources */,
 				3BE9D4781BF289AA00E6F893 /* ViewController.swift in Sources */,
 				C1F6AFE71C59FBCA00BC499B /* AssessmentViewController.swift in Sources */,
@@ -362,11 +431,8 @@
 				3B1390D31C752BE600EB3B9D /* JGTransitionExpandContract.swift in Sources */,
 				3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */,
 				3B429D231C4F5E5500DD59DB /* ActivitiesViewController.swift in Sources */,
-<<<<<<< HEAD
 				3B1390D11C752BE600EB3B9D /* JGFlipMenuController.swift in Sources */,
-=======
-				3B429D2B1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift in Sources */,
->>>>>>> 61a53d7a299407dd7820f2c701b5480f38ef62e5
+				8FF24CBB1C7E5602008A4995 /* SentenceFrameViewController.swift in Sources */,
 				F10BE6D11C56D783009C0D84 /* ImageConnectViewController.swift in Sources */,
 				C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */,
 				3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */,
@@ -483,6 +549,7 @@
 		};
 		3BE9D4851BF289AA00E6F893 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C4E5311D38F37D9817EF89C /* Pods-ELL App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -499,6 +566,7 @@
 		};
 		3BE9D4861BF289AA00E6F893 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC40059B6738651CEFC52E15 /* Pods-ELL App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

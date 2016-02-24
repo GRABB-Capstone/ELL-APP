@@ -13,8 +13,13 @@ class TestingViewController: UIViewController {
 
     @IBOutlet weak var test: UILabel!
     
+    var receive = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        receive = "not received"
+        test.text = receive
 
         // Do any additional setup after loading the view.
     }

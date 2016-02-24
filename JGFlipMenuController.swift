@@ -18,6 +18,8 @@ class JGFlipMenuController: UIViewController, UINavigationControllerDelegate, JG
     
     private var mainStoryBoard: UIStoryboard!
     
+    var send = "received"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +49,7 @@ class JGFlipMenuController: UIViewController, UINavigationControllerDelegate, JG
         
         // get instance using the frontSideTitle.text which MUST be the same a view controller's Storyboard ID
         let vc = mainStoryBoard.instantiateViewControllerWithIdentifier(menuItems[indexTag].frontSideTitle.text) as UIViewController
-            
+        //performSegueWithIdentifier("test", sender: self)
         // convert the menu item center point that's in the  menu items container to the full view container point
         transitionAnimation.focalPoint = menuItems[indexTag].superview?.convertPoint(menuItems[indexTag].center, toView: self.view)
         
@@ -88,7 +90,12 @@ class JGFlipMenuController: UIViewController, UINavigationControllerDelegate, JG
         }
     }
     
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        <#code#>
-    }*/
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "test" {
+            let vc = segue.destinationViewController as! TestingViewController
+            vc.receive = self.send
+        }
+
+    }
 }

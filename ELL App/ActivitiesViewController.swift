@@ -56,8 +56,8 @@ class ActivitiesViewController: UIViewController {
             vc.objectId = objectId
         }
         
-        else if segue.identifier == "wordmaster" {
-            let vc = segue.destinationViewController as! WordMasterViewController
+        else if segue.identifier == "sentenceframe" {
+            let vc = segue.destinationViewController as! SentenceFrameViewController
             vc.objectId = objectId
         }
     }
