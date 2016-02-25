@@ -70,7 +70,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                 
                 
                     self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
-                    self.commentBox.center = CGPoint(x: centerX, y: 200 + (numImg + 1) / 2 * 175)
+                    self.commentBox.center = CGPoint(x: centerX, y: 150 + (numImg + 1) / 2 * 150)
                     self.commentBox.placeholder = "Optional Notes"
                     self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
                     self.view.addSubview(self.commentBox)
@@ -78,7 +78,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                     self.newButton = UIButton()
                     self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
                     self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
-                    self.newButton!.center = CGPoint(x: centerX, y: 75 + (numImg + 3) / 2 * 175)
+                    self.newButton!.center = CGPoint(x: centerX, y: 70 + (numImg + 3) / 2 * 150)
                     self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
                     self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
                     self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
@@ -105,8 +105,8 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         
         self.newButton = UIButton()
         self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.newButton!.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
-        self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 250 + buttonNum / 2 * 175)
+        self.newButton!.frame = CGRect(x: 0, y: 0, width: 145, height: 145)
+        self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 200 + buttonNum / 2 * 150)
         self.newButton!.setImage(image, forState: .Normal)
         self.newButton!.selected = false
         self.newButton!.backgroundColor = UIColor.clearColor()
@@ -145,6 +145,8 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
             commentBox.text = ""
             
             selectedButtons.removeAll()
+            
+            JLToast.makeText("Submitted", duration: JLToastDelay.ShortDelay).show()
         }
     }
     

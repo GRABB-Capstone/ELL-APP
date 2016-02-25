@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SCLAlertView
+//import SCLAlertView
 
 class ReadAlongViewController: UIViewController {
 
