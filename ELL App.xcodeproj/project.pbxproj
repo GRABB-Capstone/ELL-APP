@@ -202,6 +202,7 @@
 		3BE9D4741BF289AA00E6F893 /* ELL App */ = {
 			isa = PBXGroup;
 			children = (
+				8F4563BA1C7E7A49001172DE /* JLToast */,
 				3B1390D41C752BFB00EB3B9D /* JGFlipMenu */,
 				F1AF39321C56015E00106D70 /* BookTable */,
 				DE84C4F21C598AAE001E6104 /* ImageConnect */,
@@ -221,10 +222,6 @@
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
 				3BE9D4811BF289AA00E6F893 /* Info.plist */,
 				3BA637941C7E7698003A7387 /* DoodleViewController.swift */,
-				8F4563B21C7E7936001172DE /* JLToast.swift */,
-				8F4563B31C7E7936001172DE /* JLToastCenter.swift */,
-				8F4563B41C7E7936001172DE /* JLToastView.swift */,
-				8F4563B51C7E7936001172DE /* JLToastWindow.swift */,
 			);
 			path = "ELL App";
 			sourceTree = "<group>";
@@ -236,6 +233,17 @@
 				3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */,
 			);
 			path = SSRadioButtonController;
+			sourceTree = "<group>";
+		};
+		8F4563BA1C7E7A49001172DE /* JLToast */ = {
+			isa = PBXGroup;
+			children = (
+				8F4563B21C7E7936001172DE /* JLToast.swift */,
+				8F4563B31C7E7936001172DE /* JLToastCenter.swift */,
+				8F4563B41C7E7936001172DE /* JLToastView.swift */,
+				8F4563B51C7E7936001172DE /* JLToastWindow.swift */,
+			);
+			name = JLToast;
 			sourceTree = "<group>";
 		};
 		B1E762B6126F09E4E4AD67A2 /* Pods */ = {

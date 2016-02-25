@@ -166,10 +166,8 @@ class SentenceFrameViewController: UIViewController {
             sentence.text = "\(self.firstWord) is similar to \(self.secondWord) because"
             
             selectedButtons.removeAll()
-            
-            //JLToast.makeText("Basic JLToast").show()
+
             JLToast.makeText("Submitted", duration: JLToastDelay.ShortDelay).show()
-            //JLToast.makeText("With delay, JLToast will be shown after delay.", delay: 1, duration: 5).show()
         }
     }
     
@@ -179,13 +177,11 @@ class SentenceFrameViewController: UIViewController {
             
             if selectedButtons.count == 1 {
                 selectedButtons.removeAll()
-                //firstWord = "________"
             }
                 
             else {
                 selectedButtons[0] = selectedButtons[1]
                 selectedButtons.removeLast()
-                //secondWord = "________"
             }
         }
             
