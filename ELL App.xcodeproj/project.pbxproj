@@ -16,6 +16,9 @@
 		3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */; };
 		3B98BE911C7BCAE800B9CEE9 /* ReadAlongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */; };
 		3BA637951C7E7698003A7387 /* DoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA637941C7E7698003A7387 /* DoodleViewController.swift */; };
+		3BA637971C7F0A0C003A7387 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA637961C7F0A0C003A7387 /* reset.png */; };
+		3BA637991C7F0B8E003A7387 /* Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA637981C7F0B8E003A7387 /* Right.png */; };
+		3BA6379D1C7F0C12003A7387 /* Restart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA6379C1C7F0C12003A7387 /* Restart.png */; };
 		3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576231C460A61009A2819 /* BookTableViewCell.swift */; };
 		3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576251C460C6F009A2819 /* BookTableViewController.swift */; };
 		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
@@ -68,6 +71,9 @@
 		3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongTableViewController.swift; sourceTree = "<group>"; };
 		3B429D2A1C52ED0B00DD59DB /* ReadAlongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongTableViewCell.swift; sourceTree = "<group>"; };
 		3BA637941C7E7698003A7387 /* DoodleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoodleViewController.swift; sourceTree = "<group>"; };
+		3BA637961C7F0A0C003A7387 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
+		3BA637981C7F0B8E003A7387 /* Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Right.png; sourceTree = "<group>"; };
+		3BA6379C1C7F0C12003A7387 /* Restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restart.png; sourceTree = "<group>"; };
 		3BC576231C460A61009A2819 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		3BC576251C460C6F009A2819 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRABB LOGO.png"; sourceTree = "<group>"; };
@@ -154,6 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */,
+				3BA637961C7F0A0C003A7387 /* reset.png */,
+				3BA6379C1C7F0C12003A7387 /* Restart.png */,
+				3BA637981C7F0B8E003A7387 /* Right.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -361,8 +370,11 @@
 				3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */,
 				3BE9D47D1BF289AA00E6F893 /* Assets.xcassets in Resources */,
 				3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */,
+				3BA6379D1C7F0C12003A7387 /* Restart.png in Resources */,
 				DE84C4FC1C59923C001E6104 /* happy.png in Resources */,
 				3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */,
+				3BA637971C7F0A0C003A7387 /* reset.png in Resources */,
+				3BA637991C7F0B8E003A7387 /* Right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

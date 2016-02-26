@@ -50,7 +50,7 @@ class ReadAlongViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        SCLAlertView().showInfo("Directions", subTitle: "Have student read the book and input any words to review with their page number")
+        SCLAlertView().showInfo("Read Along", subTitle: "Have student read the book and input any words to review with their page number")
     }
 
     override func didReceiveMemoryWarning() {

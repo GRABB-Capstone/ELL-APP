@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SAH-BQ-BYR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SAH-BQ-BYR">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Assessment-->
@@ -289,7 +290,7 @@
                                 <rect key="frame" x="0.0" y="92" width="768" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51C-Oy-b4F" id="stX-PR-3wA">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3s-FG-EPV">
@@ -389,7 +390,7 @@
                                 <rect key="frame" x="0.0" y="92" width="768" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2JZ-ED-E7c" id="xaK-JX-BlN">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="209.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="209"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBO-ZG-cYz">
@@ -559,7 +560,7 @@
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.60784313729999995" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
-                                <state key="normal" title="PRE-ASSESSMENT">
+                                <state key="normal" title="ASSESSMENT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -570,11 +571,11 @@
                                 <rect key="frame" x="144" y="652" width="194" height="95"/>
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.60784313729999995" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                                <state key="normal" title="POST-ASSESSMENT">
+                                <state key="normal" title="WORD DOODLE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="assessment" id="uDd-fE-rwe"/>
+                                    <segue destination="Qh0-de-Rf1" kind="show" identifier="doodle" id="IX7-sw-Ox0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nr-Z0-W7J">
@@ -647,7 +648,7 @@
                                 <rect key="frame" x="0.0" y="92" width="768" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d4e-rt-W5i" id="FZ8-th-ca0">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4m-YE-8Cy">
@@ -707,7 +708,7 @@
                                 <rect key="frame" x="0.0" y="92" width="768" height="159"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N6k-bg-siT" id="nz3-ra-KUi">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="158.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="158"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcO-qz-soB">
@@ -827,7 +828,7 @@
             </objects>
             <point key="canvasLocation" x="-1713" y="-1612"/>
         </scene>
-        <!--Doodle View Controller-->
+        <!--Word Doodle-->
         <scene sceneID="5Aj-Yg-cxX">
             <objects>
                 <viewController id="Qh0-de-Rf1" customClass="DoodleViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -842,15 +843,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30G-CS-Ces" userLabel="MainImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bH-5L-Fsm">
-                                <rect key="frame" x="708" y="28" width="40" height="30"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="share:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="QPG-fS-2Pg"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daB-7L-noa">
                                 <rect key="frame" x="118" y="863" width="50" height="200"/>
                                 <state key="normal" image="Black">
@@ -950,36 +942,42 @@
                                     <action selector="pencilPressed:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="nYh-jm-48a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnq-lq-5kq">
-                                <rect key="frame" x="20" y="28" width="40" height="30"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="reset:" destination="Qh0-de-Rf1" eventType="touchUpInside" id="3Js-Gp-3z0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vU-Vc-UUd">
-                                <rect key="frame" x="356" y="28" width="57" height="30"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSk-W9-92f" userLabel="TempImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jP3-CN-43Q">
+                                <rect key="frame" x="78" y="109" width="612" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Word Doodle" id="xLz-eI-Ubt">
+                        <rightBarButtonItems>
+                            <barButtonItem image="Right.png" id="ymz-bO-Km1">
+                                <connections>
+                                    <action selector="nextWord:" destination="Qh0-de-Rf1" id="uV8-V5-zGP"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="Restart.png" id="XPP-ow-ZV4">
+                                <connections>
+                                    <action selector="resetImage:" destination="Qh0-de-Rf1" id="xQi-YG-Xnt"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="label" destination="jP3-CN-43Q" id="QCp-lN-gNy"/>
                         <outlet property="mainImageView" destination="30G-CS-Ces" id="PJg-VP-ftK"/>
                         <outlet property="tempImageView" destination="WSk-W9-92f" id="Gli-33-aDZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RB2-hZ-K7n" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832" y="2189"/>
+            <point key="canvasLocation" x="639" y="2357"/>
         </scene>
     </scenes>
     <resources>
@@ -994,9 +992,8 @@
         <image name="LightBlue" width="53" height="332"/>
         <image name="LightGreen" width="53" height="332"/>
         <image name="Red" width="53" height="332"/>
+        <image name="Restart.png" width="50" height="50"/>
+        <image name="Right.png" width="50" height="50"/>
         <image name="Yellow" width="53" height="332"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="TXb-rg-OM2"/>
-    </inferredMetricsTieBreakers>
 </document>
