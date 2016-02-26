@@ -47,8 +47,7 @@ class AssessmentViewController: UIViewController, SSRadioButtonControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(words)
-        print(words.count)
+        SCLAlertView().showInfo("Assessment", subTitle: "Rank how well you know each word.")
         
         if words.count >= 1 {
             word1.text = words[0]
