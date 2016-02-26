@@ -27,6 +27,9 @@ class SentenceFrameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SCLAlertView().showInfo("Sentence Frame", subTitle: "Select two words and explain how they are similar.")
+        
         var i = 0
         let centerX = Int(self.view.center.x)
         

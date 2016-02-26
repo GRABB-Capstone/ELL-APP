@@ -27,6 +27,9 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SCLAlertView().showInfo("Image Connect", subTitle: "Choose two images and describe their relationship.")
+        
         var i = 0
         let centerX = Int(self.view.center.x)
         
