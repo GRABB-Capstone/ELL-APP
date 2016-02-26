@@ -40,7 +40,6 @@
 		3BE9D4801BF289AA00E6F893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9D47E1BF289AA00E6F893 /* LaunchScreen.storyboard */; };
 		3BE9D48A1BF29F7800E6F893 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */; };
 		3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */; };
-		7CB4DBC77A3EDE71384B4A27 /* Pods_ELL_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448FB0A17C9E07753C04CD8F /* Pods_ELL_App.framework */; };
 		8F4563B61C7E7936001172DE /* JLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4563B21C7E7936001172DE /* JLToast.swift */; };
 		8F4563B71C7E7936001172DE /* JLToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4563B31C7E7936001172DE /* JLToastCenter.swift */; };
 		8F4563B81C7E7936001172DE /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4563B41C7E7936001172DE /* JLToastView.swift */; };
@@ -96,8 +95,6 @@
 		3BE9D4811BF289AA00E6F893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BE9D4881BF29F7800E6F893 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		3BE9D4891BF29F7800E6F893 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
-		448FB0A17C9E07753C04CD8F /* Pods_ELL_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ELL_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C4E5311D38F37D9817EF89C /* Pods-ELL App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELL App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ELL App/Pods-ELL App.debug.xcconfig"; sourceTree = "<group>"; };
 		8F4563B21C7E7936001172DE /* JLToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToast.swift; sourceTree = "<group>"; };
 		8F4563B31C7E7936001172DE /* JLToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastCenter.swift; sourceTree = "<group>"; };
 		8F4563B41C7E7936001172DE /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
@@ -112,7 +109,6 @@
 		DE84C4F51C598B93001E6104 /* ImageConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectTableViewCell.swift; sourceTree = "<group>"; };
 		DE84C4F91C59923C001E6104 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
 		DE84C4FA1C59923C001E6104 /* maybe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maybe.png; sourceTree = "<group>"; };
-		EC40059B6738651CEFC52E15 /* Pods-ELL App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELL App.release.xcconfig"; path = "Pods/Target Support Files/Pods-ELL App/Pods-ELL App.release.xcconfig"; sourceTree = "<group>"; };
 		F10BE6D01C56D783009C0D84 /* ImageConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectViewController.swift; sourceTree = "<group>"; };
 		F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewCell.swift; sourceTree = "<group>"; };
 		F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +132,6 @@
 				3BCFFF001C0E404D00C20C79 /* ParseUI.framework in Frameworks */,
 				3BCFFEFF1C0E404D00C20C79 /* Parse.framework in Frameworks */,
 				3BCFFEFE1C0E404D00C20C79 /* Bolts.framework in Frameworks */,
-				7CB4DBC77A3EDE71384B4A27 /* Pods_ELL_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +165,6 @@
 				3BCFFEFB1C0E404D00C20C79 /* Bolts.framework */,
 				3BCFFEFC1C0E404D00C20C79 /* Parse.framework */,
 				3BCFFEFD1C0E404D00C20C79 /* ParseUI.framework */,
-				448FB0A17C9E07753C04CD8F /* Pods_ELL_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,7 +177,6 @@
 				3BE9D4871BF29F7800E6F893 /* SSRadioButtonController */,
 				3BE9D4741BF289AA00E6F893 /* ELL App */,
 				3BE9D4731BF289AA00E6F893 /* Products */,
-				B1E762B6126F09E4E4AD67A2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,15 +233,6 @@
 				8F4563B51C7E7936001172DE /* JLToastWindow.swift */,
 			);
 			name = JLToast;
-			sourceTree = "<group>";
-		};
-		B1E762B6126F09E4E4AD67A2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7C4E5311D38F37D9817EF89C /* Pods-ELL App.debug.xcconfig */,
-				EC40059B6738651CEFC52E15 /* Pods-ELL App.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		BF8EBF1C1C7FA6330025F4A3 /* SentenceFrame */ = {
@@ -315,12 +299,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BE9D4841BF289AA00E6F893 /* Build configuration list for PBXNativeTarget "ELL App" */;
 			buildPhases = (
-				B8961A1696D5590F857058FC /* Check Pods Manifest.lock */,
 				3BE9D46E1BF289AA00E6F893 /* Sources */,
 				3BE9D46F1BF289AA00E6F893 /* Frameworks */,
 				3BE9D4701BF289AA00E6F893 /* Resources */,
-				9F868ADCFAF1BA86F0B6BEFC /* Embed Pods Frameworks */,
-				41565D4AFFA758A91964856D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -383,54 +364,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		41565D4AFFA758A91964856D /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ELL App/Pods-ELL App-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F868ADCFAF1BA86F0B6BEFC /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ELL App/Pods-ELL App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B8961A1696D5590F857058FC /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3BE9D46E1BF289AA00E6F893 /* Sources */ = {
@@ -574,7 +507,6 @@
 		};
 		3BE9D4851BF289AA00E6F893 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C4E5311D38F37D9817EF89C /* Pods-ELL App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -591,7 +523,6 @@
 		};
 		3BE9D4861BF289AA00E6F893 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC40059B6738651CEFC52E15 /* Pods-ELL App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
