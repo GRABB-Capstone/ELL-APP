@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B1390D11C752BE600EB3B9D /* JGFlipMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1390CE1C752BE600EB3B9D /* JGFlipMenuController.swift */; };
-		3B1390D21C752BE600EB3B9D /* JGFlipMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1390CF1C752BE600EB3B9D /* JGFlipMenuItem.swift */; };
-		3B1390D31C752BE600EB3B9D /* JGTransitionExpandContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1390D01C752BE600EB3B9D /* JGTransitionExpandContract.swift */; };
 		3B1390D61C752DDD00EB3B9D /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1390D51C752DDD00EB3B9D /* TestingViewController.swift */; };
 		3B429D231C4F5E5500DD59DB /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */; };
 		3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */; };
@@ -59,9 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B1390CE1C752BE600EB3B9D /* JGFlipMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGFlipMenuController.swift; sourceTree = "<group>"; };
-		3B1390CF1C752BE600EB3B9D /* JGFlipMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGFlipMenuItem.swift; sourceTree = "<group>"; };
-		3B1390D01C752BE600EB3B9D /* JGTransitionExpandContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGTransitionExpandContract.swift; sourceTree = "<group>"; };
 		3B1390D51C752DDD00EB3B9D /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongViewController.swift; sourceTree = "<group>"; };
@@ -139,17 +133,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B1390D41C752BFB00EB3B9D /* JGFlipMenu */ = {
-			isa = PBXGroup;
-			children = (
-				3B1390CE1C752BE600EB3B9D /* JGFlipMenuController.swift */,
-				3B1390CF1C752BE600EB3B9D /* JGFlipMenuItem.swift */,
-				3B1390D01C752BE600EB3B9D /* JGTransitionExpandContract.swift */,
-			);
-			name = JGFlipMenu;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		3B4088E21C0F5BCB00EF817B /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				8F4563BA1C7E7A49001172DE /* JLToast */,
-				3B1390D41C752BFB00EB3B9D /* JGFlipMenu */,
 				F1AF39321C56015E00106D70 /* BookTable */,
 				DE84C4F21C598AAE001E6104 /* ImageConnect */,
 				F1AF39311C56014F00106D70 /* ReadAlong */,
@@ -438,16 +420,13 @@
 				DE84C4F41C598B5E001E6104 /* ImageConnectTableViewController.swift in Sources */,
 				3B1390D61C752DDD00EB3B9D /* TestingViewController.swift in Sources */,
 				8F4563B71C7E7936001172DE /* JLToastCenter.swift in Sources */,
-				3B1390D21C752BE600EB3B9D /* JGFlipMenuItem.swift in Sources */,
 				F1AF392F1C55F76000106D70 /* WordConnectTableViewController.swift in Sources */,
 				8F4563B91C7E7936001172DE /* JLToastWindow.swift in Sources */,
 				3BE9D4761BF289AA00E6F893 /* AppDelegate.swift in Sources */,
 				3BCFFF181C0E4EDD00C20C79 /* LogInViewController.swift in Sources */,
-				3B1390D31C752BE600EB3B9D /* JGTransitionExpandContract.swift in Sources */,
 				3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */,
 				3B429D231C4F5E5500DD59DB /* ActivitiesViewController.swift in Sources */,
 				8F4563B61C7E7936001172DE /* JLToast.swift in Sources */,
-				3B1390D11C752BE600EB3B9D /* JGFlipMenuController.swift in Sources */,
 				8FF24CBB1C7E5602008A4995 /* SentenceFrameViewController.swift in Sources */,
 				F10BE6D11C56D783009C0D84 /* ImageConnectViewController.swift in Sources */,
 				C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */,
