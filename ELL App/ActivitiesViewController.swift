@@ -60,6 +60,11 @@ class ActivitiesViewController: UIViewController {
             let vc = segue.destinationViewController as! SentenceFrameViewController
             vc.objectId = objectId
         }
+        
+        else if segue.identifier == "doodle" {
+            let vc = segue.destinationViewController as! DoodleViewController
+            vc.words = words
+        }
     }
     
     

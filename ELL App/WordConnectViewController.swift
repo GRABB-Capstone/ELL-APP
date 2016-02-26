@@ -42,7 +42,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
                 }
 
                 self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
-                self.commentBox.center = CGPoint(x: centerX, y: 373 + (i + 1) / 2 * 85)
+                self.commentBox.center = CGPoint(x: centerX, y: 300 + (i + 1) / 2 * 70)
                 self.commentBox.placeholder = "Optional Notes"
                 self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
                 self.view.addSubview(self.commentBox)
@@ -51,7 +51,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
                 self.newButton!.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                 self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
                 self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
-                self.newButton!.center = CGPoint(x: centerX, y: 373 + (i + 3) / 2 * 85)
+                self.newButton!.center = CGPoint(x: centerX, y: 300 + (i + 3) / 2 * 70)
                 self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
                 self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
                 self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
@@ -77,7 +77,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         self.newButton = UIButton()
         self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
         self.newButton!.frame = CGRect(x: 0, y: 0, width: 150, height: 40)
-        self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 373 + buttonNum / 2 * 85)
+        self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 300 + buttonNum / 2 * 70)
         self.newButton!.setTitle(word, forState: UIControlState.Normal)
         self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(16, weight: UIFontWeightBold)
         self.newButton!.selected = false
@@ -116,6 +116,8 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
             commentBox.text = ""
             
             selectedButtons.removeAll()
+            
+            JLToast.makeText("Submitted", duration: JLToastDelay.ShortDelay).show()
         }
     }
     

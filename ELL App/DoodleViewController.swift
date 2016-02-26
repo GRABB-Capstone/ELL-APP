@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class DoodleViewController: UIViewController {
 
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var tempImageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    
+    var words = [String]()
+    var currentWord = 0
     
     var lastPoint = CGPoint.zero
     var red: CGFloat = 0.0
@@ -38,6 +43,10 @@ class DoodleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        SCLAlertView().showInfo("Word Doodle", subTitle: "Illustrate the meaning of the word. Click next to draw the next word!")
+        
+        label.text = words[currentWord]
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,6 +58,21 @@ class DoodleViewController: UIViewController {
     
     @IBAction func reset(sender: AnyObject) {
         mainImageView.image = nil
+    }
+    
+    @IBAction func resetImage(sender: AnyObject) {
+        mainImageView.image = nil
+    }
+    
+    @IBAction func nextWord(sender: AnyObject) {
+        if words.count - 1 == currentWord {
+            currentWord = 0
+        }
+        else {
+            currentWord++
+        }
+        
+        label.text = words[currentWord]
     }
     
     @IBAction func share(sender: AnyObject) {

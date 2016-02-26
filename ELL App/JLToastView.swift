@@ -126,7 +126,7 @@ public let JLToastViewLandscapeOffsetYAttributeName = "JLToastViewLandscapeOffse
             if UIInterfaceOrientationIsLandscape(orientation) {
                 y = landscapeOffsetY
             } else {
-                y = 330
+                y = 337
             }
         }
 
