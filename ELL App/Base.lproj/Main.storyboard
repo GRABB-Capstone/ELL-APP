@@ -489,6 +489,45 @@
             </objects>
             <point key="canvasLocation" x="1025" y="-1772"/>
         </scene>
+        <!--Sentence Frame Table View Controller-->
+        <scene sceneID="ngx-yk-Bqm">
+            <objects>
+                <tableViewController id="amV-EB-k3g" customClass="SentenceFrameTableViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sR0-lZ-uKn">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sentencecell" id="gDo-aT-HgB" customClass="SentenceFrameTableViewCell" customModule="ELL_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gDo-aT-HgB" id="71I-2T-1eK">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07k-tn-xTz">
+                                            <rect key="frame" x="17" y="11" width="732" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="sentence" destination="07k-tn-xTz" id="BfL-Sz-Pcx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="amV-EB-k3g" id="c2V-4c-NP8"/>
+                            <outlet property="delegate" destination="amV-EB-k3g" id="QLD-gL-Sio"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujN-0i-3b2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1682" y="-81"/>
+        </scene>
         <!--Sentence Frame-->
         <scene sceneID="K3M-gz-S33">
             <objects>
@@ -503,7 +542,11 @@
                         <color key="backgroundColor" red="0.58091855940000003" green="0.75878259319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sentence Frame" id="eqd-N6-egc">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="OF7-fU-x3d"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="OF7-fU-x3d">
+                            <connections>
+                                <segue destination="amV-EB-k3g" kind="show" identifier="viewsentences" id="dnU-dn-iKK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoc-Rr-zF6" userLabel="First Responder" sceneMemberID="firstResponder"/>

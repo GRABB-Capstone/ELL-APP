@@ -23,6 +23,7 @@ class SentenceFrameViewController: UIViewController {
     var word1 = [String]()
     var word2 = [String]()
     var notes = [String]()
+    var sentences = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,7 +126,7 @@ class SentenceFrameViewController: UIViewController {
             sender.backgroundColor = UIColor.clearColor()
         }
         
-        sentence.text = "\(self.firstWord) is similar to \(self.secondWord) because"
+        sentence.text = "\(self.firstWord) is similar to \(self.secondWord) because "
         /*var firstRange = sentence.text?.rangeOfString(firstWord)
         var secondRange = sentence.text?.rangeOfString(secondWord)
         var attributedString = NSMutableAttributedString(string: (sentence.text)!)
@@ -139,7 +140,7 @@ class SentenceFrameViewController: UIViewController {
             word1.append(selectedButtons[0].currentTitle!)
             word2.append(selectedButtons[1].currentTitle!)
             notes.append(explanation.text!)
-            
+            sentences.append(sentence.text! + explanation.text!)
             for button in selectedButtons {
                 button.backgroundColor = UIColor.clearColor()
             }
@@ -148,7 +149,7 @@ class SentenceFrameViewController: UIViewController {
             secondWord = "________"
             explanation.text = ""
             
-            sentence.text = "\(self.firstWord) is similar to \(self.secondWord) because"
+            sentence.text = "\(self.firstWord) is similar to \(self.secondWord) because "
             
             selectedButtons.removeAll()
 
@@ -196,14 +197,12 @@ class SentenceFrameViewController: UIViewController {
         performSegueWithIdentifier("viewsentence", sender: self)
     }*/
     
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "viewpairs" {
-            let vc = segue.destinationViewController as! WordConnectTableViewController
-            vc.word1 = word1
-            vc.word2 = word2
-            vc.notes = notes
+        if segue.identifier == "viewsentences" {
+            let vc = segue.destinationViewController as! SentenceFrameTableViewController
+            vc.sentences = sentences
         }
-    }*/
+    }
 }

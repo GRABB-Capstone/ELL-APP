@@ -10,11 +10,14 @@ import UIKit
 
 class SentenceFrameTableViewCell: UITableViewCell {
     
-    
+    @IBOutlet weak var sentence: UILabel!
+
 }
 
 class SentenceFrameTableViewController: UITableViewController {
 
+    var sentences = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,23 +37,24 @@ class SentenceFrameTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return sentences.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("sentencecell", forIndexPath: indexPath) as! SentenceFrameTableViewCell
 
         // Configure the cell...
-
+        cell.sentence.text = sentences[indexPath.row]
+        
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

@@ -197,8 +197,8 @@
 				F1AF39311C56014F00106D70 /* ReadAlong */,
 				F1AF39331C56018600106D70 /* Storyboards */,
 				F1AF39301C56014200106D70 /* WordConnect */,
-				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
 				BF8EBF1C1C7FA6330025F4A3 /* SentenceFrame */,
+				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
 				3B1390D51C752DDD00EB3B9D /* TestingViewController.swift */,
 				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
 				C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */,
@@ -238,8 +238,8 @@
 		BF8EBF1C1C7FA6330025F4A3 /* SentenceFrame */ = {
 			isa = PBXGroup;
 			children = (
-				8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */,
 				BF8EBF1D1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift */,
+				8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */,
 			);
 			name = SentenceFrame;
 			sourceTree = "<group>";
