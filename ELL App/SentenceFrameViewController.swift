@@ -2,7 +2,7 @@
 //  SentenceFrameViewController.swift
 //  ELL App
 //
-//  Created by RM145-M2 on 2/24/16.
+//  Created by Genton Mo on 2/24/16.
 //  Copyright © 2016 Bcarreon. All rights reserved.
 //
 
@@ -20,7 +20,6 @@ class SentenceFrameViewController: UIViewController {
     var firstWord = "________"
     var secondWord = "________"
     
-    
     var word1 = [String]()
     var word2 = [String]()
     var notes = [String]()
@@ -29,9 +28,6 @@ class SentenceFrameViewController: UIViewController {
         super.viewDidLoad()
         var i = 0
         let centerX = Int(self.view.center.x)
-        
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
         
         query.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
             
@@ -86,20 +82,6 @@ class SentenceFrameViewController: UIViewController {
         }
     }
     
-    /*func keyboardWillShow(notification: NSNotification) {
-        
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y -= keyboardSize.height
-        }
-        
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y += keyboardSize.height
-        }
-    }*/
-    
     func makeButton(word: String, buttonNum: Int) {
         let centerX = Int(self.view.center.x)
         
@@ -128,8 +110,6 @@ class SentenceFrameViewController: UIViewController {
                 else {
                     secondWord = sender.currentTitle!
                 }
-                
-                
             }
         }
             
@@ -146,6 +126,11 @@ class SentenceFrameViewController: UIViewController {
         }
         
         sentence.text = "\(self.firstWord) is similar to \(self.secondWord) because"
+        /*var firstRange = sentence.text?.rangeOfString(firstWord)
+        var secondRange = sentence.text?.rangeOfString(secondWord)
+        var attributedString = NSMutableAttributedString(string: (sentence.text)!)
+        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: firstRange)
+        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: secondRange)*/
     }
     
     func submit(sender: UIButton) {
@@ -166,10 +151,8 @@ class SentenceFrameViewController: UIViewController {
             sentence.text = "\(self.firstWord) is similar to \(self.secondWord) because"
             
             selectedButtons.removeAll()
-            
-            //JLToast.makeText("Basic JLToast").show()
+
             JLToast.makeText("Submitted", duration: JLToastDelay.ShortDelay).show()
-            //JLToast.makeText("With delay, JLToast will be shown after delay.", delay: 1, duration: 5).show()
         }
     }
     
@@ -179,13 +162,11 @@ class SentenceFrameViewController: UIViewController {
             
             if selectedButtons.count == 1 {
                 selectedButtons.removeAll()
-                //firstWord = "________"
             }
                 
             else {
                 selectedButtons[0] = selectedButtons[1]
                 selectedButtons.removeLast()
-                //secondWord = "________"
             }
         }
             

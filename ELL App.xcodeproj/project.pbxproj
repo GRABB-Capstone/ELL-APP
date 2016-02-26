@@ -49,6 +49,8 @@
 		8F4563B81C7E7936001172DE /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4563B41C7E7936001172DE /* JLToastView.swift */; };
 		8F4563B91C7E7936001172DE /* JLToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4563B51C7E7936001172DE /* JLToastWindow.swift */; };
 		8FF24CBB1C7E5602008A4995 /* SentenceFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */; };
+		BF6854731C7FA2EB00DF716C /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6854721C7FA2EB00DF716C /* SCLAlertView.swift */; };
+		BF8EBF1E1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBF1D1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift */; };
 		C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */; };
 		C1F6AFE71C59FBCA00BC499B /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */; };
 		C1F6AFED1C59FBE200BC499B /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F6AFEA1C59FBE200BC499B /* sad.png */; };
@@ -107,6 +109,8 @@
 		8F4563B41C7E7936001172DE /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
 		8F4563B51C7E7936001172DE /* JLToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastWindow.swift; sourceTree = "<group>"; };
 		8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceFrameViewController.swift; sourceTree = "<group>"; };
+		BF6854721C7FA2EB00DF716C /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		BF8EBF1D1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceFrameTableViewController.swift; sourceTree = "<group>"; };
 		C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectViewController.swift; sourceTree = "<group>"; };
 		C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
 		C1F6AFEA1C59FBE200BC499B /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 		3BE9D4741BF289AA00E6F893 /* ELL App */ = {
 			isa = PBXGroup;
 			children = (
+				8F4563BA1C7E7A49001172DE /* JLToast */,
 				3B1390D41C752BFB00EB3B9D /* JGFlipMenu */,
 				F1AF39321C56015E00106D70 /* BookTable */,
 				DE84C4F21C598AAE001E6104 /* ImageConnect */,
@@ -218,10 +223,10 @@
 				F1AF39331C56018600106D70 /* Storyboards */,
 				F1AF39301C56014200106D70 /* WordConnect */,
 				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
+				BF8EBF1C1C7FA6330025F4A3 /* SentenceFrame */,
 				3B1390D51C752DDD00EB3B9D /* TestingViewController.swift */,
 				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
 				C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */,
-				8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */,
 				DE84C4F91C59923C001E6104 /* happy.png */,
 				DE84C4FA1C59923C001E6104 /* maybe.png */,
 				C1F6AFEA1C59FBE200BC499B /* sad.png */,
@@ -229,11 +234,8 @@
 				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
 				3BE9D4811BF289AA00E6F893 /* Info.plist */,
+				BF6854721C7FA2EB00DF716C /* SCLAlertView.swift */,
 				3BA637941C7E7698003A7387 /* DoodleViewController.swift */,
-				8F4563B21C7E7936001172DE /* JLToast.swift */,
-				8F4563B31C7E7936001172DE /* JLToastCenter.swift */,
-				8F4563B41C7E7936001172DE /* JLToastView.swift */,
-				8F4563B51C7E7936001172DE /* JLToastWindow.swift */,
 			);
 			path = "ELL App";
 			sourceTree = "<group>";
@@ -247,6 +249,17 @@
 			path = SSRadioButtonController;
 			sourceTree = "<group>";
 		};
+		8F4563BA1C7E7A49001172DE /* JLToast */ = {
+			isa = PBXGroup;
+			children = (
+				8F4563B21C7E7936001172DE /* JLToast.swift */,
+				8F4563B31C7E7936001172DE /* JLToastCenter.swift */,
+				8F4563B41C7E7936001172DE /* JLToastView.swift */,
+				8F4563B51C7E7936001172DE /* JLToastWindow.swift */,
+			);
+			name = JLToast;
+			sourceTree = "<group>";
+		};
 		B1E762B6126F09E4E4AD67A2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +267,15 @@
 				EC40059B6738651CEFC52E15 /* Pods-ELL App.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF8EBF1C1C7FA6330025F4A3 /* SentenceFrame */ = {
+			isa = PBXGroup;
+			children = (
+				8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */,
+				BF8EBF1D1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift */,
+			);
+			name = SentenceFrame;
 			sourceTree = "<group>";
 		};
 		DE84C4F21C598AAE001E6104 /* ImageConnect */ = {
@@ -457,10 +479,12 @@
 				C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */,
 				3BA637951C7E7698003A7387 /* DoodleViewController.swift in Sources */,
 				3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */,
+				BF8EBF1E1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift in Sources */,
 				3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */,
 				3BE9D48A1BF29F7800E6F893 /* SSRadioButton.swift in Sources */,
 				8F4563B81C7E7936001172DE /* JLToastView.swift in Sources */,
 				3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */,
+				BF6854731C7FA2EB00DF716C /* SCLAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
