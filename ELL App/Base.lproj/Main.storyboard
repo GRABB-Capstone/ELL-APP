@@ -641,7 +641,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.58091855940000003" green="0.75878259319999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Activities" id="UQf-69-j7H"/>
+                    <navigationItem key="navigationItem" title="Activities" id="UQf-69-j7H">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="d0w-bR-t3v">
+                            <connections>
+                                <action selector="logOut:" destination="TQl-D1-8Dv" id="Ykd-it-eS1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="label" destination="HI4-po-yct" id="BGf-xr-ACj"/>
@@ -783,7 +789,13 @@
                             <outlet property="delegate" destination="45I-6Q-NhJ" id="nE0-kP-o6k"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Book List" id="J9L-qm-x6P"/>
+                    <navigationItem key="navigationItem" title="Book List" id="J9L-qm-x6P">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="lmQ-tg-NOB">
+                            <connections>
+                                <action selector="logOut:" destination="45I-6Q-NhJ" id="2Lz-NK-8lB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <segue destination="TQl-D1-8Dv" kind="show" identifier="activities" id="5T7-r7-P3r"/>
@@ -796,7 +808,7 @@
         <!--Log In View Controller-->
         <scene sceneID="Cyb-b8-A2b">
             <objects>
-                <viewController id="NNM-QM-Uop" customClass="LogInViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInView" id="NNM-QM-Uop" customClass="LogInViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WqC-oW-GUn"/>
                         <viewControllerLayoutGuide type="bottom" id="hXO-Mz-HQP"/>
@@ -832,12 +844,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5e-8G-Sgo">
-                                <rect key="frame" x="174" y="491" width="420" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.58091855939093739" green="0.75878259322861097" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -845,7 +851,6 @@
                     <connections>
                         <outlet property="passwordTextField" destination="XCT-4v-TGN" id="oIj-qc-CIt"/>
                         <outlet property="usernameTextField" destination="DeO-Sn-wKl" id="qi8-FR-3o0"/>
-                        <outlet property="verificationLabel" destination="g5e-8G-Sgo" id="W7B-3e-Irc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mW-Uo-oew" userLabel="First Responder" sceneMemberID="firstResponder"/>

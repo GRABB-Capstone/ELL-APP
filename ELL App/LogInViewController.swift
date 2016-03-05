@@ -13,12 +13,12 @@ class LogInViewController: UIViewController {
 
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var verificationLabel: UILabel!
+    
+    var currentUser = PFUser.currentUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +30,6 @@ class LogInViewController: UIViewController {
         var user = PFUser()
         user.username = usernameTextField.text!
         user.password = passwordTextField.text!
-        self.verificationLabel.text = ""
         
         PFUser.logInWithUsernameInBackground(usernameTextField.text!, password: passwordTextField.text!, block: {
             (User : PFUser?, Error : NSError?) -> Void in
@@ -43,19 +42,9 @@ class LogInViewController: UIViewController {
                 }
             }
             else {
-                self.verificationLabel.text = "Username/Password combination not valid"
+                SCLAlertView().showError("Log In Failed", subTitle: "The username/password is incorrect")
             }
         })
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

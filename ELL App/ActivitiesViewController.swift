@@ -32,6 +32,16 @@ class ActivitiesViewController: UIViewController {
         
     }
     
+    @IBAction func logOut(sender: AnyObject) {
+        PFUser.logOut()
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            var Storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("logInView")
+            self.presentViewController(logInSuccessVC, animated: true, completion: nil)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

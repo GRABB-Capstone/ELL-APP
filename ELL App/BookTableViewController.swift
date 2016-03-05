@@ -22,6 +22,7 @@ class BookTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // logged in user
         var currentUser = PFUser.currentUser()
 
         var booksQuery = PFQuery(className: "Book")
@@ -29,7 +30,10 @@ class BookTableViewController: UITableViewController {
         booksQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if let objects = objects {
                 for object in objects {
+                    
                     self.users = object["users"] as! [String]
+                    
+                    // query the books from only the signed in user
                     if self.users.contains((currentUser?.username)!) {
                         self.titles.append(object["title"] as! String)
                         self.authors.append(object["author"] as! String)
@@ -39,12 +43,19 @@ class BookTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     }
                 }
-                
-                //print(self.titles)
-                //print(self.authors)
-                //print(self.bookPhotos)
             }
         }
+    }
+    
+    @IBAction func logOut(sender: AnyObject) {
+        PFUser.logOut()
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            var Storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("logInView")
+            self.presentViewController(logInSuccessVC, animated: true, completion: nil)
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
