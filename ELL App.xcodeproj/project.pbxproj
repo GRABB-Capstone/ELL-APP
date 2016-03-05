@@ -16,9 +16,9 @@
 		3BA637971C7F0A0C003A7387 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA637961C7F0A0C003A7387 /* reset.png */; };
 		3BA637991C7F0B8E003A7387 /* Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA637981C7F0B8E003A7387 /* Right.png */; };
 		3BA6379D1C7F0C12003A7387 /* Restart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA6379C1C7F0C12003A7387 /* Restart.png */; };
+		3BA637A91C8AD30A003A7387 /* ELLO Icon Logo White Transparent (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA637A81C8AD30A003A7387 /* ELLO Icon Logo White Transparent (1).png */; };
 		3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576231C460A61009A2819 /* BookTableViewCell.swift */; };
 		3BC576261C460C6F009A2819 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC576251C460C6F009A2819 /* BookTableViewController.swift */; };
-		3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */; };
 		3BCFFEFE1C0E404D00C20C79 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFEFB1C0E404D00C20C79 /* Bolts.framework */; };
 		3BCFFEFF1C0E404D00C20C79 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFEFC1C0E404D00C20C79 /* Parse.framework */; };
 		3BCFFF001C0E404D00C20C79 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCFFEFD1C0E404D00C20C79 /* ParseUI.framework */; };
@@ -69,9 +69,9 @@
 		3BA637961C7F0A0C003A7387 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
 		3BA637981C7F0B8E003A7387 /* Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Right.png; sourceTree = "<group>"; };
 		3BA6379C1C7F0C12003A7387 /* Restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restart.png; sourceTree = "<group>"; };
+		3BA637A81C8AD30A003A7387 /* ELLO Icon Logo White Transparent (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ELLO Icon Logo White Transparent (1).png"; sourceTree = "<group>"; };
 		3BC576231C460A61009A2819 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		3BC576251C460C6F009A2819 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
-		3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRABB LOGO.png"; sourceTree = "<group>"; };
 		3BCFFEFB1C0E404D00C20C79 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		3BCFFEFC1C0E404D00C20C79 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		3BCFFEFD1C0E404D00C20C79 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -104,11 +104,11 @@
 		BF8EBF1D1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceFrameTableViewController.swift; sourceTree = "<group>"; };
 		C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectViewController.swift; sourceTree = "<group>"; };
 		C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
-		C1F6AFEA1C59FBE200BC499B /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
+		C1F6AFEA1C59FBE200BC499B /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sad.png; path = "ELL App/sad.png"; sourceTree = "<group>"; };
 		DE84C4F31C598B5E001E6104 /* ImageConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectTableViewController.swift; sourceTree = "<group>"; };
 		DE84C4F51C598B93001E6104 /* ImageConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectTableViewCell.swift; sourceTree = "<group>"; };
-		DE84C4F91C59923C001E6104 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
-		DE84C4FA1C59923C001E6104 /* maybe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maybe.png; sourceTree = "<group>"; };
+		DE84C4F91C59923C001E6104 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = happy.png; path = "ELL App/happy.png"; sourceTree = "<group>"; };
+		DE84C4FA1C59923C001E6104 /* maybe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maybe.png; path = "ELL App/maybe.png"; sourceTree = "<group>"; };
 		F10BE6D01C56D783009C0D84 /* ImageConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConnectViewController.swift; sourceTree = "<group>"; };
 		F1AF392A1C55EA5500106D70 /* WordConnectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewCell.swift; sourceTree = "<group>"; };
 		F1AF392E1C55F76000106D70 /* WordConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectTableViewController.swift; sourceTree = "<group>"; };
@@ -141,10 +141,13 @@
 		3B4088E21C0F5BCB00EF817B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				3BCFFEF91C0E3C0700C20C79 /* GRABB LOGO.png */,
+				3BA637A81C8AD30A003A7387 /* ELLO Icon Logo White Transparent (1).png */,
 				3BA637961C7F0A0C003A7387 /* reset.png */,
 				3BA6379C1C7F0C12003A7387 /* Restart.png */,
 				3BA637981C7F0B8E003A7387 /* Right.png */,
+				DE84C4F91C59923C001E6104 /* happy.png */,
+				DE84C4FA1C59923C001E6104 /* maybe.png */,
+				C1F6AFEA1C59FBE200BC499B /* sad.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -202,9 +205,6 @@
 				3B1390D51C752DDD00EB3B9D /* TestingViewController.swift */,
 				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
 				C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */,
-				DE84C4F91C59923C001E6104 /* happy.png */,
-				DE84C4FA1C59923C001E6104 /* maybe.png */,
-				C1F6AFEA1C59FBE200BC499B /* sad.png */,
 				3BCFFF171C0E4EDD00C20C79 /* LogInViewController.swift */,
 				3BE9D4771BF289AA00E6F893 /* ViewController.swift */,
 				3BE9D47C1BF289AA00E6F893 /* Assets.xcassets */,
@@ -357,8 +357,8 @@
 				3BE9D47B1BF289AA00E6F893 /* Main.storyboard in Resources */,
 				3BA6379D1C7F0C12003A7387 /* Restart.png in Resources */,
 				DE84C4FC1C59923C001E6104 /* happy.png in Resources */,
-				3BCFFEFA1C0E3C0700C20C79 /* GRABB LOGO.png in Resources */,
 				3BA637971C7F0A0C003A7387 /* reset.png in Resources */,
+				3BA637A91C8AD30A003A7387 /* ELLO Icon Logo White Transparent (1).png in Resources */,
 				3BA637991C7F0B8E003A7387 /* Right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
