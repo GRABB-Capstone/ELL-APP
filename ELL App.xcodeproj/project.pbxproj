@@ -518,6 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -534,6 +535,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

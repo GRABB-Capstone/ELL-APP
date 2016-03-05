@@ -17,21 +17,27 @@ class BookTableViewController: UITableViewController {
     var objectIds = [String]()
     var selectedObjectId = String()
     var selectedTitle = String()
+    var users = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var currentUser = PFUser.currentUser()
+
         var booksQuery = PFQuery(className: "Book")
     
         booksQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if let objects = objects {
                 for object in objects {
-                    self.titles.append(object["title"] as! String)
-                    self.authors.append(object["author"] as! String)
-                    self.bookPhotos.append(object["bookPhoto"] as! PFFile)
-                    self.objectIds.append(object.objectId! as String)
-                    
-                    self.tableView.reloadData()
+                    self.users = object["users"] as! [String]
+                    if self.users.contains((currentUser?.username)!) {
+                        self.titles.append(object["title"] as! String)
+                        self.authors.append(object["author"] as! String)
+                        self.bookPhotos.append(object["bookPhoto"] as! PFFile)
+                        self.objectIds.append(object.objectId! as String)
+                        
+                        self.tableView.reloadData()
+                    }
                 }
                 
                 //print(self.titles)
