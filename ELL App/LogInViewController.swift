@@ -31,9 +31,11 @@ class LogInViewController: UIViewController {
         user.username = usernameTextField.text!
         user.password = passwordTextField.text!
         
+        // Get the username and password from the fields and validate through parse
         PFUser.logInWithUsernameInBackground(usernameTextField.text!, password: passwordTextField.text!, block: {
             (User : PFUser?, Error : NSError?) -> Void in
             
+            // If valid go to book list view else prompt with log in fail
             if Error == nil {
                 dispatch_async(dispatch_get_main_queue()) {
                     let Storyboard = UIStoryboard(name: "Main", bundle: nil)
