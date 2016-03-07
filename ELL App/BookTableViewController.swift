@@ -33,8 +33,6 @@ class BookTableViewController: UITableViewController {
                     
                     self.users = object["users"] as! [String]
                     
-                    print(self.users)
-                    
                     // query the books from only the signed in user
                     if self.users.contains((currentUser?.username)!) {
                         self.titles.append(object["title"] as! String)

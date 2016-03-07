@@ -33,6 +33,8 @@ class ActivitiesViewController: UIViewController {
     }
     
     @IBAction func logOut(sender: AnyObject) {
+        
+        // If user clicks log out button log out through parse and go back to log in screen
         PFUser.logOut()
         
         dispatch_async(dispatch_get_main_queue()) {
