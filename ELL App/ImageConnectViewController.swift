@@ -47,7 +47,6 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                     if (img["book"] as! String) == self.bookTitle {
                         self.images.append(img["image"] as! PFFile)
                         imgCount++
-
                     }
                 }
                 

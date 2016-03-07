@@ -277,8 +277,8 @@
 		F1AF39321C56015E00106D70 /* BookTable */ = {
 			isa = PBXGroup;
 			children = (
-				3BC576251C460C6F009A2819 /* BookTableViewController.swift */,
 				3BC576231C460A61009A2819 /* BookTableViewCell.swift */,
+				3BC576251C460C6F009A2819 /* BookTableViewController.swift */,
 			);
 			name = BookTable;
 			sourceTree = "<group>";

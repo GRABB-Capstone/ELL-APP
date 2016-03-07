@@ -30,9 +30,8 @@ class BookTableViewController: UITableViewController {
         booksQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if let objects = objects {
                 for object in objects {
-                    
                     self.users = object["users"] as! [String]
-                    
+
                     // query the books from only the signed in user
                     if self.users.contains((currentUser?.username)!) {
                         self.titles.append(object["title"] as! String)
