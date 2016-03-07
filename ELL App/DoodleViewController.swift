@@ -45,7 +45,9 @@ class DoodleViewController: UIViewController {
         
         SCLAlertView().showInfo("Word Doodle", subTitle: "Illustrate the meaning of the word. Click next to draw the next word!")
         
-        label.text = words[currentWord]
+        if (words.count > 0) {
+            label.text = words[currentWord]
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,7 +73,9 @@ class DoodleViewController: UIViewController {
             currentWord++
         }
         
-        label.text = words[currentWord]
+        if (words.count > 0) {
+            label.text = words[currentWord]
+        }
     }
     
     @IBAction func share(sender: AnyObject) {
