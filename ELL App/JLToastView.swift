@@ -107,10 +107,10 @@ public let JLToastViewLandscapeOffsetYAttributeName = "JLToastViewLandscapeOffse
         let systemVersion = (UIDevice.currentDevice().systemVersion as NSString).floatValue
 
         let userInterfaceIdiom = UIDevice.currentDevice().userInterfaceIdiom
-        let portraitOffsetY = self.dynamicType.defaultValueForAttributeName(
+        /*let portraitOffsetY = self.dynamicType.defaultValueForAttributeName(
             JLToastViewPortraitOffsetYAttributeName,
             forUserInterfaceIdiom: userInterfaceIdiom
-        ) as! CGFloat
+        ) as! CGFloat*/
         let landscapeOffsetY = self.dynamicType.defaultValueForAttributeName(
             JLToastViewLandscapeOffsetYAttributeName,
             forUserInterfaceIdiom: userInterfaceIdiom
@@ -126,7 +126,7 @@ public let JLToastViewLandscapeOffsetYAttributeName = "JLToastViewLandscapeOffse
             if UIInterfaceOrientationIsLandscape(orientation) {
                 y = landscapeOffsetY
             } else {
-                y = 337
+                y = 337   // CHANGE THIS VALUE TO CHANGE TOAST HEIGHT
             }
         }
 

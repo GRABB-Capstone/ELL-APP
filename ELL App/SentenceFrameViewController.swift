@@ -9,6 +9,8 @@
 import UIKit
 import Parse
 
+// This activity SHOULD replace Word Connect. See Word Connect for more details.
+
 class SentenceFrameViewController: UIViewController {
     
     var newButton: UIButton?
@@ -33,6 +35,7 @@ class SentenceFrameViewController: UIViewController {
         var i = 0
         let centerX = Int(self.view.center.x)
         
+        // Looks for the words in the Book
         query.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
             
             let arr = object!["words"] as! [String]
@@ -100,6 +103,7 @@ class SentenceFrameViewController: UIViewController {
         self.view.addSubview(self.newButton!)
     }
     
+    // Checks how many buttons are currently pressed. Ensures no more than 2 are pressed at once.
     func pressed(sender: UIButton) {
         
         if sender.backgroundColor == UIColor.clearColor() {

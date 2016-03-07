@@ -27,7 +27,7 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func logInButtonAction(sender: AnyObject) {
-        var user = PFUser()
+        let user = PFUser()
         user.username = usernameTextField.text!
         user.password = passwordTextField.text!
         
@@ -36,8 +36,8 @@ class LogInViewController: UIViewController {
             
             if Error == nil {
                 dispatch_async(dispatch_get_main_queue()) {
-                    var Storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    var logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("bookListView")
+                    let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("bookListView")
                     self.presentViewController(logInSuccessVC, animated: true, completion: nil)
                 }
             }

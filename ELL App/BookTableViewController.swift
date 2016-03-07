@@ -23,9 +23,9 @@ class BookTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // logged in user
-        var currentUser = PFUser.currentUser()
+        let currentUser = PFUser.currentUser()
 
-        var booksQuery = PFQuery(className: "Book")
+        let booksQuery = PFQuery(className: "Book")
     
         booksQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if let objects = objects {
@@ -50,8 +50,8 @@ class BookTableViewController: UITableViewController {
         PFUser.logOut()
         
         dispatch_async(dispatch_get_main_queue()) {
-            var Storyboard = UIStoryboard(name: "Main", bundle: nil)
-            var logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("logInView")
+            let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("logInView")
             self.presentViewController(logInSuccessVC, animated: true, completion: nil)
         }
         
@@ -104,7 +104,7 @@ class BookTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         
         if (segue.identifier == "activities") {
-            var vc = segue.destinationViewController as! ActivitiesViewController
+            let vc = segue.destinationViewController as! ActivitiesViewController
             vc.objectId = selectedObjectId
             vc.bookTitle = selectedTitle
         }

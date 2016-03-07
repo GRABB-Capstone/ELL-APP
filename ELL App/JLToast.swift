@@ -13,14 +13,14 @@
  *            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
  *   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
  *
- *  0. You just DO WHAT THE FUCK YOU WANT TO.
+ *
  *
  */
 
 import UIKit
 
 public struct JLToastDelay {
-    public static let ShortDelay: NSTimeInterval = 2.0
+    public static let ShortDelay: NSTimeInterval = 0.5
     public static let LongDelay: NSTimeInterval = 3.5
 }
 

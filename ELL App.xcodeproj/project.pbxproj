@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B1390D61C752DDD00EB3B9D /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1390D51C752DDD00EB3B9D /* TestingViewController.swift */; };
 		3B429D231C4F5E5500DD59DB /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */; };
 		3B429D271C52E1D600DD59DB /* ReadAlongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */; };
 		3B429D291C52EBE700DD59DB /* ReadAlongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */; };
@@ -60,7 +59,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B1390D51C752DDD00EB3B9D /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		3B429D261C52E1D600DD59DB /* ReadAlongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongViewController.swift; sourceTree = "<group>"; };
 		3B429D281C52EBE700DD59DB /* ReadAlongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAlongTableViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 				F1AF39301C56014200106D70 /* WordConnect */,
 				BF8EBF1C1C7FA6330025F4A3 /* SentenceFrame */,
 				3BE9D4751BF289AA00E6F893 /* AppDelegate.swift */,
-				3B1390D51C752DDD00EB3B9D /* TestingViewController.swift */,
 				3B429D221C4F5E5500DD59DB /* ActivitiesViewController.swift */,
 				C1F6AFE61C59FBCA00BC499B /* AssessmentViewController.swift */,
 				3BCFFF171C0E4EDD00C20C79 /* LogInViewController.swift */,
@@ -377,7 +374,6 @@
 				F1AF392B1C55EA5500106D70 /* WordConnectTableViewCell.swift in Sources */,
 				3BE9D48B1BF29F7800E6F893 /* SSRadioButtonsController.swift in Sources */,
 				DE84C4F41C598B5E001E6104 /* ImageConnectTableViewController.swift in Sources */,
-				3B1390D61C752DDD00EB3B9D /* TestingViewController.swift in Sources */,
 				8F4563B71C7E7936001172DE /* JLToastCenter.swift in Sources */,
 				F1AF392F1C55F76000106D70 /* WordConnectTableViewController.swift in Sources */,
 				8F4563B91C7E7936001172DE /* JLToastWindow.swift in Sources */,

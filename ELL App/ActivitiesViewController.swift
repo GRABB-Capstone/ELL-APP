@@ -25,6 +25,7 @@ class ActivitiesViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         label.text = bookTitle
+        // Tests if Book got segued from BookTable to ActivitiesVC. Prints all words the book.
         query.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
             self.words = object!["words"] as! [String]
             print(self.words)
@@ -36,8 +37,8 @@ class ActivitiesViewController: UIViewController {
         PFUser.logOut()
         
         dispatch_async(dispatch_get_main_queue()) {
-            var Storyboard = UIStoryboard(name: "Main", bundle: nil)
-            var logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("logInView")
+            let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("logInView")
             self.presentViewController(logInSuccessVC, animated: true, completion: nil)
         }
     }

@@ -38,7 +38,7 @@ class ReadAlongViewController: UIViewController {
         // Pass the selected object to the new view controller.
         
         if (segue.identifier == "readAlongContinued") {
-            var vc = segue.destinationViewController as! ReadAlongTableViewController
+            let vc = segue.destinationViewController as! ReadAlongTableViewController
             vc.words = self.wordCollection
             vc.pages = self.pageCollection
             vc.notes = self.notesCollection

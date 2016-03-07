@@ -9,13 +9,16 @@
 import UIKit
 import Parse
 
+// This activity SHOULD be phased out and replaced with Sentence Frame. You will need to
+// think of a replacement activity. Ask Briana's students for activities they would like
+// to see.
+
 class WordConnectViewController: UIViewController, SSRadioButtonControllerDelegate {
 
     var newButton: UIButton?
     let commentBox = UITextField()
     var objectId = String()
     var query = PFQuery(className: "Book")
-    let radioButtonController = SSRadioButtonsController()
     var selectedButtons = [UIButton]()
     var word1 = [String]()
     var word2 = [String]()
@@ -29,9 +32,6 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         var i = 0
         let centerX = Int(self.view.center.x)
         
-        radioButtonController.delegate = self
-        radioButtonController.shouldLetDeSelect = true
-
         query.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
 
             let arr = object!["words"] as! [String]
@@ -85,7 +85,6 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(16, weight: UIFontWeightBold)
         self.newButton!.selected = false
         self.newButton!.backgroundColor = UIColor.clearColor()
-        self.radioButtonController.addButton(self.newButton!)
         self.view.addSubview(self.newButton!)
     }
     

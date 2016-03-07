@@ -16,7 +16,6 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     var objectId = String()
     var bookQuery = PFQuery(className: "Book")
     var imgQuery = PFQuery(className: "Image")
-    let radioButtonController = SSRadioButtonsController()
     var bookTitle = String()
     var selectedButtons = [UIButton]()
     var newImg: UIImage?
@@ -28,18 +27,16 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Currently only pairs images with images. Future iterations of this activity should pair images with words.
         SCLAlertView().showInfo("Image Connect", subTitle: "Choose two images and describe their relationship.")
         
         var i = 0
         let centerX = Int(self.view.center.x)
         
-        radioButtonController.delegate = self
-        radioButtonController.shouldLetDeSelect = true
-        
+        // Looks for book's images inside the database
         bookQuery.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
             
             self.bookTitle = object!["title"] as! String
-        
     
             self.imgQuery.findObjectsInBackgroundWithBlock { (object, error) -> Void in
                 var imgCount = 0
@@ -49,7 +46,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                         imgCount++
                     }
                 }
-                
+                // Randomly displays up to 6 images stored in the database. All locations are updated dynamically
                 if imgCount > 0 {
                     let getRandom = self.randomSequenceGenerator(0, max: self.images.count - 1)
                     if self.images.count > 0 {
@@ -101,7 +98,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
             }
         }
     }
-    
+    // Creates a button that is displayed as an image
     func makeButton(image: UIImage, buttonNum: Int) {
         let centerX = Int(self.view.center.x)
         
@@ -113,10 +110,10 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         self.newButton!.selected = false
         self.newButton!.backgroundColor = UIColor.clearColor()
         self.newButton!.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        self.radioButtonController.addButton(self.newButton!)
         self.view.addSubview(self.newButton!)
     }
     
+    // Checks how many buttons are currently pressed. Ensures no more than 2 are pressed at once.
     func pressed(sender: UIButton) {
         
         if sender.backgroundColor == UIColor.clearColor() {
