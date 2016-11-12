@@ -18,8 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        Parse.setApplicationId("XlZQi8Z0dAIDNWjBmqWmNctcEjVA3NTNSVDF2fin",
-            clientKey: "ARFYXgM2GLQJmKhqn7WOu7esS1hfXxrI3NfoSq1G")
+        //Parse.setApplicationId("XlZQi8Z0dAIDNWjBmqWmNctcEjVA3NTNSVDF2fin",
+        //    clientKey: "ARFYXgM2GLQJmKhqn7WOu7esS1hfXxrI3NfoSq1G")
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "XlZQi8Z0dAIDNWjBmqWmNctcEjVA3NTNSVDF2fin"
+            $0.clientKey = "ARFYXgM2GLQJmKhqn7WOu7esS1hfXxrI3NfoSq1G"
+            $0.server = "https://parseapi.back4app.com"
+            $0.localDatastoreEnabled = true // If you need to enable local data store
+        }
+        Parse.initializeWithConfiguration(configuration)
         
         /*var testObject:PFObject = PFObject(className: "TestObject")
         testObject["foo"] = "bar"
