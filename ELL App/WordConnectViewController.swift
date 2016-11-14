@@ -52,7 +52,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
                 
                 self.newButton = UIButton(type: UIButtonType.System)
                 self.newButton!.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-                self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
+                self.newButton!.addTarget(self, action: #selector(WordConnectViewController.submit(_:)), forControlEvents: UIControlEvents.TouchUpInside)
                 self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
                 self.newButton!.center = CGPoint(x: centerX, y: 320 + (i + 3) / 2 * 70)
                 self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
@@ -78,7 +78,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         let centerX = Int(self.view.center.x)
         
         self.newButton = UIButton()
-        self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.newButton!.addTarget(self, action: #selector(WordConnectViewController.pressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.newButton!.frame = CGRect(x: 0, y: 0, width: 150, height: 40)
         self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 320 + buttonNum / 2 * 70)
         self.newButton!.setTitle(word, forState: UIControlState.Normal)

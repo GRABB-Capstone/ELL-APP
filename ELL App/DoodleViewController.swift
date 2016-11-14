@@ -70,7 +70,7 @@ class DoodleViewController: UIViewController {
             currentWord = 0
         }
         else {
-            currentWord++
+            currentWord += 1
         }
         
         if (words.count > 0) {

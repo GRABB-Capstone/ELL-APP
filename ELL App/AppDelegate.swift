@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.localDatastoreEnabled = true // If you need to enable local data store
         }
         Parse.initializeWithConfiguration(configuration)
+        
+        FIRApp.configure()
         
         /*var testObject:PFObject = PFObject(className: "TestObject")
         testObject["foo"] = "bar"

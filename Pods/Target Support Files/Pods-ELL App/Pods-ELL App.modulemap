@@ -1,0 +1,6 @@
+framework module Pods_ELL_App {
+  umbrella header "Pods-ELL App-umbrella.h"
+
+  export *
+  module * { export * }
+}

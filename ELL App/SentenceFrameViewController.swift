@@ -66,7 +66,7 @@ class SentenceFrameViewController: UIViewController {
                 
                 self.newButton = UIButton(type: UIButtonType.System)
                 self.newButton!.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-                self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
+                self.newButton!.addTarget(self, action: #selector(SentenceFrameViewController.submit(_:)), forControlEvents: UIControlEvents.TouchUpInside)
                 self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
                 self.newButton!.center = CGPoint(x: centerX, y: sentenceY + 90)
                 self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
@@ -93,7 +93,7 @@ class SentenceFrameViewController: UIViewController {
         let centerX = Int(self.view.center.x)
         
         self.newButton = UIButton()
-        self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.newButton!.addTarget(self, action: #selector(SentenceFrameViewController.pressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.newButton!.frame = CGRect(x: 0, y: 0, width: 150, height: 40)
         self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 300 + buttonNum / 2 * 70)
         self.newButton!.setTitle(word, forState: UIControlState.Normal)

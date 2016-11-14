@@ -43,7 +43,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                 for img in object! {
                     if (img["book"] as! String) == self.bookTitle {
                         self.images.append(img["image"] as! PFFile)
-                        imgCount++
+                        imgCount += 1
                     }
                 }
                 // Randomly displays up to 6 images stored in the database. All locations are updated dynamically
@@ -75,7 +75,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                     self.view.addSubview(self.commentBox)
                     
                     self.newButton = UIButton()
-                    self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
+                    self.newButton!.addTarget(self, action: #selector(ImageConnectViewController.submit(_:)), forControlEvents: UIControlEvents.TouchUpInside)
                     self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
                     self.newButton!.center = CGPoint(x: centerX, y: 70 + (numImg + 3) / 2 * 150)
                     self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
@@ -103,7 +103,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         let centerX = Int(self.view.center.x)
         
         self.newButton = UIButton()
-        self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.newButton!.addTarget(self, action: #selector(ImageConnectViewController.pressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.newButton!.frame = CGRect(x: 0, y: 0, width: 145, height: 145)
         self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 200 + buttonNum / 2 * 150)
         self.newButton!.setImage(image, forState: .Normal)
