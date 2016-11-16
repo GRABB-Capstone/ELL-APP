@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Firebase
 
 class LogInViewController: UIViewController {
 
@@ -48,6 +49,28 @@ class LogInViewController: UIViewController {
             }
         })
     }
+ 
+    /*
+    @IBAction func logInButtonAction(sender: AnyObject) {
+        let email = usernameTextField.text!
+        let password = passwordTextField.text!
+        FIRAuth.auth()?.signInWithEmail(email, password: password, completion: { (user, error) in
+            if(error != nil) {
+                print("DEVELOPER: Unable to authenticate with Firebase using email")
+                print(error)
+                SCLAlertView().showError("Log In Failed", subTitle: "The username/password is incorrect")
+            }
+            else {
+                print("DEVELOPER: Successfully authenticated with Firebase using email")
+                dispatch_async(dispatch_get_main_queue()) {
+                    let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("bookListView")
+                    self.presentViewController(logInSuccessVC, animated: true, completion: nil)
+                }
+            }
+        })
+    }
+    */
     
 
     @IBAction func createNewAccount(sender: AnyObject) {

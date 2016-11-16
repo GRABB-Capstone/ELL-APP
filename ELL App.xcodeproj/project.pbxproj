@@ -368,6 +368,7 @@
 					3BE9D4711BF289AA00E6F893 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = K6537G2NJZ;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -614,6 +615,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -632,6 +634,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bcarreon.ELL-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

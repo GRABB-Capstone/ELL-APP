@@ -85,7 +85,7 @@ class DoodleViewController: UIViewController {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        let activity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        let activity = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
         presentViewController(activity, animated: true, completion: nil)
     }
     
@@ -118,17 +118,17 @@ class DoodleViewController: UIViewController {
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
         
         // 2
-        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
-        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
+        CGContextMoveToPoint(context!, fromPoint.x, fromPoint.y)
+        CGContextAddLineToPoint(context!, toPoint.x, toPoint.y)
         
         // 3
-        CGContextSetLineCap(context, CGLineCap.Round)
-        CGContextSetLineWidth(context, brushWidth)
-        CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
-        CGContextSetBlendMode(context, CGBlendMode.Normal)
+        CGContextSetLineCap(context!, CGLineCap.Round)
+        CGContextSetLineWidth(context!, brushWidth)
+        CGContextSetRGBStrokeColor(context!, red, green, blue, 1.0)
+        CGContextSetBlendMode(context!, CGBlendMode.Normal)
         
         // 4
-        CGContextStrokePath(context)
+        CGContextStrokePath(context!)
         
         // 5
         tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()

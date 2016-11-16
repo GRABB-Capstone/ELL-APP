@@ -37,9 +37,9 @@ class CreateAccountViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: {})
     }
     
-    func completeMySignIn(id: String, userData: Dictionary<String, String>){
+    /*func completeMySignIn(id: String, userData: Dictionary<String, String>){
         self.rootRef.childByAppendingPath("users").childByAppendingPath(id).setValue(user)
-    }
+    }*/
     
     
 
@@ -62,16 +62,18 @@ class CreateAccountViewController: UIViewController {
             else {
                 print("DEVELOPER: Successfully authenticated with Firebase using email")
                 if let user = user {
-//                    let userData = ["provider": user.providerID, "userName": "\(user.displayName)", "profileImg": "\(user.photoURL)"]
-                    let userData = ["firstName": firstname!, "lastName": lastname!, "userName": username!, "email" :email!, "password" : password]
-                    self.completeMySignIn(user.uid, userData: userData)
-                    
+                    let userData: Dictionary<String, String> = ["firstName": firstname!, "lastName": lastname!, "userName": username!, "email" :email!, "password" : password!]
+                    self.rootRef.childByAppendingPath("users").childByAppendingPath(user.uid).setValue(userData)
+                    //Not Sure if this is needed yet
+                    //NSUserDefaults.standardUserDefaults().setValue(user? ["uid"], forKey: "uid")
+                    self.dismissViewControllerAnimated(true, completion: {})
                 }
             }
         })
         }
         else {
-            signupErrorAlert("Oops!", message: "Don't forget to enter your name, email, password, and a username.")
+            //signupErrorAlert("Oops!", message: "Don't forget to enter your name, email, password, and a username.")
+            SCLAlertView().showError("Sign Up Failed", subTitle: "Don't forget to enter your name, email, password, and a username.")
         }
     
 
