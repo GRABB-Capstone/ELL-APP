@@ -745,9 +745,97 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIT-nf-l0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-691" y="-1606"/>
+            <point key="canvasLocation" x="121" y="-1606"/>
         </scene>
-        <!--Log In View Controller-->
+        <!--Create Account Page-->
+        <scene sceneID="Qvw-1M-7gW">
+            <objects>
+                <viewController storyboardIdentifier="createNewAccountView" title="Create Account Page" id="Gj5-JL-LY2" customClass="CreateAccountViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7RB-Zq-5cX"/>
+                        <viewControllerLayoutGuide type="bottom" id="q1G-uH-iU5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="53S-tO-s0y">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Em-cP-0rn">
+                                <rect key="frame" x="197" y="254" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sjr-3t-37b">
+                                <rect key="frame" x="197" y="331" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pjn-KC-Xf9">
+                                <rect key="frame" x="197" y="411" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CREATE AN ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxO-7A-AI7">
+                                <rect key="frame" x="169" y="174" width="431" height="53"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gaz-ay-17W">
+                                <rect key="frame" x="197" y="487" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcR-0R-3Nf">
+                                <rect key="frame" x="197" y="566" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Sd-iM-NuN">
+                                <rect key="frame" x="321" y="663" width="127" height="29"/>
+                                <segments>
+                                    <segment title="Student"/>
+                                    <segment title="Teacher"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzZ-uE-mTm">
+                                <rect key="frame" x="360" y="859" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelCreateAccount:" destination="Gj5-JL-LY2" eventType="touchUpInside" id="GqE-6F-FkY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgR-No-0bE">
+                                <rect key="frame" x="314" y="756" width="141" height="33"/>
+                                <color key="backgroundColor" red="0.43921568630000002" green="0.60784313729999995" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="CREATE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccount:" destination="Gj5-JL-LY2" eventType="touchUpInside" id="ZsY-nF-tnr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51372549020000002" green="0.69803921570000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Account Page" id="YBV-nx-U3p"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="emailField" destination="Gaz-ay-17W" id="kUf-lW-J8X"/>
+                        <outlet property="firstnameField" destination="0Em-cP-0rn" id="Ig1-J5-aI0"/>
+                        <outlet property="lastnameField" destination="Sjr-3t-37b" id="ALE-Ck-uMM"/>
+                        <outlet property="passwordField" destination="rcR-0R-3Nf" id="Pcb-SL-XTC"/>
+                        <outlet property="typeField" destination="5Sd-iM-NuN" id="00P-4c-eQA"/>
+                        <outlet property="usernameField" destination="Pjn-KC-Xf9" id="ebv-ot-QkX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2e-Tt-nOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2701" y="-449"/>
+        </scene>
+        <!--Log In Page-->
         <scene sceneID="Cyb-b8-A2b">
             <objects>
                 <viewController storyboardIdentifier="logInView" id="NNM-QM-Uop" customClass="LogInViewController" customModule="ELL_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -786,9 +874,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTW-RQ-F61">
+                                <rect key="frame" x="314" y="640" width="141" height="30"/>
+                                <state key="normal" title="Create New Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createNewAccount:" destination="NNM-QM-Uop" eventType="touchUpInside" id="dtX-Xb-Wnt"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.58091855939093739" green="0.75878259322861097" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.51372549019607838" green="0.69803921568627447" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Log In Page" id="IuN-nc-9ad">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="qo5-hB-T2M"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="passwordTextField" destination="XCT-4v-TGN" id="oIj-qc-CIt"/>
@@ -797,7 +897,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mW-Uo-oew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2777" y="-1612"/>
+            <point key="canvasLocation" x="-2701" y="-1576"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zLx-zB-6M9">
@@ -816,7 +916,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIS-qr-xjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1713" y="-1612"/>
+            <point key="canvasLocation" x="-901" y="-1612"/>
         </scene>
         <!--Word Doodle-->
         <scene sceneID="5Aj-Yg-cxX">

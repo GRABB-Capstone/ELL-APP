@@ -8,4 +8,6 @@ target 'ELL App' do
   # Pods for ELL App
 	pod 'Firebase'
     pod 'Firebase/Auth'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
 end

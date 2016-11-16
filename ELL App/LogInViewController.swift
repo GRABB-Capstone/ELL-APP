@@ -48,5 +48,12 @@ class LogInViewController: UIViewController {
             }
         })
     }
+    
+
+    @IBAction func createNewAccount(sender: AnyObject) {
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let createAccView = Storyboard.instantiateViewControllerWithIdentifier("createNewAccountView")
+        self.presentViewController(createAccView, animated: true, completion: nil)
+    }
 
 }

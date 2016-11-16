@@ -45,6 +45,9 @@
 		8F4563B91C7E7936001172DE /* JLToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4563B51C7E7936001172DE /* JLToastWindow.swift */; };
 		8FF24CBB1C7E5602008A4995 /* SentenceFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */; };
 		B78FECB11DD9374700BE6004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B78FECB01DD9374700BE6004 /* GoogleService-Info.plist */; };
+		B78FECB51DD94A7400BE6004 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78FECB41DD94A7400BE6004 /* CreateAccountViewController.swift */; };
+		B78FECB71DD9647400BE6004 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78FECB61DD9647400BE6004 /* Constants.swift */; };
+		B78FECBB1DD9666F00BE6004 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78FECBA1DD9666F00BE6004 /* DataService.swift */; };
 		BF6854731C7FA2EB00DF716C /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6854721C7FA2EB00DF716C /* SCLAlertView.swift */; };
 		BF8EBF1E1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBF1D1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift */; };
 		C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */; };
@@ -104,6 +107,9 @@
 		8F4563B51C7E7936001172DE /* JLToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastWindow.swift; sourceTree = "<group>"; };
 		8FF24CBA1C7E5602008A4995 /* SentenceFrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceFrameViewController.swift; sourceTree = "<group>"; };
 		B78FECB01DD9374700BE6004 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B78FECB41DD94A7400BE6004 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		B78FECB61DD9647400BE6004 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B78FECBA1DD9666F00BE6004 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		BF6854721C7FA2EB00DF716C /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		BF8EBF1D1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceFrameTableViewController.swift; sourceTree = "<group>"; };
 		C12FB8D31C54BC3000248509 /* WordConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordConnectViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +207,8 @@
 		3BE9D4741BF289AA00E6F893 /* ELL App */ = {
 			isa = PBXGroup;
 			children = (
+				B78FECB91DD9663500BE6004 /* Service */,
+				B78FECB81DD965FD00BE6004 /* Utility */,
 				8F4563BA1C7E7A49001172DE /* JLToast */,
 				F1AF39321C56015E00106D70 /* BookTable */,
 				DE84C4F21C598AAE001E6104 /* ImageConnect */,
@@ -218,6 +226,7 @@
 				B78FECB01DD9374700BE6004 /* GoogleService-Info.plist */,
 				BF6854721C7FA2EB00DF716C /* SCLAlertView.swift */,
 				3BA637941C7E7698003A7387 /* DoodleViewController.swift */,
+				B78FECB41DD94A7400BE6004 /* CreateAccountViewController.swift */,
 			);
 			path = "ELL App";
 			sourceTree = "<group>";
@@ -249,6 +258,22 @@
 				8F4563B51C7E7936001172DE /* JLToastWindow.swift */,
 			);
 			name = JLToast;
+			sourceTree = "<group>";
+		};
+		B78FECB81DD965FD00BE6004 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B78FECB61DD9647400BE6004 /* Constants.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		B78FECB91DD9663500BE6004 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B78FECBA1DD9666F00BE6004 /* DataService.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		BF8EBF1C1C7FA6330025F4A3 /* SentenceFrame */ = {
@@ -447,12 +472,15 @@
 				DE84C4F41C598B5E001E6104 /* ImageConnectTableViewController.swift in Sources */,
 				8F4563B71C7E7936001172DE /* JLToastCenter.swift in Sources */,
 				F1AF392F1C55F76000106D70 /* WordConnectTableViewController.swift in Sources */,
+				B78FECBB1DD9666F00BE6004 /* DataService.swift in Sources */,
 				8F4563B91C7E7936001172DE /* JLToastWindow.swift in Sources */,
 				3BE9D4761BF289AA00E6F893 /* AppDelegate.swift in Sources */,
+				B78FECB71DD9647400BE6004 /* Constants.swift in Sources */,
 				3BCFFF181C0E4EDD00C20C79 /* LogInViewController.swift in Sources */,
 				3BC576241C460A61009A2819 /* BookTableViewCell.swift in Sources */,
 				3B429D231C4F5E5500DD59DB /* ActivitiesViewController.swift in Sources */,
 				8F4563B61C7E7936001172DE /* JLToast.swift in Sources */,
+				B78FECB51DD94A7400BE6004 /* CreateAccountViewController.swift in Sources */,
 				8FF24CBB1C7E5602008A4995 /* SentenceFrameViewController.swift in Sources */,
 				F10BE6D11C56D783009C0D84 /* ImageConnectViewController.swift in Sources */,
 				C12FB8D41C54BC3000248509 /* WordConnectViewController.swift in Sources */,
