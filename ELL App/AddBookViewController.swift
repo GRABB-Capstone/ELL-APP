@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     var rootRef = FIRDatabase.database().reference()
@@ -29,6 +30,8 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     override func viewDidLoad() {
         super.viewDidLoad()
         loggedInUser.text = FIRAuth.auth()!.currentUser?.displayName
+        subjectRow = 0;
+        gradeRow = 0;
         
         // Do any additional setup after loading the view.
     }
@@ -58,9 +61,15 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     @IBAction func createBook(sender: AnyObject) {
-        if bookNameTextField.text != "" && authorTextField.text != "" {
-            let book : AnyObject = ["title" : bookNameTextField.text!, "author" : authorTextField.text!, "subject" : subjects[subjectRow], "grade": grades[gradeRow] ]
-            self.rootRef.childByAppendingPath("books").setValue(book, forUndefinedKey: "book")
+        let bookName = bookNameTextField.text
+        let author = authorTextField.text
+        let subjectSelected = subjects[subjectRow]
+        let gradeSelected = grades[gradeRow]
+        
+        if bookName != "" && author != "" {
+            let book: [String : String] = ["title" : bookName!, "author" : author!, "subject" : subjectSelected, "grade": gradeSelected]
+            rootRef.child("books").childByAutoId().setValuesForKeysWithDictionary(book)
+            
 
         }
 

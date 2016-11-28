@@ -63,7 +63,7 @@ class CreateAccountViewController: UIViewController {
                 print("DEVELOPER: Successfully authenticated with Firebase using email")
                 if let user = user {
                     let userData: Dictionary<String, String> = ["firstName": firstname!, "lastName": lastname!, "userName": username!, "email" :email!, "password" : password!]
-                    self.rootRef.childByAppendingPath("users").childByAppendingPath(user.uid).setValue(userData)
+                    self.rootRef.child("users").child(user.uid).setValue(userData)
                     //Not Sure if this is needed yet
                     //NSUserDefaults.standardUserDefaults().setValue(user? ["uid"], forKey: "uid")
                     self.dismissViewControllerAnimated(true, completion: {})
@@ -72,11 +72,10 @@ class CreateAccountViewController: UIViewController {
         })
         }
         else {
-            //signupErrorAlert("Oops!", message: "Don't forget to enter your name, email, password, and a username.")
+
             SCLAlertView().showError("Sign Up Failed", subTitle: "Don't forget to enter your name, email, password, and a username.")
         }
     
-
 
 
 //        if username != "" && email != "" && password != "" {
