@@ -6,8 +6,10 @@ target 'ELL App' do
   use_frameworks!
 
   # Pods for ELL App
-	pod 'Firebase'
+    pod 'Firebase'
     pod 'Firebase/Auth'
     pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    pod 'Firebase/Analytics'
 end

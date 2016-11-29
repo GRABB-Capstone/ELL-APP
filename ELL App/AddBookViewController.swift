@@ -8,18 +8,19 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
-class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
+class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
 
     var rootRef = FIRDatabase.database().reference()
+    var storageRef = FIRStorage.storage().reference()
     
+    @IBOutlet var coverImageView: UIImageView!
     @IBOutlet weak var loggedInUser: UILabel!
     @IBOutlet weak var subjectPickerView: UIPickerView!
     @IBOutlet weak var bookNameTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
     @IBOutlet weak var gradePickerView: UIPickerView!
     
-    @IBOutlet weak var wordsTextView: UITextView!
     
     var subjects  = ["Language Arts","Social Studies","Math"]
     var grades = ["K","1", "2", "3", "4", "5", "6"]
@@ -29,14 +30,12 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loggedInUser.text = FIRAuth.auth()!.currentUser?.displayName
+        self.loggedInUser.text = FIRAuth.auth()!.currentUser?.displayName
         subjectRow = 0;
         gradeRow = 0;
-        
         // Do any additional setup after loading the view.
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -65,12 +64,43 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let author = authorTextField.text
         let subjectSelected = subjects[subjectRow]
         let gradeSelected = grades[gradeRow]
-        
-        if bookName != "" && author != "" {
-            let book: [String : String] = ["title" : bookName!, "author" : author!, "subject" : subjectSelected, "grade": gradeSelected]
-            rootRef.child("books").childByAutoId().setValuesForKeysWithDictionary(book)
-            
 
+        if (coverImageView.image == nil){
+            SCLAlertView().showError("Image not Selected", subTitle: "Please Select an Image")
+            return
+        }
+        else {
+            let coverImage: UIImage = coverImageView.image!
+            if let data: NSData = UIImagePNGRepresentation(coverImage) {
+            
+            // set upload path
+                let metaData = FIRStorageMetadata()
+                metaData.contentType = "image/jpg"
+                self.storageRef.child("covers").child(bookName!+"-cover").putData(data, metadata: metaData){(metaData,error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                        return
+                    } else {
+                        // store downloadURL
+                        if let downloadURL = metaData?.downloadURL()!.absoluteString {
+                            if bookName != "" && author != "" {
+                
+                                let book: [String : AnyObject] = ["title" : bookName!, "author" : author!, "subject" : subjectSelected, "grade": gradeSelected, "coverImageURL": downloadURL]
+                                
+                                self.rootRef.child("books").childByAutoId().setValue(book, withCompletionBlock: {(error, ref ) -> Void in
+                                                    SCLAlertView().showInfo("Book Added", subTitle: "Book was successfully Added")
+                                });
+                                
+                            }
+                            else {
+                                SCLAlertView().showError("Form Incomplete", subTitle: "Please fill in all the fields")
+                            }
+
+                        }
+                    }
+                }
+            }
+            
         }
 
     }
@@ -98,7 +128,27 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
-
+    
+    @IBAction func addImage(sender: AnyObject)
+    {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
+            print("Button capture")
+            let imag = UIImagePickerController()
+            imag.delegate = self
+            imag.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            imag.allowsEditing = false
+            self.presentViewController(imag, animated: true, completion: nil)
+        }
+    }
+    
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+        let selectedImage : UIImage = image
+        coverImageView.image=selectedImage
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

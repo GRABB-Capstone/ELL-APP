@@ -17,7 +17,6 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var typeField: UISegmentedControl!
     
     var rootRef = FIRDatabase.database().reference()
     
@@ -36,11 +35,6 @@ class CreateAccountViewController: UIViewController {
     @IBAction func cancelCreateAccount(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: {})
     }
-    
-    /*func completeMySignIn(id: String, userData: Dictionary<String, String>){
-        self.rootRef.childByAppendingPath("users").childByAppendingPath(id).setValue(user)
-    }*/
-    
     
 
     @IBAction func createAccount(sender: AnyObject) {
@@ -125,7 +119,7 @@ class CreateAccountViewController: UIViewController {
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
     }
-//
+    
     /*
     // MARK: - Navigation
 
