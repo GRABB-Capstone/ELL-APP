@@ -871,11 +871,11 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-mV-AZn">
-                                <rect key="frame" x="324" y="678" width="121" height="29"/>
+                                <rect key="frame" x="321" y="678" width="127" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Teacher"/>
+                                    <segment title="Student"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
@@ -887,6 +887,7 @@
                         <outlet property="firstnameField" destination="0Em-cP-0rn" id="Ig1-J5-aI0"/>
                         <outlet property="lastnameField" destination="Sjr-3t-37b" id="ALE-Ck-uMM"/>
                         <outlet property="passwordField" destination="rcR-0R-3Nf" id="Pcb-SL-XTC"/>
+                        <outlet property="userType" destination="3pH-mV-AZn" id="UvF-hl-UcP"/>
                         <outlet property="usernameField" destination="Pjn-KC-Xf9" id="ebv-ot-QkX"/>
                     </connections>
                 </viewController>

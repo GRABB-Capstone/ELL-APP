@@ -17,6 +17,7 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet var userType: UISegmentedControl!
     
     var rootRef = FIRDatabase.database().reference()
     
@@ -57,7 +58,12 @@ class CreateAccountViewController: UIViewController {
                 print("DEVELOPER: Successfully authenticated with Firebase using email")
                 if let user = user {
                     let userData: Dictionary<String, String> = ["firstName": firstname!, "lastName": lastname!, "userName": username!, "email" :email!, "password" : password!]
-                    self.rootRef.child("users").child(user.uid).setValue(userData)
+                    if(self.userType.selectedSegmentIndex == 0) {
+                        self.rootRef.child("users").child("teachers").child(user.uid).setValue(userData)
+                    }
+                    else if(self.userType.selectedSegmentIndex == 1) {
+                        self.rootRef.child("users").child("students").child(user.uid).setValue(userData)
+                    }
                     //Not Sure if this is needed yet
                     //NSUserDefaults.standardUserDefaults().setValue(user? ["uid"], forKey: "uid")
                     self.dismiss(animated: true, completion: {})
