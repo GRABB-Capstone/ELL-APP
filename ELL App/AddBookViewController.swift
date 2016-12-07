@@ -42,13 +42,13 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
 
-    @IBAction func cancelAddBook(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {})
+    @IBAction func cancelAddBook(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: {})
     }
 
     
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView.isEqual(subjectPickerView)) {
             return subjects[row]
 
@@ -59,24 +59,24 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return "Error"
     }
     
-    @IBAction func createBook(sender: AnyObject) {
+    @IBAction func createBook(_ sender: AnyObject) {
         let bookName = bookNameTextField.text
         let author = authorTextField.text
         let subjectSelected = subjects[subjectRow]
         let gradeSelected = grades[gradeRow]
 
         if (coverImageView.image == nil){
-            SCLAlertView().showError("Image not Selected", subTitle: "Please Select an Image")
+            let _ = SCLAlertView().showError("Image not Selected", subTitle: "Please Select an Image")
             return
         }
         else {
             let coverImage: UIImage = coverImageView.image!
-            if let data: NSData = UIImagePNGRepresentation(coverImage) {
+            if let data: Data = UIImagePNGRepresentation(coverImage) {
             
             // set upload path
                 let metaData = FIRStorageMetadata()
                 metaData.contentType = "image/jpg"
-                self.storageRef.child("covers").child(bookName!+"-cover").putData(data, metadata: metaData){(metaData,error) in
+                self.storageRef.child("covers").child(bookName!+"-cover").put(data, metadata: metaData){(metaData,error) in
                     if let error = error {
                         print(error.localizedDescription)
                         return
@@ -85,15 +85,15 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                         if let downloadURL = metaData?.downloadURL()!.absoluteString {
                             if bookName != "" && author != "" {
                 
-                                let book: [String : AnyObject] = ["title" : bookName!, "author" : author!, "subject" : subjectSelected, "grade": gradeSelected, "coverImageURL": downloadURL]
+                                let book: [String : AnyObject] = ["title" : bookName! as AnyObject, "author" : author! as AnyObject, "subject" : subjectSelected as AnyObject, "grade": gradeSelected as AnyObject, "coverImageURL": downloadURL as AnyObject]
                                 
                                 self.rootRef.child("books").childByAutoId().setValue(book, withCompletionBlock: {(error, ref ) -> Void in
-                                                    SCLAlertView().showInfo("Book Added", subTitle: "Book was successfully Added")
+                                                    let _ = SCLAlertView().showInfo("Book Added", subTitle: "Book was successfully Added")
                                 });
                                 
                             }
                             else {
-                                SCLAlertView().showError("Form Incomplete", subTitle: "Please fill in all the fields")
+                                let _ = SCLAlertView().showError("Form Incomplete", subTitle: "Please fill in all the fields")
                             }
 
                         }
@@ -104,7 +104,7 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
 
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(pickerView.isEqual(subjectPickerView)) {
             return subjects.count
             
@@ -115,7 +115,7 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return -1
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(pickerView.isEqual(subjectPickerView)) {
             subjectRow = row
             
@@ -125,27 +125,27 @@ class AddBookViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    @IBAction func addImage(sender: AnyObject)
+    @IBAction func addImage(_ sender: AnyObject)
     {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
             print("Button capture")
             let imag = UIImagePickerController()
             imag.delegate = self
-            imag.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            imag.sourceType = UIImagePickerControllerSourceType.photoLibrary;
             imag.allowsEditing = false
-            self.presentViewController(imag, animated: true, completion: nil)
+            self.present(imag, animated: true, completion: nil)
         }
     }
     
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+    func imagePickerController(_ picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
         let selectedImage : UIImage = image
         coverImageView.image=selectedImage
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     

@@ -19,7 +19,7 @@ class ReadAlongViewController: UIViewController {
     var pageCollection = [String]()
     var notesCollection = [String]()
     
-    @IBAction func submitButtonAction(sender: AnyObject) {
+    @IBAction func submitButtonAction(_ sender: AnyObject) {
         self.wordCollection.append(word.text!)
         self.pageCollection.append(page.text!)
         self.notesCollection.append(notes.text!)
@@ -29,16 +29,16 @@ class ReadAlongViewController: UIViewController {
         notes.text = ""
     }
     
-    @IBAction func nextButtonAction(sender: AnyObject) {
-        performSegueWithIdentifier("readAlongContinued", sender: self)
+    @IBAction func nextButtonAction(_ sender: AnyObject) {
+        performSegue(withIdentifier: "readAlongContinued", sender: self)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
         if (segue.identifier == "readAlongContinued") {
-            let vc = segue.destinationViewController as! ReadAlongTableViewController
+            let vc = segue.destination as! ReadAlongTableViewController
             vc.words = self.wordCollection
             vc.pages = self.pageCollection
             vc.notes = self.notesCollection
@@ -50,7 +50,7 @@ class ReadAlongViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        SCLAlertView().showInfo("Read Along", subTitle: "Have student read the book and input any words to review with their page number.")
+        let _ = SCLAlertView().showInfo("Read Along", subTitle: "Have student read the book and input any words to review with their page number.")
     }
 
     override func didReceiveMemoryWarning() {

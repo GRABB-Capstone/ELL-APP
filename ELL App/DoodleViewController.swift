@@ -43,7 +43,7 @@ class DoodleViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        SCLAlertView().showInfo("Word Doodle", subTitle: "Illustrate the meaning of the word. Click next to draw the next word!")
+        let _ = SCLAlertView().showInfo("Word Doodle", subTitle: "Illustrate the meaning of the word. Click next to draw the next word!")
         
         if (words.count > 0) {
             label.text = words[currentWord]
@@ -57,15 +57,15 @@ class DoodleViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func reset(sender: AnyObject) {
+    @IBAction func reset(_ sender: AnyObject) {
         mainImageView.image = nil
     }
     
-    @IBAction func resetImage(sender: AnyObject) {
+    @IBAction func resetImage(_ sender: AnyObject) {
         mainImageView.image = nil
     }
     
-    @IBAction func nextWord(sender: AnyObject) {
+    @IBAction func nextWord(_ sender: AnyObject) {
         if words.count - 1 == currentWord {
             currentWord = 0
         }
@@ -78,18 +78,18 @@ class DoodleViewController: UIViewController {
         }
     }
     
-    @IBAction func share(sender: AnyObject) {
+    @IBAction func share(_ sender: AnyObject) {
         UIGraphicsBeginImageContext(mainImageView.bounds.size)
-        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0,
+        mainImageView.image?.draw(in: CGRect(x: 0, y: 0,
             width: mainImageView.frame.size.width, height: mainImageView.frame.size.height))
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         let activity = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
-        presentViewController(activity, animated: true, completion: nil)
+        present(activity, animated: true, completion: nil)
     }
     
-    @IBAction func pencilPressed(sender: AnyObject) {
+    @IBAction func pencilPressed(_ sender: AnyObject) {
         
         var index = sender.tag ?? 0
         if index < 0 || index >= colors.count {
@@ -103,32 +103,32 @@ class DoodleViewController: UIViewController {
         }
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = false
         if let touch = touches.first {
-            lastPoint = touch.locationInView(self.view)
+            lastPoint = touch.location(in: self.view)
         }
     }
     
-    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
+    func drawLineFrom(_ fromPoint: CGPoint, toPoint: CGPoint) {
         
         // 1
         UIGraphicsBeginImageContext(view.frame.size)
         let context = UIGraphicsGetCurrentContext()
-        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
         
         // 2
-        CGContextMoveToPoint(context!, fromPoint.x, fromPoint.y)
-        CGContextAddLineToPoint(context!, toPoint.x, toPoint.y)
+        context!.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
+        context!.addLine(to: CGPoint(x: toPoint.x, y: toPoint.y))
         
         // 3
-        CGContextSetLineCap(context!, CGLineCap.Round)
-        CGContextSetLineWidth(context!, brushWidth)
-        CGContextSetRGBStrokeColor(context!, red, green, blue, 1.0)
-        CGContextSetBlendMode(context!, CGBlendMode.Normal)
+        context!.setLineCap(CGLineCap.round)
+        context!.setLineWidth(brushWidth)
+        context!.setStrokeColor(red: red, green: green, blue: blue, alpha: 1.0)
+        context!.setBlendMode(CGBlendMode.normal)
         
         // 4
-        CGContextStrokePath(context!)
+        context!.strokePath()
         
         // 5
         tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -137,11 +137,11 @@ class DoodleViewController: UIViewController {
         
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         // 6
         swiped = true
         if let touch = touches.first {
-            let currentPoint = touch.locationInView(view)
+            let currentPoint = touch.location(in: view)
             drawLineFrom(lastPoint, toPoint: currentPoint)
             
             // 7
@@ -149,7 +149,7 @@ class DoodleViewController: UIViewController {
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if !swiped {
             // draw a single point
@@ -158,8 +158,8 @@ class DoodleViewController: UIViewController {
         
         // Merge tempImageView into mainImageView
         UIGraphicsBeginImageContext(mainImageView.frame.size)
-        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
-        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
+        mainImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.normal, alpha: 1.0)
+        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.normal, alpha: opacity)
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

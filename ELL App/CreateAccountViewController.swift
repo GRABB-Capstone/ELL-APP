@@ -32,12 +32,12 @@ class CreateAccountViewController: UIViewController {
     }
     
     
-    @IBAction func cancelCreateAccount(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {})
+    @IBAction func cancelCreateAccount(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: {})
     }
     
 
-    @IBAction func createAccount(sender: AnyObject) {
+    @IBAction func createAccount(_ sender: AnyObject) {
         
         
         let firstname = firstnameField.text
@@ -48,10 +48,10 @@ class CreateAccountViewController: UIViewController {
         
         if username != "" && email != "" && password != "" && firstname != "" && lastname != "" {
         
-        FIRAuth.auth()!.createUserWithEmail(email!, password: password!, completion:{ user, error in
+        FIRAuth.auth()!.createUser(withEmail: email!, password: password!, completion:{ user, error in
             if error != nil {
                 print("DEVELOPER: Unable to authenticate with Firebase using email")
-                print(error)
+                print(error ?? "No Error")
             }
             else {
                 print("DEVELOPER: Successfully authenticated with Firebase using email")
@@ -60,14 +60,14 @@ class CreateAccountViewController: UIViewController {
                     self.rootRef.child("users").child(user.uid).setValue(userData)
                     //Not Sure if this is needed yet
                     //NSUserDefaults.standardUserDefaults().setValue(user? ["uid"], forKey: "uid")
-                    self.dismissViewControllerAnimated(true, completion: {})
+                    self.dismiss(animated: true, completion: {})
                 }
             }
         })
         }
         else {
 
-            SCLAlertView().showError("Sign Up Failed", subTitle: "Don't forget to enter your name, email, password, and a username.")
+            let _ = SCLAlertView().showError("Sign Up Failed", subTitle: "Don't forget to enter your name, email, password, and a username.")
         }
     
 
@@ -110,14 +110,14 @@ class CreateAccountViewController: UIViewController {
     }
 //
 //
-    func signupErrorAlert(title: String, message: String) {
+    func signupErrorAlert(_ title: String, message: String) {
         
         // Called upon signup error to let the user know signup didn't work.
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
     /*

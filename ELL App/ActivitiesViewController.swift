@@ -26,22 +26,22 @@ class ActivitiesViewController: UIViewController {
         // Do any additional setup after loading the view.
         label.text = bookTitle
         // Tests if Book got segued from BookTable to ActivitiesVC. Prints all words the book.
-        query.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
+        query.getObjectInBackground(withId: objectId) { (object, error) -> Void in
             self.words = object!["words"] as! [String]
             print(self.words)
         }
         
     }
     
-    @IBAction func logOut(sender: AnyObject) {
+    @IBAction func logOut(_ sender: AnyObject) {
         
         // If user clicks log out button log out through parse and go back to log in screen
         PFUser.logOut()
         
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             let Storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("logInView")
-            self.presentViewController(logInSuccessVC, animated: true, completion: nil)
+            let logInSuccessVC = Storyboard.instantiateViewController(withIdentifier: "logInView")
+            self.present(logInSuccessVC, animated: true, completion: nil)
         }
     }
     
@@ -50,32 +50,32 @@ class ActivitiesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "wordconnect" {
-            let vc = segue.destinationViewController as! WordConnectViewController
+            let vc = segue.destination as! WordConnectViewController
             vc.objectId = self.objectId
         }
         
         else if segue.identifier == "assessment" {
-            let vc = segue.destinationViewController as! AssessmentViewController
+            let vc = segue.destination as! AssessmentViewController
             vc.words = words
         }
         
         else if segue.identifier == "imageconnect" {
-            let vc = segue.destinationViewController as! ImageConnectViewController
+            let vc = segue.destination as! ImageConnectViewController
             vc.objectId = objectId
         }
         
         else if segue.identifier == "sentenceframe" {
-            let vc = segue.destinationViewController as! SentenceFrameViewController
+            let vc = segue.destination as! SentenceFrameViewController
             vc.objectId = objectId
         }
         
         else if segue.identifier == "doodle" {
-            let vc = segue.destinationViewController as! DoodleViewController
+            let vc = segue.destination as! DoodleViewController
             vc.words = words
         }
     }
