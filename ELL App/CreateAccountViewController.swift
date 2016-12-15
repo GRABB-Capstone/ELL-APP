@@ -75,47 +75,9 @@ class CreateAccountViewController: UIViewController {
 
             let _ = SCLAlertView().showError("Sign Up Failed", subTitle: "Don't forget to enter your name, email, password, and a username.")
         }
-    
-
-
-//        if username != "" && email != "" && password != "" {
-//            
-//            // Set Email and Password for the New User.
-//            
-//            DataService.dataService.BASE_REF.createUser(email, password: password, withValueCompletionBlock: { error, result in
-//                
-//                if error != nil {
-//                    
-//                    // There was a problem.
-//                    self.signupErrorAlert("Oops!", message: "Having some trouble creating your account. Try again.")
-//                    
-//                } else {
-//                    
-//                    // Create and Login the New User with authUser
-//                    DataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: {
-//                        err, authData in
-//                        
-//                        let user = ["provider": authData.provider!, "email": email!, "username": username!]
-//                        
-//                        // Seal the deal in DataService.swift.
-//                        DataService.dataService.createNewAccount(authData.uid, user: user)
-//                    })
-//                    
-//                    // Store the uid for future access - handy!
-//                    NSUserDefaults.standardUserDefaults().setValue(result ["uid"], forKey: "uid")
-//                    
-//                    // Enter the app.
-//                    self.performSegueWithIdentifier("NewUserLoggedIn", sender: nil)
-//                }
-//            })
-//            
-//        } else {
-//            signupErrorAlert("Oops!", message: "Don't forget to enter your email, password, and a username.")
-//        }
         
     }
-//
-//
+
     func signupErrorAlert(_ title: String, message: String) {
         
         // Called upon signup error to let the user know signup didn't work.

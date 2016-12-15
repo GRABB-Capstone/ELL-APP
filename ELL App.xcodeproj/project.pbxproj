@@ -47,7 +47,6 @@
 		B78FECB11DD9374700BE6004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B78FECB01DD9374700BE6004 /* GoogleService-Info.plist */; };
 		B78FECB51DD94A7400BE6004 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78FECB41DD94A7400BE6004 /* CreateAccountViewController.swift */; };
 		B78FECB71DD9647400BE6004 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78FECB61DD9647400BE6004 /* Constants.swift */; };
-		B78FECBB1DD9666F00BE6004 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78FECBA1DD9666F00BE6004 /* DataService.swift */; };
 		B7963C251DE51F0C00BD449E /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963C241DE51F0C00BD449E /* AddBookViewController.swift */; };
 		BF6854731C7FA2EB00DF716C /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6854721C7FA2EB00DF716C /* SCLAlertView.swift */; };
 		BF8EBF1E1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBF1D1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift */; };
@@ -110,7 +109,6 @@
 		B78FECB01DD9374700BE6004 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B78FECB41DD94A7400BE6004 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		B78FECB61DD9647400BE6004 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B78FECBA1DD9666F00BE6004 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B7963C241DE51F0C00BD449E /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		BF6854721C7FA2EB00DF716C /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		BF8EBF1D1C7FA6500025F4A3 /* SentenceFrameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceFrameTableViewController.swift; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 		3BE9D4741BF289AA00E6F893 /* ELL App */ = {
 			isa = PBXGroup;
 			children = (
-				B78FECB91DD9663500BE6004 /* Service */,
 				B78FECB81DD965FD00BE6004 /* Utility */,
 				8F4563BA1C7E7A49001172DE /* JLToast */,
 				F1AF39321C56015E00106D70 /* BookTable */,
@@ -269,14 +266,6 @@
 				B78FECB61DD9647400BE6004 /* Constants.swift */,
 			);
 			name = Utility;
-			sourceTree = "<group>";
-		};
-		B78FECB91DD9663500BE6004 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				B78FECBA1DD9666F00BE6004 /* DataService.swift */,
-			);
-			name = Service;
 			sourceTree = "<group>";
 		};
 		BF8EBF1C1C7FA6330025F4A3 /* SentenceFrame */ = {
@@ -477,7 +466,6 @@
 				DE84C4F41C598B5E001E6104 /* ImageConnectTableViewController.swift in Sources */,
 				8F4563B71C7E7936001172DE /* JLToastCenter.swift in Sources */,
 				F1AF392F1C55F76000106D70 /* WordConnectTableViewController.swift in Sources */,
-				B78FECBB1DD9666F00BE6004 /* DataService.swift in Sources */,
 				8F4563B91C7E7936001172DE /* JLToastWindow.swift in Sources */,
 				3BE9D4761BF289AA00E6F893 /* AppDelegate.swift in Sources */,
 				B78FECB71DD9647400BE6004 /* Constants.swift in Sources */,

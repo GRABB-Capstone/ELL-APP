@@ -50,8 +50,8 @@ class LogInViewController: UIViewController {
         })
     }
  
-    /*
-    @IBAction func logInButtonAction(sender: AnyObject) {
+    
+    /*@IBAction func logInButtonAction(sender: AnyObject) {
         let email = usernameTextField.text!
         let password = passwordTextField.text!
         FIRAuth.auth()?.signInWithEmail(email, password: password, completion: { (user, error) in
@@ -69,8 +69,8 @@ class LogInViewController: UIViewController {
                 }
             }
         })
-    }
-    */
+    }*/
+    
     
     @IBAction func addBook(_ sender: AnyObject) {
         let email = usernameTextField.text!
