@@ -28,22 +28,22 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         super.viewDidLoad()
         
         // Currently only pairs images with images. Future iterations of this activity should pair images with words.
-        SCLAlertView().showInfo("Image Connect", subTitle: "Choose two images and describe their relationship.")
+        let _ = SCLAlertView().showInfo("Image Connect", subTitle: "Choose two images and describe their relationship.")
         
         var i = 0
         let centerX = Int(self.view.center.x)
         
         // Looks for book's images inside the database
-        bookQuery.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
+        bookQuery.getObjectInBackground(withId: objectId) { (object, error) -> Void in
             
             self.bookTitle = object!["title"] as! String
     
-            self.imgQuery.findObjectsInBackgroundWithBlock { (object, error) -> Void in
+            self.imgQuery.findObjectsInBackground { (object, error) -> Void in
                 var imgCount = 0
                 for img in object! {
                     if (img["book"] as! String) == self.bookTitle {
                         self.images.append(img["image"] as! PFFile)
-                        imgCount++
+                        imgCount += 1
                     }
                 }
                 // Randomly displays up to 6 images stored in the database. All locations are updated dynamically
@@ -51,10 +51,11 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                     let getRandom = self.randomSequenceGenerator(0, max: self.images.count - 1)
                     if self.images.count > 0 {
                         for _ in 0...self.images.count - 1 {
-                            self.images[getRandom()].getDataInBackgroundWithBlock { (pic, error) -> Void in
+                            self.images[getRandom()].getDataInBackground { (pic, error) -> Void in
                                 if let dlImage = UIImage(data: pic!) {
-                                    if i < 6 {
-                                        self.makeButton(dlImage, buttonNum: i++)
+                                    if i < 6 {                        
+                                        self.makeButton(dlImage, buttonNum: i)
+                                        i += 1
                                     }
                                 }
                             }
@@ -71,15 +72,15 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                     self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
                     self.commentBox.center = CGPoint(x: centerX, y: 150 + (numImg + 1) / 2 * 150)
                     self.commentBox.placeholder = "Optional Notes"
-                    self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
+                    self.commentBox.borderStyle = UITextBorderStyle.roundedRect
                     self.view.addSubview(self.commentBox)
                     
                     self.newButton = UIButton()
-                    self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
+                    self.newButton!.addTarget(self, action: #selector(ImageConnectViewController.submit(_:)), for: UIControlEvents.touchUpInside)
                     self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
                     self.newButton!.center = CGPoint(x: centerX, y: 70 + (numImg + 3) / 2 * 150)
-                    self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
-                    self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
+                    self.newButton!.setTitle("SUBMIT", for: UIControlState())
+                    self.newButton!.titleLabel!.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightHeavy)
                     self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
                     self.view.addSubview(self.newButton!)
                 }
@@ -89,8 +90,8 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
                     
                     noImages.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
                     noImages.center = CGPoint(x: centerX, y: 373)
-                    noImages.textAlignment = NSTextAlignment.Center
-                    noImages.font = UIFont.systemFontOfSize(22, weight: UIFontWeightRegular)
+                    noImages.textAlignment = NSTextAlignment.center
+                    noImages.font = UIFont.systemFont(ofSize: 22, weight: UIFontWeightRegular)
                     noImages.text = "There are no images"
                     self.view.addSubview(noImages)
 
@@ -99,38 +100,38 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         }
     }
     // Creates a button that is displayed as an image
-    func makeButton(image: UIImage, buttonNum: Int) {
+    func makeButton(_ image: UIImage, buttonNum: Int) {
         let centerX = Int(self.view.center.x)
         
         self.newButton = UIButton()
-        self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.newButton!.addTarget(self, action: #selector(ImageConnectViewController.pressed(_:)), for: UIControlEvents.touchUpInside)
         self.newButton!.frame = CGRect(x: 0, y: 0, width: 145, height: 145)
         self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 200 + buttonNum / 2 * 150)
-        self.newButton!.setImage(image, forState: .Normal)
-        self.newButton!.selected = false
-        self.newButton!.backgroundColor = UIColor.clearColor()
+        self.newButton!.setImage(image, for: UIControlState())
+        self.newButton!.isSelected = false
+        self.newButton!.backgroundColor = UIColor.clear
         self.newButton!.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         self.view.addSubview(self.newButton!)
     }
     
     // Checks how many buttons are currently pressed. Ensures no more than 2 are pressed at once.
-    func pressed(sender: UIButton) {
+    func pressed(_ sender: UIButton) {
         
-        if sender.backgroundColor == UIColor.clearColor() {
+        if sender.backgroundColor == UIColor.clear {
             
             if selectedButtons.count < 2 {
                 sender.backgroundColor = UIColor(red: 0, green: 0.478, blue: 1, alpha: 1)
-                selectedButtons.insert(sender, atIndex: 0)
+                selectedButtons.insert(sender, at: 0)
             }
         }
             
         else {
             removeButtonFromArray(sender)
-            sender.backgroundColor = UIColor.clearColor()
+            sender.backgroundColor = UIColor.clear
         }
     }
     
-    func submit(sender: UIButton) {
+    func submit(_ sender: UIButton) {
         
         if selectedButtons.count == 2 {
             img1.append(selectedButtons[0].currentImage!)
@@ -138,7 +139,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
             notes.append(commentBox.text!)
             
             for button in selectedButtons {
-                button.backgroundColor = UIColor.clearColor()
+                button.backgroundColor = UIColor.clear
             }
             
             commentBox.text = ""
@@ -149,8 +150,8 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         }
     }
     
-    func removeButtonFromArray(toRemove: UIButton) {
-        print(toRemove.currentImage)
+    func removeButtonFromArray(_ toRemove: UIButton) {
+        print(toRemove.currentImage ?? "No Image")
         if selectedButtons[0].currentImage == toRemove.currentImage {
             
             if selectedButtons.count == 1 {
@@ -168,7 +169,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         }
     }
     
-    func randomSequenceGenerator(min: Int, max: Int) -> () -> Int {
+    func randomSequenceGenerator(_ min: Int, max: Int) -> () -> Int {
         var numbers: [Int] = []
         return {
             if numbers.count == 0 {
@@ -176,7 +177,7 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
             }
             
             let index = Int(arc4random_uniform(UInt32(numbers.count)))
-            return numbers.removeAtIndex(index)
+            return numbers.remove(at: index)
         }
     }
     
@@ -185,15 +186,15 @@ class ImageConnectViewController: UIViewController, SSRadioButtonControllerDeleg
         // Dispose of any resources that can be recreated.
     }
    
-    @IBAction func nextButtonAction(sender: AnyObject) {
-        performSegueWithIdentifier("viewImagePairs", sender: self)
+    @IBAction func nextButtonAction(_ sender: AnyObject) {
+        performSegue(withIdentifier: "viewImagePairs", sender: self)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "viewImagePairs" {
-            let vc = segue.destinationViewController as! ImageConnectTableViewController
+            let vc = segue.destination as! ImageConnectTableViewController
             vc.img1 = img1
             vc.img2 = img2
             vc.notes = notes

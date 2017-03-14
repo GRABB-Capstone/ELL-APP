@@ -47,7 +47,7 @@ class AssessmentViewController: UIViewController, SSRadioButtonControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SCLAlertView().showInfo("Assessment", subTitle: "Rank how well you know each word.")
+        let _ = SCLAlertView().showInfo("Assessment", subTitle: "Rank how well you know each word.")
         
         if words.count >= 1 {
             word1.text = words[0]
@@ -94,28 +94,28 @@ class AssessmentViewController: UIViewController, SSRadioButtonControllerDelegat
         let sadImage = UIImage(named: "sad.png")
         let maybeImage = UIImage(named: "maybe.png")
         
-        word1happy.setBackgroundImage(happyImage, forState: UIControlState.Normal)
-        word1sad.setBackgroundImage(sadImage, forState: UIControlState.Normal)
-        word1maybe.setBackgroundImage(maybeImage, forState: UIControlState.Normal)
+        word1happy.setBackgroundImage(happyImage, for: UIControlState())
+        word1sad.setBackgroundImage(sadImage, for: UIControlState())
+        word1maybe.setBackgroundImage(maybeImage, for: UIControlState())
         
-        word2happy.setBackgroundImage(happyImage, forState: UIControlState.Normal)
-        word2sad.setBackgroundImage(sadImage, forState: UIControlState.Normal)
-        word2maybe.setBackgroundImage(maybeImage, forState: UIControlState.Normal)
+        word2happy.setBackgroundImage(happyImage, for: UIControlState())
+        word2sad.setBackgroundImage(sadImage, for: UIControlState())
+        word2maybe.setBackgroundImage(maybeImage, for: UIControlState())
         
-        word3happy.setBackgroundImage(happyImage, forState: UIControlState.Normal)
-        word3sad.setBackgroundImage(sadImage, forState: UIControlState.Normal)
-        word3maybe.setBackgroundImage(maybeImage, forState: UIControlState.Normal)
+        word3happy.setBackgroundImage(happyImage, for: UIControlState())
+        word3sad.setBackgroundImage(sadImage, for: UIControlState())
+        word3maybe.setBackgroundImage(maybeImage, for: UIControlState())
         
-        word4happy.setBackgroundImage(happyImage, forState: UIControlState.Normal)
-        word4sad.setBackgroundImage(sadImage, forState: UIControlState.Normal)
-        word4maybe.setBackgroundImage(maybeImage, forState: UIControlState.Normal)
+        word4happy.setBackgroundImage(happyImage, for: UIControlState())
+        word4sad.setBackgroundImage(sadImage, for: UIControlState())
+        word4maybe.setBackgroundImage(maybeImage, for: UIControlState())
         
-        word5happy.setBackgroundImage(happyImage, forState: UIControlState.Normal)
-        word5sad.setBackgroundImage(sadImage, forState: UIControlState.Normal)
-        word5maybe.setBackgroundImage(maybeImage, forState: UIControlState.Normal)
+        word5happy.setBackgroundImage(happyImage, for: UIControlState())
+        word5sad.setBackgroundImage(sadImage, for: UIControlState())
+        word5maybe.setBackgroundImage(maybeImage, for: UIControlState())
     }
     
-    func didSelectButton(aButton: UIButton?) {
+    func didSelectButton(_ aButton: UIButton?) {
         if aButton == word1happy {
             print("hello")
         }

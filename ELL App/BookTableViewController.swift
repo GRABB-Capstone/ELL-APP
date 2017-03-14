@@ -23,11 +23,11 @@ class BookTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // logged in user
-        let currentUser = PFUser.currentUser()
+        let currentUser = PFUser.current()
 
         let booksQuery = PFQuery(className: "Book")
     
-        booksQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+        booksQuery.findObjectsInBackground { (objects, error) -> Void in
             if let objects = objects {
                 for object in objects {
                     self.users = object["users"] as! [String]
@@ -46,13 +46,13 @@ class BookTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func logOut(sender: AnyObject) {
+    @IBAction func logOut(_ sender: AnyObject) {
         PFUser.logOut()
         
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             let Storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let logInSuccessVC = Storyboard.instantiateViewControllerWithIdentifier("logInView")
-            self.presentViewController(logInSuccessVC, animated: true, completion: nil)
+            let logInSuccessVC = Storyboard.instantiateViewController(withIdentifier: "logInView")
+            self.present(logInSuccessVC, animated: true, completion: nil)
         }
         
     }
@@ -64,23 +64,23 @@ class BookTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return titles.count
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BookTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BookTableViewCell
         
         // Configure the cell...
         
-        bookPhotos[indexPath.row].getDataInBackgroundWithBlock { (data, error) -> Void in
+        bookPhotos[indexPath.row].getDataInBackground { (data, error) -> Void in
             if let downloadedImage = UIImage(data: data!) {
                 cell.bookImage.image = downloadedImage
             }
@@ -92,19 +92,19 @@ class BookTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedObjectId = self.objectIds[indexPath.row]
         selectedTitle = self.titles[indexPath.row]
-        performSegueWithIdentifier("activities", sender: self)
+        performSegue(withIdentifier: "activities", sender: self)
     }
     
        // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
         if (segue.identifier == "activities") {
-            let vc = segue.destinationViewController as! ActivitiesViewController
+            let vc = segue.destination as! ActivitiesViewController
             vc.objectId = selectedObjectId
             vc.bookTitle = selectedTitle
         }

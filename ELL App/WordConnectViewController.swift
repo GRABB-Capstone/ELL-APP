@@ -27,12 +27,12 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SCLAlertView().showInfo("Word Connect", subTitle: "Choose two words and describe their relationship.")
+        let _ = SCLAlertView().showInfo("Word Connect", subTitle: "Choose two words and describe their relationship.")
         
         var i = 0
         let centerX = Int(self.view.center.x)
         
-        query.getObjectInBackgroundWithId(objectId) { (object, error) -> Void in
+        query.getObjectInBackground(withId: objectId) { (object, error) -> Void in
 
             let arr = object!["words"] as! [String]
             let getRandom = self.randomSequenceGenerator(0, max: arr.count - 1)
@@ -40,23 +40,24 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
             if arr.count > 0 {
                 for _ in 0...arr.count - 1 {
                     if i < 8 {
-                        self.makeButton(arr[getRandom()], buttonNum: i++)
+                        self.makeButton(arr[getRandom()], buttonNum: i)
+                        i += 1
                     }
                 }
 
                 self.commentBox.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
                 self.commentBox.center = CGPoint(x: centerX, y: 320 + (i + 1) / 2 * 70)
                 self.commentBox.placeholder = "Optional Notes"
-                self.commentBox.borderStyle = UITextBorderStyle.RoundedRect
+                self.commentBox.borderStyle = UITextBorderStyle.roundedRect
                 self.view.addSubview(self.commentBox)
                 
-                self.newButton = UIButton(type: UIButtonType.System)
-                self.newButton!.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-                self.newButton!.addTarget(self, action: "submit:", forControlEvents: UIControlEvents.TouchUpInside)
+                self.newButton = UIButton(type: UIButtonType.system)
+                self.newButton!.setTitleColor(UIColor.white, for: UIControlState())
+                self.newButton!.addTarget(self, action: #selector(WordConnectViewController.submit(_:)), for: UIControlEvents.touchUpInside)
                 self.newButton!.frame = CGRect(x: 0, y: 0, width: 84, height: 33)
                 self.newButton!.center = CGPoint(x: centerX, y: 320 + (i + 3) / 2 * 70)
-                self.newButton!.setTitle("SUBMIT", forState: UIControlState.Normal)
-                self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(15, weight: UIFontWeightHeavy)
+                self.newButton!.setTitle("SUBMIT", for: UIControlState())
+                self.newButton!.titleLabel!.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightHeavy)
                 self.newButton!.backgroundColor = UIColor(red: 0.439, green: 0.608, blue: 0.867, alpha: 1)
                 self.view.addSubview(self.newButton!)
             }
@@ -66,45 +67,45 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
                 
                 noWords.frame = CGRect(x: 0, y: 0, width: 400, height: 30)
                 noWords.center = CGPoint(x: centerX, y: 373)
-                noWords.textAlignment = NSTextAlignment.Center
-                noWords.font = UIFont.systemFontOfSize(22, weight: UIFontWeightRegular)
+                noWords.textAlignment = NSTextAlignment.center
+                noWords.font = UIFont.systemFont(ofSize: 22, weight: UIFontWeightRegular)
                 noWords.text = "There are no words"
                 self.view.addSubview(noWords)
             }
         }
     }
     
-    func makeButton(word: String, buttonNum: Int) {
+    func makeButton(_ word: String, buttonNum: Int) {
         let centerX = Int(self.view.center.x)
         
         self.newButton = UIButton()
-        self.newButton!.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.newButton!.addTarget(self, action: #selector(WordConnectViewController.pressed(_:)), for: UIControlEvents.touchUpInside)
         self.newButton!.frame = CGRect(x: 0, y: 0, width: 150, height: 40)
         self.newButton!.center = CGPoint(x: centerX + 110 * ((buttonNum % 2 == 0) ? -1 : 1), y: 320 + buttonNum / 2 * 70)
-        self.newButton!.setTitle(word, forState: UIControlState.Normal)
-        self.newButton!.titleLabel!.font = UIFont.systemFontOfSize(16, weight: UIFontWeightBold)
-        self.newButton!.selected = false
-        self.newButton!.backgroundColor = UIColor.clearColor()
+        self.newButton!.setTitle(word, for: UIControlState())
+        self.newButton!.titleLabel!.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightBold)
+        self.newButton!.isSelected = false
+        self.newButton!.backgroundColor = UIColor.clear
         self.view.addSubview(self.newButton!)
     }
     
-    func pressed(sender: UIButton) {
+    func pressed(_ sender: UIButton) {
         
-        if sender.backgroundColor == UIColor.clearColor() {
+        if sender.backgroundColor == UIColor.clear {
             
             if selectedButtons.count < 2 {
                 sender.backgroundColor = UIColor(red: 0, green: 0.478, blue: 1, alpha: 1)
-                selectedButtons.insert(sender, atIndex: 0)
+                selectedButtons.insert(sender, at: 0)
             }
         }
             
         else {
             removeButtonFromArray(sender)
-            sender.backgroundColor = UIColor.clearColor()
+            sender.backgroundColor = UIColor.clear
         }
     }
     
-    func submit(sender: UIButton) {
+    func submit(_ sender: UIButton) {
         
         if selectedButtons.count == 2 {
             word1.append(selectedButtons[0].currentTitle!)
@@ -112,7 +113,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
             notes.append(commentBox.text!)
             
             for button in selectedButtons {
-                button.backgroundColor = UIColor.clearColor()
+                button.backgroundColor = UIColor.clear
             }
             
             commentBox.text = ""
@@ -123,7 +124,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         }
     }
     
-    func removeButtonFromArray(toRemove: UIButton) {
+    func removeButtonFromArray(_ toRemove: UIButton) {
 
         if selectedButtons[0].currentTitle == toRemove.currentTitle {
             
@@ -142,7 +143,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         }
     }
 
-    func randomSequenceGenerator(min: Int, max: Int) -> () -> Int {
+    func randomSequenceGenerator(_ min: Int, max: Int) -> () -> Int {
         var numbers: [Int] = []
         return {
             if numbers.count == 0 {
@@ -150,7 +151,7 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
             }
             
             let index = Int(arc4random_uniform(UInt32(numbers.count)))
-            return numbers.removeAtIndex(index)
+            return numbers.remove(at: index)
         }
     }
     
@@ -159,15 +160,15 @@ class WordConnectViewController: UIViewController, SSRadioButtonControllerDelega
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func nextButtonAction(sender: AnyObject) {
-        performSegueWithIdentifier("viewpairs", sender: self)
+    @IBAction func nextButtonAction(_ sender: AnyObject) {
+        performSegue(withIdentifier: "viewpairs", sender: self)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "viewpairs" {
-            let vc = segue.destinationViewController as! WordConnectTableViewController
+            let vc = segue.destination as! WordConnectTableViewController
             vc.word1 = word1
             vc.word2 = word2
             vc.notes = notes

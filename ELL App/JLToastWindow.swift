@@ -19,23 +19,23 @@
 
 import UIKit
 
-public class JLToastWindow: UIWindow {
+open class JLToastWindow: UIWindow {
 
-    public static let sharedWindow: JLToastWindow = {
-        let window = JLToastWindow(frame: UIScreen.mainScreen().bounds)
-        window.userInteractionEnabled = false
-        window.windowLevel = CGFloat.max
-        window.backgroundColor = .clearColor()
+    open static let sharedWindow: JLToastWindow = {
+        let window = JLToastWindow(frame: UIScreen.main.bounds)
+        window.isUserInteractionEnabled = false
+        window.windowLevel = CGFloat.greatestFiniteMagnitude
+        window.backgroundColor = .clear
         window.rootViewController = JLToastWindowRootViewController()
-        window.hidden = false
+        window.isHidden = false
         return window
     }()
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "bringWindowToTop:",
-            name: UIWindowDidBecomeVisibleNotification,
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(JLToastWindow.bringWindowToTop(_:)),
+            name: NSNotification.Name.UIWindowDidBecomeVisible,
             object: nil
         )
     }
@@ -45,10 +45,10 @@ public class JLToastWindow: UIWindow {
     }
 
     /// Bring JLToastWindow to top when another window is being shown.
-    func bringWindowToTop(notification: NSNotification) {
+    func bringWindowToTop(_ notification: Notification) {
         if !(notification.object is JLToastWindow) {
-            self.dynamicType.sharedWindow.hidden = true
-            self.dynamicType.sharedWindow.hidden = false
+            type(of: self).sharedWindow.isHidden = true
+            type(of: self).sharedWindow.isHidden = false
         }
     }
 
@@ -57,21 +57,21 @@ public class JLToastWindow: UIWindow {
 
 private class JLToastWindowRootViewController: UIViewController {
 
-    private convenience init() {
+    fileprivate convenience init() {
         self.init(nibName: nil, bundle: nil)
     }
 
-    private override func viewDidLoad() {
+    fileprivate override func viewDidLoad() {
         super.viewDidLoad()
 //        self.view.backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0)
     }
 
-    private override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIApplication.sharedApplication().statusBarStyle
+    fileprivate override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIApplication.shared.statusBarStyle
     }
 
-    private override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return .All
+    fileprivate override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return .all
     }
 
 }
